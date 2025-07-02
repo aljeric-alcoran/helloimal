@@ -211,6 +211,9 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
@@ -220,6 +223,9 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
@@ -228,6 +234,9 @@
   }
   .max-w-screen-xl {
     max-width: var(--breakpoint-xl);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .flex-col {
     flex-direction: column;
@@ -243,6 +252,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
   .space-x-3 {
     :where(& > :not(:last-child)) {
@@ -312,6 +324,9 @@
   }
   .text-gray-500 {
     color: var(--color-gray-500);
+  }
+  .text-gray-800 {
+    color: var(--color-gray-800);
   }
   .text-gray-900 {
     color: var(--color-gray-900);
@@ -429,32 +444,32 @@
     }
   }
   .dark\:border-gray-700 {
-    @media (prefers-color-scheme: dark) {
+    &:where([data-theme=dark], [data-theme=dark] *) {
       border-color: var(--color-gray-700);
     }
   }
   .dark\:bg-gray-800 {
-    @media (prefers-color-scheme: dark) {
+    &:where([data-theme=dark], [data-theme=dark] *) {
       background-color: var(--color-gray-800);
     }
   }
   .dark\:bg-gray-900 {
-    @media (prefers-color-scheme: dark) {
+    &:where([data-theme=dark], [data-theme=dark] *) {
       background-color: var(--color-gray-900);
     }
   }
   .dark\:text-gray-400 {
-    @media (prefers-color-scheme: dark) {
+    &:where([data-theme=dark], [data-theme=dark] *) {
       color: var(--color-gray-400);
     }
   }
   .dark\:text-white {
-    @media (prefers-color-scheme: dark) {
+    &:where([data-theme=dark], [data-theme=dark] *) {
       color: var(--color-white);
     }
   }
   .dark\:hover\:bg-gray-700 {
-    @media (prefers-color-scheme: dark) {
+    &:where([data-theme=dark], [data-theme=dark] *) {
       &:hover {
         @media (hover: hover) {
           background-color: var(--color-gray-700);
@@ -463,7 +478,7 @@
     }
   }
   .dark\:hover\:text-white {
-    @media (prefers-color-scheme: dark) {
+    &:where([data-theme=dark], [data-theme=dark] *) {
       &:hover {
         @media (hover: hover) {
           color: var(--color-white);
@@ -472,7 +487,7 @@
     }
   }
   .dark\:focus\:ring-gray-600 {
-    @media (prefers-color-scheme: dark) {
+    &:where([data-theme=dark], [data-theme=dark] *) {
       &:focus {
         --tw-ring-color: var(--color-gray-600);
       }
@@ -480,21 +495,21 @@
   }
   .md\:dark\:bg-gray-900 {
     @media (width >= 48rem) {
-      @media (prefers-color-scheme: dark) {
+      &:where([data-theme=dark], [data-theme=dark] *) {
         background-color: var(--color-gray-900);
       }
     }
   }
   .md\:dark\:text-blue-500 {
     @media (width >= 48rem) {
-      @media (prefers-color-scheme: dark) {
+      &:where([data-theme=dark], [data-theme=dark] *) {
         color: var(--color-blue-500);
       }
     }
   }
   .md\:dark\:hover\:bg-transparent {
     @media (width >= 48rem) {
-      @media (prefers-color-scheme: dark) {
+      &:where([data-theme=dark], [data-theme=dark] *) {
         &:hover {
           @media (hover: hover) {
             background-color: transparent;
@@ -505,7 +520,7 @@
   }
   .md\:dark\:hover\:text-blue-500 {
     @media (width >= 48rem) {
-      @media (prefers-color-scheme: dark) {
+      &:where([data-theme=dark], [data-theme=dark] *) {
         &:hover {
           @media (hover: hover) {
             color: var(--color-blue-500);
