@@ -4,9 +4,16 @@ document.documentElement.setAttribute('data-theme', savedTheme);
 document.documentElement.classList.toggle('dark', savedTheme === 'dark');
 
 // Handle theme toggle
-const setThemeBtn = document.getElementById('theme-toggle');
+const setThemeBtn = document.getElementById('theme-switch');
 
-setThemeBtn.addEventListener('click', () => {
+const switchThemIcon = (theme) => {
+   const [lightIcon, darkIcon] = setThemeBtn?.children || [];
+   const isDark = theme === 'dark';
+   lightIcon.classList.toggle('hidden', isDark);
+   darkIcon.classList.toggle('hidden', !isDark);
+}
+
+const handleThemeSwitch = () => {
    const currentTheme = document.documentElement.getAttribute('data-theme');
    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
@@ -14,6 +21,10 @@ setThemeBtn.addEventListener('click', () => {
    document.documentElement.setAttribute('data-theme', newTheme);
    document.documentElement.classList.toggle('dark', newTheme === 'dark');
 
+   switchThemIcon(newTheme);
    // Save to localStorage
    localStorage.setItem('theme', newTheme);
-});
+}
+
+setThemeBtn.addEventListener('click', handleThemeSwitch);
+switchThemIcon(savedTheme);
