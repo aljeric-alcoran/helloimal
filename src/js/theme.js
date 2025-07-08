@@ -1,5 +1,5 @@
-// Initialize theme from localStorage (or default to 'light')
-const savedTheme = localStorage.getItem('theme') || 'light';
+// Initialize theme from localStorage (or default to 'dark')
+const savedTheme = localStorage.getItem('theme') || 'dark';
 document.documentElement.setAttribute('data-theme', savedTheme);
 document.documentElement.classList.toggle('dark', savedTheme === 'dark');
 
