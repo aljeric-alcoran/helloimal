@@ -77,8 +77,8 @@ const template = `
    </div>
 `;
 
-const setBiography = (element) => {
+const setBiographySection = (element) => {
    element.innerHTML = template;
 }
 
-export default setBiography;
+export default setBiographySection;

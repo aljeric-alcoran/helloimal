@@ -1,4 +1,4 @@
-const footer = `
+const template = `
    <div class="max-w-screen-xl w-full sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8">
       <p class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0">
          helloimal &copy;<span id="copyright-year" class="pl-1"></span>. All Rights Reserved.
@@ -50,7 +50,7 @@ const footer = `
 `;
 
 const setFooter = (element) => {
-   element.innerHTML = footer;
+   element.innerHTML = template;
    const currentYear = new Date().getFullYear();
    const year = document.getElementById('copyright-year');
    year.textContent = currentYear;

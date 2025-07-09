@@ -24,8 +24,8 @@ const template = `
    </div>
 `;
 
-const setMainBanner = (element) => {
+const setMainBannerSection = (element) => {
    element.innerHTML = template;
 };
 
-export default setMainBanner;
+export default setMainBannerSection;
