@@ -14,6 +14,10 @@ body {
   @apply max-w-screen-xl h-[40rem] items-center justify-center mx-auto p-8 md:py-16 text-gray-900 dark:text-white;
 }
 
+.biography-container {
+  @apply bg-gray-100 dark:bg-gray-800
+}
+
 .footer-container {
   @apply w-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 antialiased;
 }
