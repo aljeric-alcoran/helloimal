@@ -17,3 +17,14 @@ body {
 .footer-container {
   @apply w-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 antialiased;
 }
+
+label:has(+ input:required)::after {
+  content: "*";
+  color: #f44336;
+  margin-left: 0.2rem;
+}
+
+label:has(+ input:optional)::after {
+  content: "(optional)";
+  margin-left: 0.26rem;
+}
