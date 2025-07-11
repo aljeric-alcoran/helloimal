@@ -17,3 +17,9 @@ body {
 .footer-container {
   @apply w-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 antialiased;
 }
+
+.required-label::after {
+  content: "*";
+  color: #f44336;
+  margin-left: 0.2rem;
+}

@@ -1,7 +1,10 @@
 const template = `
    <div class="max-w-screen-xl w-full sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8">
       <p class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0">
-         helloimal &copy;<span id="copyright-year" class="pl-1"></span>. All Rights Reserved.
+         &copy;<span id="copyright-year" class="pl-1"></span> helloimal. All Rights Reserved.
+      </p>
+      <p class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0">
+         Made with ❤️ by <span class="font-semibold">Al Jeric Alcoran</span>
       </p>
       <div class="flex justify-center items-center space-x-1">
          <a href="https://www.facebook.com/aljeric.alcoran/" target="_blank" data-tooltip-target="tooltip-facebook" class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
