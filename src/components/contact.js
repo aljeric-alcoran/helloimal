@@ -4,14 +4,19 @@ const template = `
 
       <form class="max-w-sm mt-10" id="contact-form">
          <div class="mb-5">
+            <label for="name" class="required-label block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+            <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g John Doe" />
+            <span class="hidden text-xs text-red-600 mt-1" id="name-error">Name is required!</span>
+         </div>
+         <div class="mb-5">
             <label for="email" class="required-label block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="johndoe@email.com" />
+            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g. johndoe@email.com" />
             <span class="hidden text-xs text-red-600 mt-1" id="email-error">Email is required!</span>
          </div>
          <div class="mb-5">
-            <label for="name" class="required-label block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-            <input type="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-            <span class="hidden text-xs text-red-600 mt-1" id="name-error">Name is required!</span>
+            <label for="subject" class="required-label block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subject</label>
+            <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g. Job opportunity" />
+            <span class="hidden text-xs text-red-600 mt-1" id="subject-error">Subject is required!</span>
          </div>
          <div class="mb-5">
             <label for="message" class="required-label block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
@@ -33,7 +38,7 @@ import submitContactForm from "../js/contact";
 const setContactSection = (element) => {
    element.innerHTML = template;
 
-   const inputs = ['email', 'name', 'message'];
+   const inputs = ['email', 'name', 'message', 'subject'];
    document.getElementById('contact-form').addEventListener('submit', (event) => submitContactForm(event, inputs));
 }
 
