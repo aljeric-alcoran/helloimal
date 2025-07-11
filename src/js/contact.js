@@ -7,6 +7,13 @@ const submitContactForm = (event, inputs) => {
       if (!value) showErrorforInvalidInput(input);
       else formData[input] = getContactFormInputValue(input)
    };
+
+   const captchaToken = grecaptcha.getResponse();
+
+   if (!captchaToken) {
+      showErrorMessage('Please complete the reCAPTCHA!');
+      return;
+   }
    
    if (Object.keys(formData).length < inputs.length) return;
    console.log(formData);
@@ -24,6 +31,11 @@ const showErrorforInvalidInput = (input) => {
 
 const resetErrorforInvalidInput = (input) => {
    document.getElementById(`${input}-error`).style.display = 'none';
+}
+
+const showErrorMessage = (message) => {
+   document.getElementById('error-message').textContent = message;
+   document.getElementById('error-container').style.display = 'flex';
 }
 
 export default submitContactForm;

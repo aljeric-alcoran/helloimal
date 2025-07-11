@@ -23,6 +23,7 @@ const setTheme = () => {
       document.documentElement.classList.toggle('dark', newTheme === 'dark');
    
       switchThemIcon(newTheme);
+      initializeReCaptcha(newTheme);
       // Save to localStorage
       localStorage.setItem('theme', newTheme);
    }
