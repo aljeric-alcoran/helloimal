@@ -1,3 +1,5 @@
+import emailjs from '@emailjs/browser';
+
 const submitContactForm = (event, inputs) => {
    event.preventDefault();
 
@@ -15,8 +17,23 @@ const submitContactForm = (event, inputs) => {
       return;
    }
    
+   formData['g-recaptcha-response'] = captchaToken;
+
    if (Object.keys(formData).length < inputs.length) return;
-   console.log(formData);
+
+   sendForm(formData);
+}
+
+const sendForm = (formData) => {
+   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+   
+   emailjs.send(serviceId, templateId, formData, publicKey).then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+   }, (error) => {
+      console.log('FAILED...', error);
+   });
 }
 
 const getContactFormInputValue = (elementId) => {
