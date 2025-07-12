@@ -15,7 +15,7 @@ body {
 }
 
 .footer-container {
-  @apply w-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 antialiased;
+  @apply w-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 antialiased;
 }
 
 .required-label::after {
