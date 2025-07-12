@@ -69,6 +69,12 @@ const showAlert = (type,message) => {
    const errorContainer = document.querySelector('#error-container');
    errorContainer.style.display = 'flex';
    errorContainer.innerHTML = setAlerts(type, message);
+
+   if (type === 'success') {
+      setTimeout(() => {
+         errorContainer.style.display = 'none';
+      }, 5000);
+   }
 }
 
 export default submitContactForm;
