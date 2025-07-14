@@ -1,6 +1,6 @@
 const template = `
    <div class="max-w-screen-xl mx-auto p-8 md:py-16 text-gray-900 dark:text-white">
-      <h1 class="text-2xl font-semibold">Technical Skills</h1>
+      <h1 class="text-2xl font-bold"><span class="text-[#3150CE]">Technical</span> skills</h1>
       <div class="flex items-start mt-10 gap-6">
          <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
             <img id="html" src="/svg/html.svg" width="64" alt="html" class="transition group-hover:drop-shadow-[0_0_24px_rgba(251,146,60,0.8)] dark:group-hover:drop-shadow-[0_0_24px_rgba(251,146,60,0.8)]">
