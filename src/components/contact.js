@@ -1,7 +1,7 @@
 const template = `
    <div class="max-w-screen-xl mx-auto p-8 md:py-16 text-gray-900 dark:text-white">
       <h1 class="text-2xl font-bold"><span class="text-[#3150CE]">Contact</span> me</h1>
-      <div class="grid grid-cols-2 gap-6 mt-8">
+      <div class="grid grid-cols-2 gap-6 mt-10">
          <form class="w-full max-w-md" id="contact-form">
             <div id="error-container" class="hidden"></div>
             <div class="mb-5">
@@ -38,8 +38,8 @@ const template = `
             <div class="max-w-md">
                <img src="/img/contact-image.png" width="180" alt="contact-image"/>
                <div class="space-y-6 mt-4">
-                  <h1 class="text-3xl leading-12 font-bold">Need a Webpage <br>For Your Business?</h1>
-                  <p class="text-base/7">
+                  <h1 class="text-3xl leading-13 font-bold">Need a Webpage <br>For Your Business?</h1>
+                  <p class="text-base/8">
                      I can help you set up a professional and mobile-ready site — hassle-free.
                      Fill out the form to send me a message and let’s get started.
                   </p>
