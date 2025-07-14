@@ -1,7 +1,7 @@
 import setBiographySection from './components/biography.js';
 import setContactSection from './components/contact.js';
 import setFooter from './components/footer.js';
-import setMainBannerSection from './components/mainBanner.js';
+import setHeroSection from './components/hero.js';
 import setNavigation from './components/navigation.js';
 import setTechnicalSkillsSection from './components/technicalSkills.js';
 
@@ -15,7 +15,7 @@ document.querySelector('#app').innerHTML = `
 `;
 
 setNavigation(document.getElementById('navigation'));
-setMainBannerSection(document.getElementById('main-banner'));
+setHeroSection(document.getElementById('main-banner'));
 setBiographySection(document.getElementById('biography'));
 setTechnicalSkillsSection(document.getElementById('technical-skills'));
 setContactSection(document.getElementById('contact'));
