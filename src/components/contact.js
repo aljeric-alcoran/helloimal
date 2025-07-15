@@ -54,21 +54,6 @@ import submitContactForm from "../js/contact";
 
 const setContactSection = (element) => {
    element.innerHTML = template;
-   const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
-
-   window.onload = () => {
-      const interval = setInterval(() => {
-         if (window.grecaptcha && window.grecaptcha.render) {
-            clearInterval(interval);
-            window.grecaptcha.render('recaptcha-container', {
-               sitekey: recaptchaSiteKey,
-               callback: (token) => {
-                  document.getElementById('error-container').style.display = 'none';
-               }
-            });
-         }
-      }, 100);
-   };
 
    const inputs = ['email', 'name', 'message', 'subject'];
    document.getElementById('contact-form').addEventListener('submit', (event) => submitContactForm(event, inputs));
