@@ -31,23 +31,29 @@ const template = `
          </div>
       </div>
 
-      <div class="flex flex-wrap items-start mt-2 md:mt-[1.5rem] gap-2 md:gap-6">
-         <div class="w-[114px] md:w-[144px] group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
+      <div class="flex items-start mt-2 md:mt-[1.5rem] gap-2 md:gap-6">
+         <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
             <img id="javascript" src="/svg/javascript.svg" width="64" alt="javascript" class="transition group-hover:drop-shadow-[0_0_24px_rgba(234,179,8,0.8)] dark:group-hover:drop-shadow-[0_0_24px_rgba(234,179,8,0.8)]">
             <label class="text-sm">Javascript</label>
          </div>
-         <div class="w-[114px] md:w-[144px] group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
+         <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
             <img id="angular" src="/img/angular.png" width="64" alt="angular" class="transition group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] group-hover:drop-shadow-[0_0_16px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_24px_rgba(244,114,182,0.6)]">
             <label class="text-sm">Angular</label>
          </div>
-         <div class="w-[114px] md:w-[144px] group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
+         <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
             <img id="vue" src="/svg/vue-js.svg" width="64" alt="vue" class="transition group-hover:drop-shadow-[0_0_24px_rgba(34,197,94,0.8)] dark:group-hover:drop-shadow-[0_0_24px_rgba(34,197,94,0.8)]">
             <label class="text-sm">VueJS</label>
          </div>
-         <div class="w-[114px] md:w-[144px] group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
+         <div class="hidden md:block group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
             <img id="next" src="/svg/nextjs.svg" width="64" alt="next" class="transition group-hover:drop-shadow-[0_0_24px_rgba(107,114,128,0.8)] dark:group-hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.8)]">
             <label class="text-sm">NextJS</label>
          </div>                
+      </div>
+      <div class="md:hidden flex flex-wrap items-start mt-2 md:mt-[1.5rem] gap-2 md:gap-6">
+         <div class="w-[128px] group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
+            <img id="next" src="/svg/nextjs.svg" width="64" alt="next" class="transition group-hover:drop-shadow-[0_0_24px_rgba(107,114,128,0.8)] dark:group-hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.8)]">
+            <label class="text-sm">NextJS</label>
+         </div> 
       </div>
    </div>
 `;
