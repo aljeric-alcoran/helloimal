@@ -1,8 +1,8 @@
 const template = `
-   <div class="max-w-screen-xl mx-auto p-8 md:py-16 text-gray-900 dark:text-white">
-      <h1 class="text-2xl font-bold"><span class="text-[#3150CE]">About</span> me</h1>
-      <div class="flex gap-4 items-start justify-center mt-10">
-         <div class="w-80 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-sm overflow-hidden shadow-sm">
+   <div class="max-w-screen-xl mx-auto p-4 md:p-8 md:py-16 text-gray-900 dark:text-white">
+      <h1 class="text-2xl font-bold py-4 md:py-0"><span class="text-[#3150CE]">About</span> me</h1>
+      <div class="md:flex space-y-4 md:space-y-0 md:gap-4 items-start justify-center mt-5 md:mt-10">
+         <div class="w-full md:w-80 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-sm overflow-hidden shadow-sm">
             <img src="/img/hero.jpg" class="h-42 w-full object-cover transition-all duration-300 filter grayscale hover:grayscale-0" alt="Profile Pic">
             <div class="flex flex-col items-center p-4 gap-y-1">
                <p class="text-lg font-semibold">Al Jeric Alcoran</p>
@@ -10,9 +10,9 @@ const template = `
             </div>
          </div>
          <div class="w-full flex flex-col gap-4">
-            <div class="rounded-sm bg-linear-65 from-[#3150CE] to-cyan-500 px-10 py-6 text-white">
+            <div class="rounded-sm bg-linear-65 from-[#3150CE] to-cyan-500 px-5 md:px-10 py-6 text-white">
                <h2 class="text-lg font-semibold">General Information</h2>
-               <div class="mt-4 grid grid-cols-2 gap-10 text-sm">
+               <div class="mt-4 grid md:grid-cols-2 gap-4 md:gap-10 text-sm">
                   <div class="space-y-4">
                      <p class="flex items-center gap-2">
                         <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -45,9 +45,9 @@ const template = `
                </div>
             </div>
 
-            <div class="rounded-sm border border-white dark:border-gray-700 bg-white dark:bg-gray-900 p-10 dark:text-white text-gray-900 shadow-sm">
+            <div class="rounded-sm border border-white dark:border-gray-700 bg-white dark:bg-gray-900 p-5 md:p-10 dark:text-white text-gray-900 shadow-sm">
                <h2 class="text-lg font-semibold">Biography</h2>
-               <div class="mt-6 grid grid-cols-2 gap-10 text-sm">
+               <div class="mt-6 grid md:grid-cols-2 gap-5 md:gap-10 text-sm text-justify md:text-left">
                   <div class="space-y-6">
                      <div class="text-sm/6">
                         Hi, I’m AL, a web developer with over three years of hands-on experience in building and maintaining modern, responsive websites and web applications.
