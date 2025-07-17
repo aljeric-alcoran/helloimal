@@ -1,8 +1,8 @@
 const template = `
-   <div class="max-w-screen-xl mx-auto p-8 md:py-16 text-gray-900 dark:text-white">
-      <h1 class="text-2xl font-bold"><span class="text-[#3150CE]">Contact</span> me</h1>
-      <div class="grid grid-cols-2 gap-6 mt-10">
-         <form class="w-full max-w-md" id="contact-form">
+   <div class="max-w-screen-xl mx-auto p-4 md:p-8 md:py-16 text-gray-900 dark:text-white">
+      <h1 class="text-2xl font-bold py-4 md:py-0"><span class="text-[#3150CE]">Contact</span> me</h1>
+      <div class="grid md:grid-cols-2 gap-8 md:gap-6 mt-10">
+         <form class="order-2 md:order-1 w-full max-w-md" id="contact-form">
             <div id="error-container" class="hidden"></div>
             <div class="mb-5">
                <label for="name" class="required-label block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -25,7 +25,7 @@ const template = `
                <span class="hidden text-xs text-red-800 dark:text-red-400 mt-1" id="message-error">Message is required!</span>
             </div>
 
-            <div id="recaptcha-container"></div>
+            <div id="recaptcha-container" class="mx-auto w-fit md:w-full"></div>
 
             <button type="submit" class="mt-5 flex items-center justify-center gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm w-full sm:w-auto pl-3 pr-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -34,12 +34,12 @@ const template = `
                <span id="btn-text">Send message</span>
             </button>
          </form>
-         <div class="w-full">
+         <div class="w-full order-1 md:order-2">
             <div class="max-w-md">
                <img src="/img/contact-image.png" width="180" alt="contact-image"/>
                <div class="space-y-6 mt-4">
                   <h1 class="text-3xl leading-13 font-bold">Need a Webpage <br>For Your Business?</h1>
-                  <p class="text-base/8">
+                  <p class="text-base/7">
                      I can help you set up a professional and mobile-ready site — hassle-free.
                      Fill out the form to send me a message and let’s get started.
                   </p>

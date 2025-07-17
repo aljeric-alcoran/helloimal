@@ -4,7 +4,7 @@ const template = `
          <img src="/img/logo.png" class="h-8" alt="AL Logo" />
          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AL</span>
       </a>
-      <div class="flex items-center gap-6">
+      <div class="flex items-center gap-2 md:gap-6">
          <div id="theme-switch" class="md:absolute right-[350px] bg-gray-50 dark:bg-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 p-1 rounded">
             <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5V3m0 18v-2M7.05 7.05 5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636 16.95 7.05M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
@@ -20,8 +20,8 @@ const template = `
             </svg>
          </button>
       </div>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
+      <div class="fixed md:static mt-16 inset-0 z-50 md:z-0 md:mt-0 bg-white dark:bg-gray-900 w-full md:w-auto h-full md:block hidden" id="navbar-default">
+         <ul class="bg-white dark:bg-gray-900 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
             <li>
                <a href="/" onclick="route()" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">About</a>
             </li>
