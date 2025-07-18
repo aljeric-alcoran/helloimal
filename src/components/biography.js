@@ -1,7 +1,7 @@
 const template = `
-   <div class="max-w-screen-xl mx-auto p-4 md:p-8 md:py-16 text-gray-900 dark:text-white">
-      <h1 class="text-2xl font-bold py-4 md:py-0"><span class="text-[#3150CE]">About</span> me</h1>
-      <div class="md:flex space-y-4 md:space-y-0 md:gap-4 items-start justify-center mt-5 md:mt-10">
+   <div class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 text-gray-900 dark:text-white">
+      <h1 class="text-2xl font-bold py-4 md:py-0 text-center"><span class="text-[#3150CE]">About</span> me</h1>
+      <div class="md:flex space-y-4 md:space-y-0 md:gap-4 items-start justify-center mt-10 md:mt-24">
          <div class="w-full md:w-80 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-sm overflow-hidden shadow-sm">
             <img src="/img/hero.jpg" class="h-42 w-full object-cover transition-all duration-300 filter grayscale hover:grayscale-0" alt="Profile Pic">
             <div class="flex flex-col items-center p-4 gap-y-1">
@@ -10,10 +10,10 @@ const template = `
             </div>
          </div>
          <div class="w-full flex flex-col gap-4">
-            <div class="rounded-sm bg-linear-65 from-[#3150CE] to-cyan-500 px-5 md:px-10 py-6 text-white">
+            <div class="rounded-sm bg-linear-65 from-[#3150CE] to-cyan-500 px-5 md:px-10 py-4 md:py-6 text-white">
                <h2 class="text-lg font-semibold">General Information</h2>
-               <div class="mt-4 grid md:grid-cols-2 gap-4 md:gap-10 text-sm">
-                  <div class="space-y-4">
+               <div class="mt-4 grid md:grid-cols-2 gap-2 md:gap-10 text-sm">
+                  <div class="space-y-2 md:space-y-4">
                      <p class="flex items-center gap-2">
                         <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                            <path fill-rule="evenodd" d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z" clip-rule="evenodd"/>
@@ -27,7 +27,7 @@ const template = `
                         Ramon Magsaysay Zamboanga del Sur
                      </p>
                   </div>
-                  <div class="space-y-4">
+                  <div class="space-y-2 md:space-y-4">
                      <p class="flex items-center gap-2">
                         <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                            <path d="M2.038 5.61A2.01 2.01 0 0 0 2 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-.12-.01-.238-.03-.352l-.866.65-7.89 6.032a2 2 0 0 1-2.429 0L2.884 6.288l-.846-.677Z"/>
