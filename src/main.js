@@ -4,9 +4,11 @@ import { route } from './router.js';
 window.route = route;
 
 document.querySelector('#app').innerHTML = `
-   <nav id="navigation" class="nav-container"></nav>
-   <div id="main-content"></div>
-   <footer id="footer" class="footer-container"></footer>
+   <div class="relative">
+      <nav id="navigation" class="nav-container"></nav>
+      <div id="main-content"></div>
+      <footer id="footer" class="footer-container"></footer>
+   </div>
 `;
 
 setNavigation(document.getElementById('navigation'));
