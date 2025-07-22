@@ -6,7 +6,7 @@ const template = `
             <div class="max-w-md">
                <img src="/img/contact-image.png" width="180" alt="contact-image"/>
                <div class="space-y-6 mt-4">
-                  <h1 class="text-3xl leading-13 font-bold">Need a Webpage <br>For Your Business?</h1>
+                  <h1 class="text-2xl md:text-3xl leading-9 md:leading-13 font-bold">Need a Webpage <br>For Your Business?</h1>
                   <p class="text-base/7">
                      I can help you set up a professional and mobile-ready site — hassle-free.
                      Fill out the form to send me a message and let’s get started.
@@ -14,8 +14,8 @@ const template = `
                </div>
             </div>
          </div>
-         <div>
-            <h1 class="text-lg font-medium mb-6">Submit your concerns here.</h1>
+         <div class="md:ml-6">
+            <h1 class="md:text-lg font-medium mb-6">Submit your concerns here.</h1>
             <form class=" w-full max-w-md" id="contact-form">
                <div id="error-container" class="hidden"></div>
                <div class="mb-5">
