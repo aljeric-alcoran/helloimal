@@ -9,7 +9,7 @@ const template = `
    </div>
 `
 
-const setBackToTop = (element) => {
+const setScrollToTop = (element) => {
    element.insertAdjacentHTML('afterbegin', template);
 
    const btn = document.getElementById('scrollUpBtn');
@@ -33,4 +33,4 @@ const setBackToTop = (element) => {
    });
 }
 
-export default setBackToTop;
+export default setScrollToTop;

@@ -30,5 +30,4 @@ window.onpopstate = handleLocation;
 
 document.addEventListener('DOMContentLoaded', () => {
    handleLocation();
-   console.log('DOM Loaded...');
 });

@@ -5,10 +5,10 @@ const template = `
    <div id="contact" class="bg-gray-100 dark:bg-gray-800"></div>
 `
 
-import setBiographySection from '../components/biography.js';
-import setContactSection from '../components/contact.js';
-import setHeroSection from '../components/hero.js';
-import setTechnicalSkillsSection from '../components/technicalSkills.js';
+import setBiographySection from '../components/home/biography.js';
+import setContactSection from '../components/home/contact.js';
+import setHeroSection from '../components/home/hero.js';
+import setTechnicalSkillsSection from '../components/home/technicalSkills.js';
 
 const setHomePage = (container) => {
    container.innerHTML = template;
