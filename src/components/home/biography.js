@@ -1,5 +1,5 @@
 const template = `
-   <div class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 text-gray-900 dark:text-white">
+   <div class="max-w-screen-xl mx-auto p-2 py-8 md:p-8 md:py-16 text-gray-900 dark:text-white">
       <h1 class="text-2xl font-bold py-4 md:py-0 text-center"><span class="text-[#3150CE]">About</span> me</h1>
       <div class="md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:gap-4 items-start justify-center mt-10 md:mt-24">
          <div class"flex flex-col gap-4">
