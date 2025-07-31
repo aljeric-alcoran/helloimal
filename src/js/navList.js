@@ -5,7 +5,8 @@ export const setNavlist = () => {
    const navItems = [
       { href: '/', label: 'About' },
       { href: '/travel', label: 'Travel' },
-      { href: '/work', label: 'Work' }
+      { href: '/work', label: 'Work' },
+      { href: '/journal', label: 'Journal' }, // Temporary
    ];
     
    navItems.forEach(list => {

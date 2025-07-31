@@ -9,7 +9,7 @@ const template = `
                   Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
                   Ut Labore Et Dolore Magna Aliqua
                </p>
-               <p class="text-sm/5 absolute bottom-4 left-4 underline text-gray-50">Read more...</p>
+               <p class="text-sm/5 absolute bottom-4 left-4  text-gray-50">Read more →</p>
             </div>
          </div>
          <div class="col-span-2">
@@ -31,7 +31,7 @@ const template = `
                      Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
                      Ut Labore Et Dolore Magna Aliqua
                   </p>
-                  <p class="text-sm/5 absolute bottom-4 left-4 underline text-gray-600 dark:text-gray-400">Read more...</p>
+                  <p class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</p>
                </div>
             </div>
             <div class="relative rounded-sm shadow bg-white dark:bg-gray-700 overflow-hidden">
@@ -42,7 +42,7 @@ const template = `
                      Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
                      Ut Labore Et Dolore Magna Aliqua
                   </p>
-                  <p class="text-sm/5 absolute bottom-4 left-4 underline text-gray-600 dark:text-gray-400">Read more...</p>
+                  <p class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</p>
                </div>
             </div>
             <div class="relative rounded-sm shadow bg-white dark:bg-gray-700 overflow-hidden">
@@ -53,7 +53,7 @@ const template = `
                      Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
                      Ut Labore Et Dolore Magna Aliqua
                   </p>
-                  <p class="text-sm/5 absolute bottom-4 left-4 underline text-gray-600 dark:text-gray-400">Read more...</p>
+                  <p class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</p>
                </div>
             </div>
             <div class="relative rounded-sm shadow bg-white dark:bg-gray-700 overflow-hidden">
@@ -64,7 +64,7 @@ const template = `
                      Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
                      Ut Labore Et Dolore Magna Aliqua
                   </p>
-                  <p class="text-sm/5 absolute bottom-4 left-4 underline text-gray-600 dark:text-gray-400">Read more...</p>
+                  <p class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</p>
                </div>
             </div>
          </div>
