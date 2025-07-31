@@ -1,6 +1,6 @@
 import setNavigation from './components/navigation.js';
 import setFooter from './components/footer.js';
-import setBackToTop from './components/backToTop.js';
+import setScrollToTop from './components/scrollTop.js';
 import { route } from './router.js';
 window.route = route;
 
@@ -14,5 +14,5 @@ document.querySelector('#app').innerHTML = `
 
 setNavigation(document.getElementById('navigation'));
 setFooter(document.getElementById('footer'));
-setBackToTop(document.getElementById('footer'));
+setScrollToTop(document.getElementById('footer'));
 

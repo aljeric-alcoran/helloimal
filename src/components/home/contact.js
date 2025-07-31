@@ -1,10 +1,10 @@
 const template = `
-   <div class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 text-gray-900 dark:text-white">
+   <div id="contact-section" class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 text-gray-900 dark:text-white">
       <h1 class="text-2xl font-bold py-4 md:py-0 text-center"><span class="text-[#3150CE]">Contact</span> me</h1>
       <div class="grid md:grid-cols-2 gap-8 md:gap-6 mt-10 md:mt-24">
          <div class="w-full">
             <div class="max-w-md">
-               <img src="/img/contact-image.png" width="180" alt="contact-image"/>
+               <img src="/img/contact-image.webp" width="180" alt="contact-image"/>
                <div class="space-y-6 mt-4">
                   <h1 class="text-2xl md:text-3xl leading-9 md:leading-13 font-bold">Need a Webpage <br>For Your Business?</h1>
                   <p class="text-base/7">
@@ -53,7 +53,7 @@ const template = `
    </div>
 `;
 
-import submitContactForm from "../js/contact";
+import submitContactForm from "../../js/contact";
 
 const setContactSection = (element) => {
    element.innerHTML = template;
