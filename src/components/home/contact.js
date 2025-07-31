@@ -4,7 +4,7 @@ const template = `
       <div class="grid md:grid-cols-2 gap-8 md:gap-6 mt-10 md:mt-24">
          <div class="w-full">
             <div class="max-w-md">
-               <img src="/img/contact-image.png" width="180" alt="contact-image"/>
+               <img src="/img/contact-image.webp" width="180" alt="contact-image"/>
                <div class="space-y-6 mt-4">
                   <h1 class="text-2xl md:text-3xl leading-9 md:leading-13 font-bold">Need a Webpage <br>For Your Business?</h1>
                   <p class="text-base/7">

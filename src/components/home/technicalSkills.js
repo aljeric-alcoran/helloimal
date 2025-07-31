@@ -31,7 +31,7 @@ const template = `
             <label class="text-sm">Javascript</label>
          </div>
          <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
-            <img id="angular" src="/img/angular.png" width="64" alt="angular" class="transition group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] group-hover:drop-shadow-[0_0_16px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_24px_rgba(244,114,182,0.6)]">
+            <img id="angular" src="/img/angular.webp" width="64" alt="angular" class="transition group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] group-hover:drop-shadow-[0_0_16px_rgba(168,85,247,0.5)] group-hover:drop-shadow-[0_0_24px_rgba(244,114,182,0.6)]">
             <label class="text-sm">Angular</label>
          </div>
          <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-sm">
