@@ -33,7 +33,7 @@ const setActiveLinkClass = (currentPath) => {
 
    navLinks.forEach(link => {
       const linkPath = new URL(link.href, window.location.origin).pathname;
-      const isActive = linkPath === currentPath;
+      const isActive = currentPath === linkPath || currentPath.startsWith(linkPath + '/');
       
       link.className = baseClass + ' ' + (isActive ? activeClass : normalClass);
    });
@@ -41,15 +41,15 @@ const setActiveLinkClass = (currentPath) => {
 
 export const handleRoute = (path) => {
    for (const route of routes) {
-     const match = path.match(route.regex);
-     if (match) {
-       const params = {};
-       route.paramNames.forEach((name, i) => {
-         params[name] = match[i + 1];
-       });
-       route.handler(params);
-       return;
-     }
+      const match = path.match(route.regex);
+      if (match) {
+         const params = {};
+         route.paramNames.forEach((name, i) => {
+            params[name] = match[i + 1];
+         });
+         route.handler(params);
+         return;
+      }
    }
    // setNotFoundPage(main);
 }
@@ -61,18 +61,16 @@ const navigateTo = (url) => {
 }
 
 document.body.addEventListener('click', (e) => {
-   const link = e.target.closest('a[nav-link]');
-   if (link) {
-     e.preventDefault();
-     navigateTo(link.getAttribute('href'));
-   }
-});
+   const navLink = e.target.closest('a[nav-link]');
+   const journalLink = e.target.closest('a[journal-link]');
+   e.preventDefault();
 
-document.body.addEventListener('click', (e) => {
-   const link = e.target.closest('a[journal-link]');
-   if (link) {
-     e.preventDefault();
-     navigateTo(link.getAttribute('href'));
+   if (navLink) {
+     navigateTo(navLink.getAttribute('href'));
+   }
+
+   if (journalLink) {
+      navigateTo(journalLink.getAttribute('href'));
    }
 });
 
