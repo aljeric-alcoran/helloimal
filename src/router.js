@@ -1,4 +1,28 @@
-import { routes } from './js/routes.js';
+import { routeDefinitions } from './js/routes.js';
+
+const pathToRegex = (path) => {
+   const paramNames = [];
+   const regexPath = path
+      .replace(/\/:([a-zA-Z0-9_]+)/g, (_, name) => {
+         paramNames.push(name);
+         return '/([a-zA-Z0-9_-]+)';
+      })
+      .replace(/\//g, '\\/');
+ 
+   return {
+     regex: new RegExp(`^${regexPath}$`),
+     paramNames
+   };
+}
+
+const routes = routeDefinitions.map(route => {
+   const { regex, paramNames } = pathToRegex(route.path);
+   return {
+     regex,
+     paramNames,
+     handler: route.handler
+   };
+});
 
 const setActiveLinkClass = (currentPath) => {
    const baseClass = 'block py-2 px-3 rounded-sm md:p-0';
@@ -17,11 +41,15 @@ const setActiveLinkClass = (currentPath) => {
 
 export const handleRoute = (path) => {
    for (const route of routes) {
-      const match = path.match(route.path);
-      if (match) {
-         route.handler(...match.slice(1));
-         return;
-      }
+     const match = path.match(route.regex);
+     if (match) {
+       const params = {};
+       route.paramNames.forEach((name, i) => {
+         params[name] = match[i + 1];
+       });
+       route.handler(params);
+       return;
+     }
    }
    // setNotFoundPage(main);
 }
@@ -34,6 +62,14 @@ const navigateTo = (url) => {
 
 document.body.addEventListener('click', (e) => {
    const link = e.target.closest('a[nav-link]');
+   if (link) {
+     e.preventDefault();
+     navigateTo(link.getAttribute('href'));
+   }
+});
+
+document.body.addEventListener('click', (e) => {
+   const link = e.target.closest('a[journal-link]');
    if (link) {
      e.preventDefault();
      navigateTo(link.getAttribute('href'));

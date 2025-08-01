@@ -64,7 +64,7 @@ const template = `
                      Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
                      Ut Labore Et Dolore Magna Aliqua
                   </p>
-                  <p class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</p>
+                  <a href="/travel/trip-to-siquijor" journal-link class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</a>
                </div>
             </div>
          </div>
