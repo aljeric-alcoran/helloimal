@@ -1,5 +1,5 @@
 const template = `
-   <div class="max-w-screen-xl w-full sm:flex flex-col lg:flex-row sm:items-center sm:justify-evenly xl:justify-between p-4 sm:p-6 xl:p-8">
+   <div class="max-w-screen-xl w-full sm:flex flex-col gap-2 lg:flex-row sm:items-center sm:justify-evenly xl:justify-between p-4 sm:p-6 xl:p-8">
       <p class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0">
          &copy;<span id="copyright-year" class="pl-1"></span> aljericalcoran. All Rights Reserved.
       </p>

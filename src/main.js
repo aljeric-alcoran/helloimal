@@ -1,8 +1,7 @@
 import setNavigation from './components/navigation.js';
 import setFooter from './components/footer.js';
 import setScrollToTop from './components/scrollTop.js';
-import { route } from './router.js';
-window.route = route;
+import { handleRoute } from './router.js';
 
 document.querySelector('#app').innerHTML = `
    <div class="relative">
@@ -15,4 +14,7 @@ document.querySelector('#app').innerHTML = `
 setNavigation(document.getElementById('navigation'));
 setFooter(document.getElementById('footer'));
 setScrollToTop(document.getElementById('footer'));
+
+handleRoute(window.location.pathname);
+
 
