@@ -67,10 +67,12 @@ document.body.addEventListener('click', (e) => {
 
    if (navLink) {
      navigateTo(navLink.getAttribute('href'));
+     window.scrollTo(0, 0);
    }
 
    if (journalLink) {
       navigateTo(journalLink.getAttribute('href'));
+      window.scrollTo(0, 0);
    }
 });
 
