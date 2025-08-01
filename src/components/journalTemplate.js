@@ -15,7 +15,7 @@ const template = `
          <div>
             <h2 class="text-lg font-semibold mt-8">Photo Gallery</h2>
             <div id="gallery" class="grid md:grid-cols-2 lg:grid-cols-3 gap-1 mt-4">
-               
+               <!-- Content here is set by setGallery() -->
             </div>
          </div>
       </div>

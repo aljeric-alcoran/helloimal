@@ -77,3 +77,7 @@ document.body.addEventListener('click', (e) => {
 window.addEventListener('popstate', () => {
    handleRoute(window.location.pathname);
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+   setActiveLinkClass(window.location.pathname);
+});
