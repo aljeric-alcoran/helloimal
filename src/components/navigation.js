@@ -51,7 +51,6 @@ const setNavigation = (element) => {
       }
    });
 
-   
    setTheme();
 }
 

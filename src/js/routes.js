@@ -5,12 +5,21 @@ import { initRecaptcha } from "../js/recaptcha";
 
 import setTripToSiquijorJournal from "../components/travel/journal/trip-to-siquijor";
 
-export const routes = {
-   '/': () => {
-      setHomePage(document.getElementById('main-content'))
-      initRecaptcha();
+export const routes = [
+   { 
+      path: /^\/$/, 
+      handler: () => {
+         setHomePage(document.getElementById('main-content'))
+         initRecaptcha();
+      }
+   }, {
+      path: /^\/work$/, 
+      handler: () => setWorkPage(document.getElementById('main-content'))
+   }, { 
+      path: /^\/travel$/, 
+      handler: () => setTravelPage(document.getElementById('main-content')) 
+   }, { 
+      path: /^\/travel\/([a-zA-Z0-9_-]+)$/, 
+      handler: (id) => setTripToSiquijorJournal(document.getElementById('main-content')) 
    },
-   '/work': () => setWorkPage(document.getElementById('main-content')),
-   '/travel': () => setTravelPage(document.getElementById('main-content')),
-   '/journal': () => setTripToSiquijorJournal(document.getElementById('main-content')), // Temporary only
-}
+];
