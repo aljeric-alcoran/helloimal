@@ -63,18 +63,16 @@ const navigateTo = (url) => {
 document.body.addEventListener('click', (e) => {
    const navLink = e.target.closest('a[nav-link]');
    const journalLink = e.target.closest('a[journal-link]');
-   e.preventDefault();
 
-   if (navLink) {
-     navigateTo(navLink.getAttribute('href'));
-     window.scrollTo(0, 0);
-   }
-
-   if (journalLink) {
-      navigateTo(journalLink.getAttribute('href'));
-      window.scrollTo(0, 0);
-   }
+   if (navLink) interceptLinkClick(navLink, e);
+   if (journalLink) interceptLinkClick(journalLink, e);
 });
+
+const interceptLinkClick = (link, e) => {
+   e.preventDefault();
+   navigateTo(link.getAttribute('href'));
+   window.scrollTo(0, 0);
+}
 
 window.addEventListener('popstate', () => {
    handleRoute(window.location.pathname);
