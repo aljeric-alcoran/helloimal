@@ -6,7 +6,7 @@ const template = `
             <div class="max-w-md">
                <img src="/img/contact-image.webp" width="180" alt="contact-image"/>
                <div class="space-y-6 mt-4">
-                  <h1 class="text-2xl md:text-3xl leading-9 md:leading-13 font-bold">Need a Webpage <br>For Your Business?</h1>
+                  <h1 class="text-2xl md:text-3xl leading-9 md:leading-13 font-bold">Need a webpage <br>Like this one?</h1>
                   <p class="text-base/7">
                      I can help you set up a professional and mobile-ready site — hassle-free.
                      Fill out the form to send me a message and let’s get started.
