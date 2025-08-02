@@ -1,6 +1,6 @@
 const template = `
    <div class="max-w-screen-lg mx-auto pt-20 md:pt-24 xl:pb-24 xl:pt-24 text-gray-900 dark:text-white">
-      <div class="space-y-2 my-8 px-4 md:px-8">
+      <div class="space-y-1 my-8 px-4 md:px-8">
          <span id="category" class="uppercase bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 dark:bg-gray-700 dark:text-blue-400 border border-blue-400"></span>
          <h1 id="title" class="text-2xl font-bold md:py-0 mt-8"></h1>
          <h2 id="blog" class="text-lg mb-6 md:py-0 font-semibold"></h2>
