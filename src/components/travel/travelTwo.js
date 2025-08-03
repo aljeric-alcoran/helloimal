@@ -4,7 +4,7 @@ const template = `
          <div class="col-span-2">
             <p class="text-2xl/10 md:text-2xl font-semibold">A Nature-Filled Journey Through Bohol</p>
             <p class="mt-8 text-base/7">
-               I traveled to Bohol and visited some of its most unique attractions. I saw the iconic Chocolate Hills, 
+               We traveled to Bohol and visited some of its most unique attractions. I saw the iconic Chocolate Hills, 
                met tiny tarsiers up close, and explored the Xzootic Animal Park and Butterfly Garden. A drive through 
                the Bilar Man-Made Forest, surrounded by tall mahogany trees, added a peaceful touch to the trip. Bohol 
                offered a mix of natural beauty, wildlife, and calm surroundings that made the experience memorable.

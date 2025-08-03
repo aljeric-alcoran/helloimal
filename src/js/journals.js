@@ -5,7 +5,7 @@ export const journals = [
       title: 'Cambugahay Falls',
       author: 'Al Jeric Alcoran',
       readDuration: '1.5 Minutes Read',
-      date: 'May 27, 2024',
+      date: 'May 30, 2024',
       category: 'Travel',
       blog: 'Exploring the Enchanting Island of Siquijor',
       content: `
@@ -35,26 +35,26 @@ export const journals = [
             Can’t wait to see what tomorrow brings!
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1753968685/samples/landscapes/nature-mountains.jpg',
+      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754231502/2024_05_30_08_31_IMG_4186_tgd4tz.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968693/cld-sample.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230725/2024_05_30_08_29_IMG_4176_oy8lug.jpg',
+            alt: 'IMG_4176_oy8lug',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968693/cld-sample-3.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230725/2024_05_30_08_20_IMG_4088_oru2ef.jpg',
+            alt: 'IMG_4186_tgd4tz',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968685/samples/imagecon-group.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230725/2024_05_30_08_30_IMG_4178_jppqnb.jpg',
+            alt: 'IMG_4178_jppqnb',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230726/2024_05_30_08_32_IMG_4191_no0qgf.jpg',
+            alt: 'IMG_4191_no0qgf',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230725/2024_05_30_08_33_IMG_4198_iqcqo1.jpg',
+            alt: 'IMG_4198_iqcqo1',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230727/2024_05_30_08_32_IMG_4194_znyqvd.jpg',
+            alt: 'IMG_4194_znyqvd',
          }
       ]
    },
@@ -64,7 +64,7 @@ export const journals = [
       title: 'Paliton Beach',
       author: 'Al Jeric Alcoran',
       readDuration: '1.8 Minutes Read',
-      date: 'May 27, 2024',
+      date: 'May 29, 2024',
       category: 'Travel',
       blog: 'Exploring the Enchanting Island of Siquijor',
       content: `
@@ -94,26 +94,26 @@ export const journals = [
             completely full, and armed with way too many photos, we left the beach with sandy toes and happy souls.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1753968685/samples/landscapes/nature-mountains.jpg',
+      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_15_IMG_4154_olgzeo.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968693/cld-sample.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_02_IMG_4147_fk5tuy.jpg',
+            alt: 'IMG_4147_fk5tuy',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968693/cld-sample-3.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_15_IMG_4152_nj0l6p.jpg',
+            alt: 'IMG_4152_nj0l6p',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968685/samples/imagecon-group.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232265/2024_05_29_13_08_IMG_4148_fkvegx.jpg',
+            alt: 'IMG_4148_fkvegx',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_08_IMG_4150_ck7myk.jpg',
+            alt: 'IMG_4150_ck7myk',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_15_IMG_4153_cb1edj.jpg',
+            alt: 'IMG_4153_cb1edj',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232265/2024_05_29_13_08_IMG_4149_jhdiw1.jpg',
+            alt: 'IMG_4149_jhdiw1',
          }
       ]
    },
@@ -123,7 +123,7 @@ export const journals = [
       title: 'Salagdoong Beach',
       author: 'Al Jeric Alcoran',
       readDuration: '1.5 Minutes Read',
-      date: 'May 27, 2024',
+      date: 'May 30, 2024',
       category: 'Travel',
       blog: 'Exploring the Enchanting Island of Siquijor',
       content: `
@@ -158,33 +158,33 @@ export const journals = [
             appreciation for nature’s beauty.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1753968685/samples/landscapes/nature-mountains.jpg',
+      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754233594/2024_05_30_10_03_IMG_4163_ewmwx4.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968693/cld-sample.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233521/2024_05_30_10_17_IMG_4099_zztj5l.jpg',
+            alt: 'IMG_4099_zztj5l',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968693/cld-sample-3.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233520/2024_05_30_10_54_IMG_4164_gzgbne.jpg',
+            alt: 'IMG_4164_gzgbne',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968685/samples/imagecon-group.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233519/2024_05_30_10_54_IMG_4165_j90ai9.jpg',
+            alt: 'IMG_4165_j90ai9',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233521/2024_05_30_10_13_IMG_4096_y4dbzm.jpg',
+            alt: 'IMG_4096_y4dbzm',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233519/2024_05_30_10_11_IMG_4094_srtbey.jpg',
+            alt: 'IMG_4094_srtbey',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233594/2024_05_30_10_03_IMG_4163_ewmwx4.jpg',
+            alt: 'IMG_4163_ewmwx4',
          }
       ]
    },
    {
-      id: 'pitogo-cliff',
-      href: `/travel/pitogo-cliff`,
-      title: 'Pitogo Cliff',
+      id: 'aquamare-beach-camp',
+      href: `/travel/aquamare-beach-camp`,
+      title: 'Aquamare Beach Camp',
       author: 'Al Jeric Alcoran',
       readDuration: '1.5 Minutes Read',
       date: 'May 27, 2024',
@@ -192,55 +192,48 @@ export const journals = [
       blog: 'Exploring the Enchanting Island of Siquijor',
       content: `
          <p>
-            As our day continued, we took a scenic drive toward one of Siquijor’s lesser-known yet breathtaking spots—Pitogo 
-            Cliff. The journey there was relaxing, with the wind in our hair and the ocean occasionally peeking through the 
-            trees along the road.
+            After a day filled with adventure, we slowed things down with a relaxing afternoon visit to Aquamare Beach Camp—a 
+            peaceful spot perfect for unwinding by the sea.
          </p>
          <p>
-            Upon arriving, we were instantly captivated by the natural surroundings. Pitogo Cliff got its name from the 
-            Pitogo tree (Cycas edentata), a species of cycad that grows abundantly in the area. Walking through the entrance 
-            felt almost magical—the cycads lining the path, especially around Pitogo Creek, created a lush, fantasy-like 
-            atmosphere that set the tone for the experience.
+            We started with a quiet stroll along the shoreline, watching as the sun dipped toward the sea horizon. The sky 
+            turned soft shades of orange and pink, casting a golden glow over the water. It was one of those moments that 
+            made you want to press pause and just breathe it all in.
          </p>
          <p>
-            When we reached the cliff, we were stunned by the view. The cliff was incredibly high—the kind of height that 
-            makes your stomach flutter just by looking down. For a moment, we all hesitated, awestruck and a little dizzy 
-            from the sheer drop below.
+            As the sun set, so did our cravings—and it was time for a chill food trip. We ordered an easygoing spread of snacks: 
+            freshly baked pizza, crispy nachos, and refreshing blended fruit ice cream that hit the spot. It wasn’t fancy, but 
+            it was exactly what the moment called for—fun, flavorful, and best enjoyed barefoot by the sea.
          </p>
          <p>
-            Despite the height, locals made cliff diving look effortless, leaping fearlessly into the deep blue below with 
-            practiced grace. A small group of tourists gathered at the edge, watching, cheering, and taking photos—some 
-            contemplating whether to take the dive themselves.
+            Adding to the cozy vibe was a local band playing nearby. Their music carried through the breeze, giving the place a 
+            warm, communal feel. We sat back, listened, and let the melodies mix with the sound of waves in the background.
          </p>
          <p>
-            We chose to stay dry this time, simply enjoying the breathtaking view, the cool breeze, and the company. The 
-            ocean stretched far and wide, shimmering under the soft afternoon light.
-         </p>
-         <p>
-            As the sun began to set, casting golden hues over the sea, we knew it was time to go. The moment was quiet, a 
-            little reflective—a peaceful way to bid farewell to another unforgettable experience in Siquijor.
+            It was one of those effortless evenings—good food, soft music, and the kind of stillness that makes you feel 
+            completely present. Just chilling and relaxing, no agenda, just peace.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1753968685/samples/landscapes/nature-mountains.jpg',
+      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_17_06_IMG_4306_cufm73.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968693/cld-sample.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234681/2024_05_31_17_47_IMG_4210_zf2ti2.jpg',
+            alt: 'IMG_4210_zf2ti2',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968693/cld-sample-3.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_17_51_IMG_4312_cdld6s.jpg',
+            alt: 'IMG_4312_cdld6s',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1753968685/samples/imagecon-group.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234683/2024_05_31_17_28_IMG_4310_j6s7ax.jpg',
+            alt: 'IMG_4310_j6s7ax',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_17_52_IMG_4315_gx25z2.jpg',
+            alt: 'IMG_4315_gx25z2',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_17_52_IMG_4314_tlqmtm.jpg',
+            alt: 'IMG_4314_tlqmtm',
          }, {
-            src: '/img/siq-paliton.jpg',
-            alt: 'siq-paliton',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_18_32_IMG_4321_hu8xtl.jpg',
+            alt: 'IMG_4321_hu8xtl',
          }
       ]
    }

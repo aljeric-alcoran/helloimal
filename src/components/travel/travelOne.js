@@ -1,7 +1,7 @@
 const template = `
    <div class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 xl:py-32 text-gray-900 dark:text-white">
       <div class="flex flex-col xl:grid grid-flow-col grid-rows-3 gap-6">
-         <div id="journal-main" class="row-span-3 shadow hidden xl:block relative text-white">
+         <div id="journal-main" class="relative row-span-3 shadow hidden xl:block relative text-white">
             <-- Content here is set by setMainJournals()  -->
          </div>
          <div class="col-span-2">
@@ -15,50 +15,7 @@ const template = `
             </p>
          </div>
          <div id="journal-list" class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 col-span-2 row-span-2">
-            <div class="relative rounded-sm shadow bg-white dark:bg-gray-700 overflow-hidden block xl:hidden">
-               <img src="/img/siq-paliton.jpg" class="h-1/2 w-full object-cover" alt="siq-pitogo"/>
-               <div class="px-4 mt-2">
-                  <p class="text-lg font-semibold py-2">Paliton Beach</p>
-                  <p class="text-sm/6 line-clamp-3">
-                     Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
-                     Ut Labore Et Dolore Magna Aliqua
-                  </p>
-                  <a href="/travel/paliton-beach" journal-link class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</a>
-               </div>
-            </div>
-            <div class="relative rounded-sm shadow bg-white dark:bg-gray-700 overflow-hidden">
-               <img src="/img/siq-cambugahay.jpg" class="h-1/2 w-full object-cover" alt="siq-cambugahay"/>
-               <div class="px-4 mt-2 max-h-40">
-                  <p class="text-lg font-semibold py-2">Cambugahay Falls</p>
-                  <p class="text-sm/6 line-clamp-3">
-                     Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
-                     Ut Labore Et Dolore Magna Aliqua
-                  </p>
-                  <p class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</p>
-               </div>
-            </div>
-            <div class="relative rounded-sm shadow bg-white dark:bg-gray-700 overflow-hidden">
-               <img src="/img/siq-salagdoong.jpg" class="h-1/2 w-full object-cover" alt="siq-salagdoong"/>
-               <div class="px-4 mt-2">
-                  <p class="text-lg font-semibold py-2">Salagdoong Beach</p>
-                  <p class="text-sm/6 line-clamp-3">
-                     Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
-                     Ut Labore Et Dolore Magna Aliqua
-                  </p>
-                  <p class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</p>
-               </div>
-            </div>
-            <div class="relative rounded-sm shadow bg-white dark:bg-gray-700 overflow-hidden">
-               <img src="/img/siq-pitogo.jpg" class="h-1/2 w-full object-cover" alt="siq-pitogo"/>
-               <div class="px-4 mt-2">
-                  <p class="text-lg font-semibold py-2">Pitogo Cliff</p>
-                  <p class="text-sm/6 line-clamp-3">
-                     Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Tempor Incididunt 
-                     Ut Labore Et Dolore Magna Aliqua
-                  </p>
-                  <a class="text-sm/5 absolute bottom-4 left-4 text-gray-600 dark:text-gray-400">Read more →</a>
-               </div>
-            </div>
+            <-- Content here is set by setJounalList() -->
          </div>
       </div>
    </div>

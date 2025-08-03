@@ -1,11 +1,11 @@
 const template = `
-   <div class="max-w-screen-lg mx-auto pt-20 md:pt-24 xl:pb-24 xl:pt-24 text-gray-900 dark:text-white">
+   <div class="max-w-screen-md mx-auto pt-20 md:pt-24 xl:pb-24 xl:pt-24 text-gray-900 dark:text-white">
       <div class="space-y-1 my-8 px-4 md:px-8">
          <span id="category" class="uppercase bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 dark:bg-gray-700 dark:text-blue-400 border border-blue-400"></span>
          <h1 id="title" class="text-2xl font-bold md:py-0 mt-8"></h1>
          <h2 id="blog" class="text-lg mb-6 md:py-0 font-semibold"></h2>
          <div class="flex items-center gap-4">
-            <p id="info" class="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-3"></p>
+            <p id="info" class="text-sm text-gray-600 dark:text-gray-400 flex flex-wrap md:flex-nowrap items-center gap-2"></p>
          </div>
       </div>
       <div class="lg:px-8 w-full">
@@ -15,7 +15,7 @@ const template = `
          <div id="content" class="text-base/7 space-y-4 mt-4"></div>
          <div>
             <h2 class="text-lg font-semibold mt-8">Photo Gallery</h2>
-            <div id="gallery" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+            <div id="gallery" class="grid md:grid-cols-2 lg:grid-cols-3 gap-2 mt-4">
                <!-- Content here is set by setGallery() -->
             </div>
          </div>
