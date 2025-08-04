@@ -24,6 +24,7 @@ const template = `
 import { journals } from "../../js/journals";
 import { setJounalList, setMainJournals } from "./setJournals";
 
+
 const setTravelOneSection = (element) => {
    element.innerHTML = template;
 

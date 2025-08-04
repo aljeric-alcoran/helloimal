@@ -4,7 +4,7 @@ const template = `
          <div class="text-center md:text-left">
             <div class="mb-4">
                <p class="text-xl font-semibold ml-1 mb-2">Hello!</p>
-               <p class="text-8xl font-bold">I'm AL</p>
+               <p class="text-7xl md:text-8xl font-bold">I'm AL</p>
             </div>
             <p>an interactive Web Developer</p>
 

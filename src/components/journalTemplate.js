@@ -20,9 +20,12 @@ const template = `
             </div>
          </div>
       </div>
+      <div id="imageModal" class="fixed inset-0 bg-black/80 bg-opacity-90 hidden z-50 flex items-center justify-center backdrop-blur-md">
+      </div>
    </div>
 `
 import { journals } from "../js/journals";
+import imageSliderModal from './modal/imageSlider.js';
 
 const setJournalTemplate = (container, journalId) => {
    container.innerHTML = template;
@@ -40,18 +43,20 @@ const setJournalTemplate = (container, journalId) => {
    const banner = document.getElementById('image-banner');
    banner.src = journal.coverImage;
    banner.alt = journal.title;
+
 }
 
 const setGallery = (gallery) => {
    const container = document.getElementById('gallery');
 
-   gallery.forEach(({ src, alt }) => {
+   gallery.forEach(({ src, alt }, index) => {
       const wrapper = document.createElement('div');
       wrapper.className = 'aspect-[4/3] overflow-hidden';
 
       const img = document.createElement('img');
       img.src = src;
       img.alt = alt;
+      img.onclick = () => imageSliderModal(wrapper, gallery, index);
       img.className = 'rounded-sm w-full h-full object-cover transition-transform duration-500 delay-150 ease-in hover:scale-102 cursor-pointer';
 
       wrapper.appendChild(img);
