@@ -10,7 +10,7 @@ const template = `
                offered a mix of natural beauty, wildlife, and calm surroundings that made the experience memorable.
             </p>
          </div>
-         <div id="bohol-journal-list" class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 col-span-2 row-span-2">
+         <div id="bohol-journal-list" class="grid md:grid-cols-2 xl:grid-cols-3 content-end gap-4 md:gap-6 col-span-2 row-span-2">
             <-- Content here is set by setJounalList() -->
          </div>
          <div id="bohol-journal" class="row-span-3 shadow hidden xl:block relative text-white">
