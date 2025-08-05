@@ -23,7 +23,7 @@ export const setJounalList = (element, journals) => {
    element.innerHTML = journals.map((journal, index) => {
       const strippedContent = journal.content.replace(/<\/?p>/g, '').replace(/\n/g, ' ').trim();
       return `
-         <div class="relative isolate rounded-sm shadow bg-white h-94 dark:bg-gray-700 overflow-hidden ${index === 0 ? 'block xl:hidden' : ''}">
+         <div class="relative isolate rounded-sm shadow bg-white h-98 dark:bg-gray-700 overflow-hidden ${index === 0 ? 'block xl:hidden' : ''}">
             <img src="${journal.coverImage}" class="h-1/2 w-full object-cover" alt="${journal.id}"/>
             <div class="px-4 mt-4">
                <a href="${journal.href}" journal-link class="text-lg font-semibold py-2">

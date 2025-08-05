@@ -9,7 +9,7 @@ const template = `
          </div>
       </div>
       <div class="lg:px-8 w-full">
-         <img id="image-banner" src="/img/boh-chocolate-hills.jpg" class="h-[400px] w-full object-cover lg:rounded-sm" alt="bohol"/>
+         <img id="image-banner" src="/img/boh-chocolate-hills.jpg" class="h-[500px] w-full object-cover lg:rounded-sm" alt="bohol"/>
       </div>
       <div class="px-4 md:px-8 py-4">
          <div id="content" class="text-base/7 space-y-4 mt-4"></div>
