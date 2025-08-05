@@ -1,7 +1,7 @@
 const template = `
    <div class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 xl:py-32 text-gray-900 dark:text-white">
       <div class="flex flex-col xl:grid grid-flow-col grid-rows-3 gap-6">
-         <div id="journal-main" class="relative row-span-3 shadow hidden xl:block relative text-white">
+         <div id="siquijor-journal" class="relative row-span-3 shadow hidden xl:block relative text-white">
             <-- Content here is set by setMainJournals()  -->
          </div>
          <div class="col-span-2">
@@ -14,7 +14,7 @@ const template = `
                perfect blend of adventure, relaxation, and culture—an unforgettable destination.
             </p>
          </div>
-         <div id="journal-list" class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 col-span-2 row-span-2">
+         <div id="siquijor-journal-list" class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 col-span-2 row-span-2">
             <-- Content here is set by setJounalList() -->
          </div>
       </div>
@@ -22,17 +22,17 @@ const template = `
 `;
 
 import { journals } from "../../js/journals";
-import { setJounalList, setMainJournals } from "./setJournals";
-
+import { setJounalList, setMainJournal } from "./setJournals";
 
 const setTravelOneSection = (element) => {
    element.innerHTML = template;
 
-   const journalListContainer = document.getElementById("journal-list");
-   const journalMainContainer = document.getElementById("journal-main");
+   const journalListContainer = document.getElementById("siquijor-journal-list");
+   const journalMainContainer = document.getElementById("siquijor-journal");
    
-   setMainJournals(journalMainContainer, journals);
-   setJounalList(journalListContainer, journals);
+   const siquijorJournals = journals.filter(journal => journal.blog === 'Exploring the Enchanting Island of Siquijor');
+   setMainJournal(journalMainContainer, siquijorJournals);
+   setJounalList(journalListContainer, siquijorJournals);
 }
 
 export default setTravelOneSection;

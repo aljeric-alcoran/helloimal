@@ -1,4 +1,4 @@
-export const setMainJournals = (element, journals) => {
+export const setMainJournal = (element, journals) => {
    const journal = journals[0];
    const strippedContent = journal.content.replace(/<\/?p>/g, '').replace(/\n/g, ' ').trim();
 

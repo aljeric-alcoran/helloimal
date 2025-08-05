@@ -236,5 +236,242 @@ export const journals = [
             alt: 'IMG_4321_hu8xtl',
          }
       ]
+   },
+   {
+      id: 'bohol-chocolate-hills',
+      href: `/travel/bohol-chocolate-hills`,
+      title: 'Chocolate Hills',
+      author: 'Al Jeric Alcoran',
+      readDuration: '2 Minutes Read',
+      date: 'June 01, 2024',
+      category: 'Travel',
+      blog: 'A Nature-Filled Journey Through Bohol',
+      content: `
+         <p>
+            It was a bright, sunny day—perfect for a little road trip adventure. With excitement brewing, we rented a car 
+            and set off to see one of the Philippines’ most iconic natural wonders: the Chocolate Hills of Bohol.
+         </p>
+         <p>
+            The drive was smooth and scenic, and when we finally arrived, we couldn’t help but feel a sense of awe. There 
+            they were—hundreds of perfectly dome-shaped hills, stretching far into the horizon like a landscape from a storybook. 
+            It felt surreal, almost like we’d stepped into a different world.
+         </p>
+         <p>
+            We weren’t alone in our wonder. Tourists and travelers from all over were there too, soaking in the beauty and 
+            snapping photos from every angle. The place was full of energy, yet somehow still peaceful.
+         </p>
+         <p>
+            To truly appreciate the view, we took the long hike up to the main viewing deck. The climb was a bit tiring under 
+            the midday sun, but once we reached the top, the overlooking view made every step worthwhile. Rolling green mounds 
+            as far as the eye could see—it was nature’s artwork in full display.
+         </p>
+         <p>
+            While resting at the top, I took a moment to read about the history of the Chocolate Hills—how they were formed 
+            by uplifted coral deposits and centuries of erosion. Learning about their origin made the experience feel even 
+            more special, like we were standing on something ancient and extraordinary.
+         </p>
+         <p>
+            Of course, we made sure to take plenty of pictures—because some views deserve to be remembered and shared.
+         </p>
+      `,
+      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754370802/2024_06_01_14_32_IMG_4296_j4pbif.jpg',
+      gallery: [
+         {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370802/2024_06_01_14_53_IMG_4387_nfkffh.jpg',
+            alt: 'IMG_4387_nfkffh',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370803/2024_06_01_14_36_IMG_4379_ld4ibg.jpg',
+            alt: 'IMG_4379_ld4ibg',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370842/2024_06_01_14_29_IMG_4293_in6cub.jpg',
+            alt: 'IMG_4293_in6cub',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_14_28_IMG_4286_dgtogh.jpg',
+            alt: 'IMG_4286_dgtogh',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_14_41_IMG_4380_g7mglv.jpg',
+            alt: 'IMG_4380_g7mglv',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_14_41_IMG_4381_efg6go.jpg',
+            alt: 'IMG_4381_efg6go',
+         }
+      ]
+   },
+   {
+      id: 'bohol-tarsier-sanctuary',
+      href: `/travel/bohol-tarsier-sanctuary`,
+      title: 'Tarsier Sanctuary',
+      author: 'Al Jeric Alcoran',
+      readDuration: '2 Minutes Read',
+      date: 'June 01, 2024',
+      category: 'Travel',
+      blog: 'A Nature-Filled Journey Through Bohol',
+      content: `
+         <p>
+            We continued our Bohol adventure with a visit to one of its most beloved attractions—the Tarsier Sanctuary.
+         </p>
+         <p>
+            We arrived at the sanctuary and got our tickets at the booth, excitement bubbling as we stepped into the quiet, 
+            forested trail. Before heading in, we couldn’t resist a quick photo at the colorful “I ❤️ Bohol” installation—a 
+            perfect spot for capturing memories.
+         </p>
+         <p>
+            The sanctuary was calm and peaceful by design. The atmosphere was intentionally quiet, ensuring that the 
+            tarsiers—the stars of the show—weren’t disturbed. We moved slowly and respectfully, eager to see these tiny 
+            primates up close. And then we saw them.
+         </p>
+         <p>
+            Tarsiers are much smaller than we expected, with delicate hands, wide eyes, and an almost mystical presence. 
+            Seeing them up close was both elegant and amazing—they clung to branches with an effortless grace that made us 
+            fall silent in awe. Guides pointed them out gently, and we took photos carefully, making sure our flashes were off, 
+            not wanting to startle these sensitive creatures.
+         </p>
+         <p>
+            After the tour, we made a quick stop at the souvenir shop, grabbing some T-shirts and keychains to remember the 
+            visit. It felt good to take a piece of the experience home with us.
+         </p>
+         <p>
+            This quiet detour into the world of the tarsiers was the perfect way to balance the grandeur of the Chocolate Hills. 
+            The trip was amazing from start to finish—a beautiful blend of adventure, nature, and quiet wonder.
+         </p>
+      `,
+      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_13_52_IMG_4253_ubmnyj.jpg',
+      gallery: [
+         {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_13_26_IMG_4240_mnxtj8.jpg',
+            alt: 'IMG_4240_mnxtj8',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_13_28_IMG_4245_pywjh2.jpg',
+            alt: 'IMG_4245_pywjh2',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_13_30_IMG_4370_qklits.jpg',
+            alt: 'IMG_4251_gzwxcj',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370741/2024_06_01_13_34_IMG_4252_ec77br.jpg',
+            alt: 'IMG_4370_qklits',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_13_34_IMG_4251_gzwxcj.jpg',
+            alt: 'IMG_4252_ec77br',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_13_37_IMG_4376_s0xj5x.jpg',
+            alt: 'IMG_4376_s0xj5x',
+         }
+      ]
+   },
+   {
+      id: 'bilar-man-made-forest',
+      href: `/travel/bilar-man-made-forest`,
+      title: 'Bilar Man-Made Forest',
+      author: 'Al Jeric Alcoran',
+      readDuration: '1.5 Minutes Read',
+      date: 'June 01, 2024',
+      category: 'Travel',
+      blog: 'A Nature-Filled Journey Through Bohol',
+      content: `
+         <p>
+            On our way to the famous Chocolate Hills, we made a short but refreshing stop at the Bilar Man-Made Forest—a 
+            place that surprised us with its quiet charm and natural beauty.
+         </p>
+         <p>
+            Stretching along the road like a green tunnel, the forest instantly felt cooler the moment we entered. The air 
+            turned crisp and refreshing, a welcome change from the sunny heat of the open road. The tall mahogany trees 
+            stood in perfect rows, their trunks straight and strong, reaching up like silent guardians of the path.
+         </p>
+         <p>
+            What made the place feel magical was the way the shadows played on the road—filtered sunlight dancing gently 
+            through the dense canopy above. It was like nature had dimmed the lights just enough to give the whole forest 
+            a calm, cinematic glow.
+         </p>
+         <p>
+            The spot has clearly become a favorite for travelers. Many people stop here just to take photos, and it’s easy 
+            to see why. Every angle is picture-perfect, whether you're standing in the middle of the road with trees rising 
+            behind you or capturing a candid shot with the soft light spilling through the leaves.
+         </p>
+         <p>
+            It was a brief visit, but it added a peaceful moment to our day—a pause to breathe, take photos, and appreciate 
+            the beauty of something man-made, yet in harmony with nature.
+         </p>
+      `,
+      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_13_10_IMG_4264_y5jxp7.jpg',
+      gallery: [
+         {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370744/2024_06_01_13_14_IMG_4367_igvrg6.jpg',
+            alt: 'IMG_4210_zf2ti2',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_13_11_IMG_4266_nrjg5d.jpg',
+            alt: 'IMG_4312_cdld6s',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_13_17_IMG_4237_svjrt9.jpg',
+            alt: 'IMG_4310_j6s7ax',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_13_13_IMG_4355_uws3gg.jpg',
+            alt: 'IMG_4315_gx25z2',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_13_10_IMG_4264_y5jxp7.jpg',
+            alt: 'IMG_4314_tlqmtm',
+         }
+      ]
+   },
+   {
+      id: 'bohol-xzootic-animal-park',
+      href: `/travel/bohol-xzootic-animal-park`,
+      title: 'Xzootic Animal Park',
+      author: 'Al Jeric Alcoran',
+      readDuration: '2 Minutes Read',
+      date: 'June 01, 2024',
+      category: 'Travel',
+      blog: 'A Nature-Filled Journey Through Bohol',
+      content: `
+         <p>
+            Before heading off to the Chocolate Hills, we made a quick but fascinating visit to Xzootic Animal Park in 
+            Bohol—a small animal sanctuary that turned out to be a fun and interactive experience.
+         </p>
+         <p>
+            After paying the entrance fee, we entered the park and were immediately drawn to one of its most well-known 
+            attractions: the largest preserved python, displayed for visitors to see up close. It was massive and a little 
+            intimidating, but incredibly impressive.
+         </p>
+         <p>
+            As we wandered through the park, we saw a variety of animals—iguanas basking lazily, colorful birds chirping in 
+            their enclosures, and of course, several kinds of snakes. The diversity surprised us, especially for a compact 
+            zoo, and made the short visit more enjoyable than we expected.
+         </p>
+         <p>
+            One of the highlights was getting the chance to hold a live python and pose for photos with it. Despite our initial 
+            hesitation, the python was harmless and surprisingly calm, clearly comfortable being handled by curious visitors 
+            like us. It was a memorable moment—equal parts thrilling and surreal.
+         </p>
+         <p>
+            We also caught a glimpse of some butterflies fluttering around the garden area, adding a soft, natural touch to 
+            the experience. Before leaving, we stopped by the souvenir corner and picked up a few keepsakes, then continued 
+            on toward the next big destination—the Chocolate Hills.
+         </p>
+         <p>
+            It was a brief stop, but a fun one—perfect for animal lovers or anyone looking to add a little adventure to 
+            their Bohol itinerary.
+         </p>
+      `,
+      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_12_09_IMG_4333_pm5hki.jpg',
+      gallery: [
+         {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_12_32_IMG_4352_uczxnp.jpg',
+            alt: 'IMG_4210_zf2ti2',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_12_09_IMG_4336_zmjmrb.jpg',
+            alt: 'IMG_4312_cdld6s',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370746/2024_06_01_12_12_IMG_4339_pyzvns.jpg',
+            alt: 'IMG_4310_j6s7ax',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370744/2024_06_01_12_32_IMG_4350_kiqaew.jpg',
+            alt: 'IMG_4315_gx25z2',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370746/2024_06_01_12_15_IMG_4259_ii4dtm.jpg',
+            alt: 'IMG_4314_tlqmtm',
+         }, {
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370746/2024_06_01_12_15_IMG_4345_bakgpu.jpg',
+            alt: 'IMG_4321_hu8xtl',
+         }
+      ]
    }
 ]
