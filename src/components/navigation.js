@@ -1,7 +1,7 @@
 const template = `
    <div class="absolute w-full bg-white/60 border-gray-200 dark:bg-gray-900/60 backdrop-blur-md z-10">
       <div class="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:py-8">
-         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/img/logo.webp" class="h-8" alt="AL Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AL</span>
          </a>
