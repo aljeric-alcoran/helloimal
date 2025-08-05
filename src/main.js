@@ -4,7 +4,7 @@ import setScrollToTop from './components/scrollTop.js';
 import { handleRoute } from './router.js';
 
 document.querySelector('#app').innerHTML = `
-   <div class="relative">
+   <div class="relative scroll-smooth">
       <nav id="navigation" class="nav-container"></nav>
       <div id="main-content"></div>
       <footer id="footer" class="footer-container"></footer>

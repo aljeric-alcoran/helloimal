@@ -4,7 +4,7 @@ const template = `
       <div class="md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:gap-4 items-start justify-center mt-10 md:mt-24">
          <div class"flex flex-col gap-4">
             <div class="w-full md:w-80 p-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-sm shadow-sm">
-               <img src="/img/hero.jpg" class="h-56 w-full object-cover transition-all duration-300 filter grayscale hover:grayscale-0" alt="Profile Pic">
+               <img src="https://res.cloudinary.com/docdldire/image/upload/v1754235497/2024_12_31_18_51_IMG_6041_zksw1o.jpg" class="h-56 w-full object-cover transition-all duration-300 filter grayscale hover:grayscale-0" alt="Profile Pic">
                <div class="flex flex-col p-4">
                   <p class="text-lg font-semibold flex items-center gap-1">Al Jeric Alcoran <img src="/img/verified-badge.webp" class="w-5 h-5" alt="Verified Badge"/></p>
                   <span class="text-sm text-gray-500">Web Developer</span>

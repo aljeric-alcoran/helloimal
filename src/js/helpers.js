@@ -13,5 +13,5 @@ export const downloadCV = () => {
    link.download = 'downloaded-file';
    document.body.appendChild(link);
    link.click();
-   link.remove();
+   document.body.removeChild(link);
 }
