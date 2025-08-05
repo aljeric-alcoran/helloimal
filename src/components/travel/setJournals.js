@@ -10,7 +10,7 @@ export const setMainJournal = (element, journals) => {
                <span class="absolute inset-0 z-10"></span>
                ${journal.title}
             </a> 
-            <p class="text-sm/6 line-clamp-3">
+            <p class="text-sm/6 line-clamp-4">
                ${strippedContent}
             </p>
             <p class="text-sm/5 absolute bottom-4 left-4 text-white">Read more →</p>
@@ -30,7 +30,7 @@ export const setJounalList = (element, journals) => {
                   <span class="absolute inset-0 z-10"></span>
                   ${journal.title}
                </a>
-               <p class="text-sm/6 line-clamp-3 mt-4">
+               <p class="text-sm/6 line-clamp-10 md:line-clamp-6 mt-4">
                   ${strippedContent}
                </p>
                <p class="text-sm/5 absolute text-blue-600 dark:text-blue-400 bottom-4 left-4">
