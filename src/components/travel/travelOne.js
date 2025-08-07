@@ -14,7 +14,7 @@ const template = `
                perfect blend of adventure, relaxation, and culture—an unforgettable destination.
             </p>
          </div>
-         <div id="siquijor-journal-list" class="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 col-span-2 row-span-2">
+         <div id="siquijor-journal-list" class="grid md:grid-cols-2 xl:grid-cols-3 content-end gap-4 md:gap-6 col-span-2 row-span-2">
             <-- Content here is set by setJounalList() -->
          </div>
       </div>
