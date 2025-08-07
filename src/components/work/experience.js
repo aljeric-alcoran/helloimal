@@ -1,7 +1,7 @@
 const template = `
    <div class="h-full flex flex-col items-center justify-center">
       <div class="mt-30 w-full max-w-screen-md grid grid-cols-3 gap-4">
-         <img src="/img/boh-chocolate-hills.jpg" class="shadow bg-gray-100 dark:bg-gray-800 w-full h-full rounded-xl w-full object-cover" alt="bohol"/>
+         <img src="https://res.cloudinary.com/docdldire/image/upload/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg" class="shadow bg-gray-100 dark:bg-gray-800 w-full h-full rounded-xl w-full object-cover" alt="IMG_0960_gvc9ln"/>
          <div class="bg-gray-100 dark:bg-gray-800 col-span-2 p-8 rounded-xl shadow">
             <div class="w-12 h-12 flex items-center justify-center p-3 rounded-lg bg-gray-200 dark:bg-gray-700">
                <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">

@@ -226,7 +226,7 @@ export const journals = [
             src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234683/2024_05_31_17_28_IMG_4310_j6s7ax.jpg',
             alt: 'IMG_4310_j6s7ax',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_17_52_IMG_4315_gx25z2.jpg',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754547896/2024_05_31_17_06_IMG_4307_ljtkiz.jpg',
             alt: 'IMG_4315_gx25z2',
          }, {
             src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_17_52_IMG_4314_tlqmtm.jpg',
@@ -274,7 +274,7 @@ export const journals = [
             Of course, we made sure to take plenty of pictures—because some views deserve to be remembered and shared.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754370802/2024_06_01_14_32_IMG_4296_j4pbif.jpg',
+      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754547307/2024_06_01_14_35_IMG_4303_hvytr6.jpg',
       gallery: [
          {
             src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370802/2024_06_01_14_53_IMG_4387_nfkffh.jpg',
@@ -283,7 +283,7 @@ export const journals = [
             src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370803/2024_06_01_14_36_IMG_4379_ld4ibg.jpg',
             alt: 'IMG_4379_ld4ibg',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370842/2024_06_01_14_29_IMG_4293_in6cub.jpg',
+            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754547522/2024_06_01_14_29_IMG_4294_g98bcj.jpg',
             alt: 'IMG_4293_in6cub',
          }, {
             src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_14_28_IMG_4286_dgtogh.jpg',
