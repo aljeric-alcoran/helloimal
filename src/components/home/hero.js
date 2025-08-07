@@ -9,14 +9,14 @@ const template = `
             <p>an interactive Web Developer</p>
 
             <div class="flex items-center justify-center gap-2 mt-8 w-full">
-               <button id="download-file-btn" type="button" class="cursor-pointer text-white border border-[#3150CE] bg-[#3150CE] hover:bg-[#3150CE]/90 focus:ring-2 focus:outline-none focus:ring-[#3150CE]/50 font-medium rounded-xl text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3150CE]/55 gap-1">
+               <button id="download-file-btn" type="button" class="cursor-pointer text-white border border-[#3150CE] bg-[#3150CE] hover:bg-[#3150CE]/90 focus:ring-2 focus:outline-none focus:ring-[#3150CE]/50 font-medium rounded-xl text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3150CE]/55 gap-2">
                   <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/>
                      </svg>                   
                   Download CV
                </button>
 
-               <button id="contact-me-btn" type="button" class="cursor-pointer text-[#3150CE] bg-[#3150CE]/10 hover:bg-[#3150CE]/15 border border-[#3150CE] hover:border-[#3150CE]/90 focus:ring-2 focus:outline-none focus:ring-[#3150CE]/50 font-medium rounded-xl text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3150CE]/55 gap-1">
+               <button id="contact-me-btn" type="button" class="cursor-pointer text-[#3150CE] bg-[#3150CE]/10 hover:bg-[#3150CE]/15 border border-[#3150CE] hover:border-[#3150CE]/90 focus:ring-2 focus:outline-none focus:ring-[#3150CE]/50 font-medium rounded-xl text-sm px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3150CE]/55 gap-2">
                   <svg class="w-5 h-5 text-[#3150CE]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
                   </svg>                                     

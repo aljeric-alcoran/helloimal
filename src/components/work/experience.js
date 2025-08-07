@@ -1,6 +1,31 @@
 const template = `
    <div class="h-full flex flex-col items-center justify-center">
-      <div class="mt-30 w-full max-w-screen-md grid grid-cols-3 gap-4">
+      <div class="mt-20 text-center w-full max-w-screen-md py-24 space-y-2">
+         <div class="mb-6 inline-flex items-center gap-1 justify-center bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-md px-2 py-1">
+            <div class="inline-flex items-center justify-center w-2 h-2 border border-green-300 rounded-full">
+               <span class="w-1 h-1 bg-green-500 rounded-full"></span>
+            </div>
+            <span class="text-xs">Available for Work</span>
+         </div>
+         <h3 class="text-5xl font-semibold">Al Jeric Alcoran</h3>
+         <p>Web Developer</p>
+         <div class="flex items-center justify-center gap-2 mt-8 w-full">
+            <button id="download-file-btn" type="button" class="cursor-pointer text-white border border-[#3150CE] bg-[#3150CE] hover:bg-[#3150CE]/90 focus:ring-2 focus:outline-none focus:ring-[#3150CE]/50 rounded-xl text-xs px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3150CE]/55 gap-2">
+               <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/>
+               </svg>                   
+               Download CV
+            </button>
+
+            <button id="contact-me-btn" type="button" class="cursor-pointer text-[#3150CE] bg-[#3150CE]/10 hover:bg-[#3150CE]/15 border border-[#3150CE] hover:border-[#3150CE]/90 focus:ring-2 focus:outline-none focus:ring-[#3150CE]/50 rounded-xl text-xs px-4 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3150CE]/55 gap-2">
+               <svg class="w-4 h-4 text-[#3150CE]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+               </svg>                                     
+               Contact Me
+            </button>
+         </div>
+      </div>
+      <div class="mt-4 w-full max-w-screen-md grid grid-cols-3 gap-4">
          <img src="https://res.cloudinary.com/docdldire/image/upload/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg" class="shadow bg-gray-100 dark:bg-gray-800 w-full h-full rounded-xl w-full object-cover" alt="IMG_0960_gvc9ln"/>
          <div class="bg-gray-100 dark:bg-gray-800 col-span-2 p-8 rounded-xl shadow">
             <div class="w-12 h-12 flex items-center justify-center p-3 rounded-lg bg-gray-200 dark:bg-gray-700">
@@ -10,7 +35,7 @@ const template = `
             </div>
             <p class="mt-12 text-xl font-semibold">Professional Profile</p>
             <p class="mt-3 text-sm/6 text-balance text-gray-500 dark:text-gray-400 w-full">
-               Motivated and detail-oriented Frontend Web Developer with a strong foundation in 
+               Motivated and detail-oriented Web Developer with a strong foundation in 
                modern web technologies. Skilled in building responsive, user-friendly interfaces and contributing 
                to full-stack development projects. Eager to learn and grow in a collaborative team environment while 
                delivering high-quality code and innovative solutions.

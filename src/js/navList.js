@@ -4,8 +4,8 @@ export const setNavlist = () => {
 
    const navItems = [
       { href: '/', label: 'About' },
-      { href: '/travel', label: 'Travel' },
       { href: '/work', label: 'Work' },
+      { href: '/travel', label: 'Travel' },
    ];
     
    navItems.forEach(list => {
