@@ -17,4 +17,12 @@ setScrollToTop(document.getElementById('footer'));
 
 handleRoute(window.location.pathname);
 
-
+window.addEventListener('DOMContentLoaded', () => {
+   const hash = window.location.hash;
+   if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+   }
+});
