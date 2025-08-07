@@ -3,7 +3,7 @@ const template = `
       <h1 class="text-2xl font-bold py-4 md:py-0 text-center"><span class="text-[#3150CE]">About</span> me</h1>
       <div class="md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:gap-4 items-start justify-center mt-10 md:mt-24">
          <div class"flex flex-col gap-4">
-            <div class="w-full md:w-80 p-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-sm shadow-sm">
+            <div class="w-full md:w-80 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-xl shadow-sm overflow-hidden">
                <img src="https://res.cloudinary.com/docdldire/image/upload/v1754235497/2024_12_31_18_51_IMG_6041_zksw1o.jpg" class="h-56 w-full object-cover transition-all duration-300 filter grayscale hover:grayscale-0" alt="Profile Pic">
                <div class="flex flex-col p-4">
                   <p class="text-lg font-semibold flex items-center gap-1">Al Jeric Alcoran <img src="/img/verified-badge.webp" class="w-5 h-5" alt="Verified Badge"/></p>
@@ -45,11 +45,11 @@ const template = `
                </div>
             </div>
          </div>
-         <div class="w-full rounded-sm border border-white dark:border-gray-700 bg-white dark:bg-gray-900 p-5 md:p-10 dark:text-white text-gray-900 shadow-sm">
+         <div class="w-full rounded-xl border border-white dark:border-gray-700 bg-white dark:bg-gray-900 p-5 md:p-10 dark:text-white text-gray-900 shadow-sm">
             <h2 class="text-lg font-semibold">Biography</h2>
             <div class="mt-6 grid lg:grid-cols-2 gap-5 md:gap-10 text-sm text-justify lg:text-left">
                <div class="space-y-6">
-                  <div class="text-base/7">
+                  <div class="text-base/7 text-balance">
                      Hi, I’m AL, a web developer with over three years of hands-on experience in building and maintaining modern, responsive websites and web applications.
                      My career started in 2021 as a junior frontend developer, where I developed a strong foundation in frontend development. After a year, I began working as a freelance software developer at a new company, focusing on maintaining their application and their website to meet evolving business needs.
                      When I’m not coding, you’ll likely find me playing electronic games, reading manga & manhwa or creating funny videos XD.
@@ -66,7 +66,7 @@ const template = `
                <div class="space-y-6">
                   <div class="space-y-1">    
                      <p class="font-semibold">How do you spend your free time?</p>
-                     <span class="text-base/7">I record my gameplay and upload it to YouTube. I also create funny videos for Facebook, and I read manga and manhwa online. I also watch anime series like: One Piece, Blue Lock etc.</span>
+                     <span class="text-base/7 text-balance">I record my gameplay and upload it to YouTube. I also create funny videos for Facebook, and I read manga and manhwa online. I also watch anime series like: One Piece, Blue Lock etc.</span>
                   </div>
                   <div class="space-y-1">    
                      <p class="font-semibold">What is your dream?</p>

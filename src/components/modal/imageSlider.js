@@ -4,7 +4,7 @@ const template = `
       <div class="w-full md:max-w-5xl md:px-4 flex items-center justify-center">
          <button id="prevImage" class="hidden lg:block absolute cursor-pointer left-0 md:left-8 text-white text-5xl px-6 hover:text-gray-300">&lsaquo;</button>
          <div class="w-full h-full min-h-[80vh] max-h-[80vh] flex items-center overflow-hidden bg-white dark:bg-black">
-            <img id="modalImage" src="" alt="Modal Image" class="max-h-[80vh] md:rounded-sm shadow-lg object-contain" />
+            <img id="modalImage" src="" alt="Modal Image" class="max-h-[80vh] md:rounded-xl shadow-lg object-contain" />
          </div>
          <button id="nextImage" class="hidden lg:block absolute cursor-pointer right-0 md:right-8 text-white text-5xl px-6 hover:text-gray-300">&rsaquo;</button>
       </div>
