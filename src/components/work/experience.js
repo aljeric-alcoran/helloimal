@@ -58,8 +58,8 @@ const template = `
          </div>
          <p class="mt-6 text-xl font-semibold">Work Experience</p>
          <p class="mt-3 text-base text-gray-500 dark:text-gray-400 w-full">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Quisquam, quase. Lorem 
-            ipsum dolor sit amet consectetur.
+            Track record of proven ability to build and maintain <br>
+            web applications, delivering reliable solutions for clients.
          </p>
       </div>
 
@@ -79,12 +79,12 @@ const template = `
                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clip-rule="evenodd"/>
                      </svg> 
-                     Work from home
+                     Remote work
                   </p>
                   <p class="text-sm/6">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quase. Lorem ipsum dolor sit amet 
-                     consectetur adipisicing elit. Quisquam, quase. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                     Quisquam, quase. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quase. 
+                     I work across both frontend and backend development, working on web apps with Angular, 
+                     websites with WordPress, and mobile applications with Ionic. I focus on building, maintaining, 
+                     and optimizing applications to ensure performance, scalability, and a seamless user experience.
                   </p>
                </div>
             </div>
@@ -107,9 +107,10 @@ const template = `
                      Cagayan de Oro City
                   </p>
                   <p class="text-sm/6">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quase. Lorem ipsum dolor sit amet 
-                     consectetur adipisicing elit. Quisquam, quase. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                     Quisquam, quase. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quase. 
+                     In my first role as a Junior Frontend Developer, I worked on a personal information system built with 
+                     Vue. I handled API integration from the backend team and made sure the user experience was smooth and 
+                     responsive. I also actively took part in team discussions and sprint planning sessions, as we followed 
+                     Agile Scrum practices throughout the project. 
                   </p>
                </div>
             </div>
