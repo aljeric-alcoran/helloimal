@@ -128,7 +128,10 @@ const setWorkExperience= (element) => {
    downloadCVButton.addEventListener('click', () => downloadCV());
 
    const contactMeButton = document.getElementById('contact-me');
-   contactMeButton.addEventListener('click', () => window.location.href = '/#contact');
+   contactMeButton.addEventListener('click', () => {
+      localStorage.setItem('scrollTo', 'contact');
+      window.location.href = '/';
+   });
 };
 
 export default setWorkExperience;

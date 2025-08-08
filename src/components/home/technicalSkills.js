@@ -1,5 +1,5 @@
 const template = `
-   <div class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 text-gray-900 dark:text-white">
+   <div id="skills" class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 text-gray-900 dark:text-white">
       <h1 class="text-2xl font-bold py-4 md:py-0 text-center"><span class="text-[#3150CE]">Technical</span> skills</h1>
       <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-10 md:mt-24">
          <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-xl">
