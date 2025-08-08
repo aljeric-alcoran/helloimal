@@ -11,7 +11,7 @@ body {
 }
 
 .main-banner-container {
-  @apply max-w-screen-xl items-center justify-center mx-auto px-8  text-gray-900 dark:text-white;
+  @apply max-w-screen-xl items-center justify-center mx-auto px-8 text-gray-900 dark:text-white;
 }
 
 .footer-container {
