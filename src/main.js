@@ -24,6 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
          const scrollElement = document.getElementById(scrollToId);
          if (scrollElement) scrollElement.scrollIntoView({ behavior: 'smooth' });
-      }, 400); 
+      }, 300); 
    }
  });

@@ -15,7 +15,7 @@ const template = `
             <label class="text-sm">Tailwindcss</label>
          </div>
          <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-xl">
-            <img id="vite" src="/svg/vite.svg" width="64" alt="vite" class="transition group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] group-hover:drop-shadow-[0_0_16px_rgba(234,179,8,0.8)] group-hover:drop-shadow-[0_0_24px_rgba(244,114,182,0.6)]">
+            <img id="vite" src="/svg/vite.svg" width="60" alt="vite" class="transition group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] group-hover:drop-shadow-[0_0_16px_rgba(234,179,8,0.8)] group-hover:drop-shadow-[0_0_24px_rgba(244,114,182,0.6)]">
             <label class="text-sm">Vite</label>
          </div>
          <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-xl">

@@ -15,3 +15,8 @@ export const downloadCV = () => {
    link.click();
    document.body.removeChild(link);
 }
+
+export const scrollTo = (elementId, route) => {
+   localStorage.setItem('scrollTo', elementId);
+   window.location.href = route;
+} 
