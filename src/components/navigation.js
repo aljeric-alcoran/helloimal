@@ -1,5 +1,5 @@
 const template = `
-   <div class="absolute w-full bg-white/60 border-gray-200 dark:bg-gray-900/60 backdrop-blur-md z-10 shadow">
+   <div class="absolute w-full bg-white/60 border-gray-200 dark:bg-gray-900/60 backdrop-blur-md z-10 shadow-sm">
       <div class="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:py-8">
          <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/img/logo.webp" class="h-8" alt="AL Logo" />
@@ -7,7 +7,7 @@ const template = `
          </a>
 
          <div class="fixed md:static mt-16 inset-0 top-2 z-50 md:z-0 md:mt-0 w-full md:w-auto h-full md:block hidden" id="navbar-default">
-            <ul id="nav-list" class="font-medium flex flex-col p-4 md:p-0 bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent md:bg-opacity-0 border border-gray-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"></ul>
+            <ul id="nav-list" class="font-medium flex flex-col p-4 md:p-0 bg-gray-100 dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent md:bg-opacity-0 border border-gray-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"></ul>
          </div>
 
          <div class="flex items-center gap-2 md:gap-6 relative">
@@ -33,18 +33,18 @@ const template = `
 import setTheme from "../js/theme";
 import { setNavlist } from "../js/navList";
 
+
 const setNavigation = (element) => {
    element.innerHTML = template;
 
    const navbarBtn = document.getElementById('navbar-btn');
    const navbar = document.getElementById('navbar-default');
-   
-   const toogleNavbar = () => {
-      const isHidden = navbar.classList.contains('hidden');
-      navbar.classList.toggle('hidden', !isHidden);
-   }
+   const outsideClick = document.getElementById('main-content');
 
-   navbarBtn.addEventListener('click', toogleNavbar);
+   navbarBtn.addEventListener('click', toggleNavbar);
+   outsideClick.addEventListener('click', () => {
+      navbar.classList.toggle('hidden', true);
+   });
    
    window.addEventListener('resize', () => {
       if (window.innerWidth === 768) {
@@ -55,8 +55,15 @@ const setNavigation = (element) => {
    setTheme();
 }
 
+const toggleNavbar = () => {
+   const navbar = document.getElementById('navbar-default');
+
+   const isHidden = navbar.classList.contains('hidden');
+   navbar.classList.toggle('hidden', !isHidden);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-   setNavlist();
+   setNavlist(toggleNavbar);
 });
 
 export default setNavigation;
