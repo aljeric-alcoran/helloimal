@@ -5,7 +5,7 @@ const template = `
             <-- Content here is set by setMainJournals()  -->
          </div>
          <div class="col-span-2">
-            <p class="text-2xl/10 md:text-2xl font-semibold">Exploring the Enchanting Island of Siquijor</p>
+            <p class="text-2xl/10 md:text-2xl font-semibold text-balance">Exploring the Enchanting Island of Siquijor</p>
             <p class="mt-8 text-base/7">
                We traveled to Siquijor, a mystical island in the Philippines known for its natural beauty and local legends. 
                The trip was filled with serene beaches, hidden waterfalls like Cambugahay Falls, and scenic rides along quiet 

@@ -1,10 +1,10 @@
-export const setNavlist = () => {
+export const setNavlist = (toggleNavbar) => {
    const navList = document.getElementById('nav-list');
    const currentPath = window.location.pathname;
 
    const navItems = [
       { href: '/', label: 'About' },
-      { href: '/work', label: 'Work' },
+      { href: '/experience', label: 'Experience' },
       { href: '/travel', label: 'Travel' },
    ];
     
@@ -12,6 +12,7 @@ export const setNavlist = () => {
       const li = document.createElement('li');
       const a = document.createElement('a');
 
+      li.onclick = () => toggleNavbar();
       a.href = list.href;
       a.textContent = list.label;
       a.setAttribute('nav-link', '')

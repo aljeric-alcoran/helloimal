@@ -12,7 +12,7 @@ export const routeDefinitions = [
          initRecaptcha();
       }
    }, {
-      path: '/work',
+      path: '/experience',
       handler: () => setWorkPage(document.getElementById('main-content'))
    }, {
       path: '/travel',
