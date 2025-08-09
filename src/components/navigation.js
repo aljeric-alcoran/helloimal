@@ -1,10 +1,15 @@
 const template = `
-   <div class="absolute w-full bg-white/60 border-gray-200 dark:bg-gray-900/60 backdrop-blur-md z-10">
+   <div class="absolute w-full bg-white/60 border-gray-200 dark:bg-gray-900/60 backdrop-blur-md z-10 shadow">
       <div class="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:py-8">
          <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/img/logo.webp" class="h-8" alt="AL Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AL</span>
          </a>
+
+         <div class="fixed md:static mt-16 inset-0 top-2 z-50 md:z-0 md:mt-0 w-full md:w-auto h-full md:block hidden" id="navbar-default">
+            <ul id="nav-list" class="font-medium flex flex-col p-4 md:p-0 bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent md:bg-opacity-0 border border-gray-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"></ul>
+         </div>
+
          <div class="flex items-center gap-2 md:gap-6 relative">
             <div id="theme-switch" class="md:absolute left-[-60px] bg-gray-50 dark:bg-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 p-1 rounded">
                <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -20,10 +25,6 @@ const template = `
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                </svg>
             </button>
-
-            <div class="fixed md:static mt-16 inset-0 top-2 z-50 md:z-0 md:mt-0 w-full md:w-auto h-full md:block hidden" id="navbar-default">
-               <ul id="nav-list" class="font-medium flex flex-col p-4 md:p-0 bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent md:bg-opacity-0 border border-gray-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"></ul>
-            </div>
          </div>
       </div>
    </div>

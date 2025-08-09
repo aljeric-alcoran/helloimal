@@ -4,7 +4,7 @@ export const setNavlist = () => {
 
    const navItems = [
       { href: '/', label: 'About' },
-      { href: '/work', label: 'Work' },
+      { href: '/experience', label: 'Experience' },
       { href: '/travel', label: 'Travel' },
    ];
     
