@@ -2,7 +2,7 @@ const template = `
    <div class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 xl:py-32 text-gray-900 dark:text-white">
       <div class="flex flex-col xl:grid grid-flow-col grid-rows-3 gap-6">
          <div class="col-span-2">
-            <p class="text-2xl/10 md:text-2xl font-semibold">A Nature-Filled Journey Through Bohol</p>
+            <p class="text-2xl/10 md:text-2xl font-semibold text-balance">A Nature-Filled Journey Through Bohol</p>
             <p class="mt-8 text-base/7">
                We traveled to Bohol and visited some of its most unique attractions. I saw the iconic Chocolate Hills, 
                met tiny tarsiers up close, and explored the Xzootic Animal Park and Butterfly Garden. A drive through 
