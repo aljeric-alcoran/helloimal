@@ -21,9 +21,9 @@ export const scrollTo = (elementId, route) => {
    window.location.href = route;
 } 
 
-export const getOptimizedImageUrl = (baseUrl, originalWidth, originalHeight, maxDimension = 1600) => {
+export const getOptimizedImageUrl = (baseUrl, originalWidth, originalHeight, maxDimension = originalWidth) => {
    const screenWidth = window.innerWidth;
-
+   
    let targetWidth = Math.min(screenWidth, originalWidth, maxDimension);
 
    let targetHeight = Math.round((targetWidth / originalWidth) * originalHeight);
