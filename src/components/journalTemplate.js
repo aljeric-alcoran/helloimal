@@ -81,7 +81,7 @@ const setGallery = (gallery) => {
       inner.innerHTML = `
          <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
          <img 
-            src="${getOptimizedImageUrl(src, w, h)}"
+            src="${getOptimizedImageUrl(src, w, h, 800)}"
             alt="${alt}"
             loading="lazy"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 rounded-xl shadow"
