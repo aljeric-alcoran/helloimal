@@ -31,10 +31,24 @@ const template = `
       </div>
 
       <div class="mt-4 w-full max-w-screen-md grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-4 px-4 md:px-0">
-         <img 
-            src="https://res.cloudinary.com/docdldire/image/upload/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg" 
-            class="hidden md:block shadow bg-gray-100 dark:bg-gray-800 w-full h-full rounded-xl w-full object-cover" alt="IMG_0960_gvc9ln"
-         />
+         <div 
+            class="relative w-full h-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800"
+            style="
+               background-image: url('https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_10,h_10,c_fill,g_auto/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg');
+               background-size: cover;
+               background-position: center;
+            "
+         >
+            <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
+
+            <img 
+               src="https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_600,h_800,c_fill,g_auto/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg"
+               alt="IMG_0960_gvc9ln"
+               loading="lazy"
+               class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 rounded-xl shadow"
+               onload="this.style.opacity='1'"
+            />
+         </div>
          <div class="bg-gray-50 dark:bg-gray-800 col-span-2 p-6 md:p-8 rounded-xl shadow">
             <div class="w-12 h-12 flex items-center justify-center p-3 rounded-lg bg-gray-200 dark:bg-gray-700">
                <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
