@@ -21,13 +21,11 @@ export const scrollTo = (elementId, route) => {
    window.location.href = route;
 } 
 
-export const getOptimizedImageUrl = (baseUrl, originalWidth, originalHeight) => {
+export const getOptimizedImageUrl = (baseUrl, originalWidth, originalHeight, maxDimension = 1600) => {
    const screenWidth = window.innerWidth;
 
-   // Use screen width, but don't upscale beyond original image width
-   let targetWidth = Math.min(screenWidth, originalWidth);
+   let targetWidth = Math.min(screenWidth, originalWidth, maxDimension);
 
-   // Keep aspect ratio
    let targetHeight = Math.round((targetWidth / originalWidth) * originalHeight);
 
    return baseUrl.replace(
