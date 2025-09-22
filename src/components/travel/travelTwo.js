@@ -14,7 +14,7 @@ const template = `
             <-- Content here is set by setJounalList() -->
          </div>
          <div id="bohol-journal" class="row-span-3 shadow hidden xl:block relative text-white">
-            <-- Content here is set by setMainJournals()  -->
+            <-- Content here is set by setMainJournal()  -->
          </div>
       </div>
    </div>
