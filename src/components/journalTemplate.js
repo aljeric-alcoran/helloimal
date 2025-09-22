@@ -26,7 +26,7 @@ const template = `
 `
 import { journals } from "../js/journals";
 import imageSliderModal from './modal/imageSlider.js';
-const cloudinaryURL =  'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,c_fill,g_auto'
+import { customImageUrlOptimizer, getOptimizedImageUrl } from '../js/helpers.js'
 
 const setJournalTemplate = (container, journalId) => {
    container.innerHTML = template;
@@ -44,9 +44,9 @@ const setJournalTemplate = (container, journalId) => {
    const banner = document.getElementById('image-banner');
    banner.innerHTML = `
       <div 
-         class="relative w-full h-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800"
+         class="relative w-full h-full lg:rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 animate-pulse"
          style="
-            background-image: url('${cloudinaryURL},w_10,h_10${journal.coverImage}');
+            background-image: url('${ customImageUrlOptimizer(journal.coverImage.url, 20, 20) }');
             background-size: cover;
             background-position: center;
          "
@@ -54,11 +54,11 @@ const setJournalTemplate = (container, journalId) => {
          <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
 
          <img 
-            src="${cloudinaryURL}${journal.coverImage}"
+            src="${ getOptimizedImageUrl(journal.coverImage.url, journal.coverImage.w, journal.coverImage.h) }"
             alt="${journal.id}"
             loading="lazy"
-            class="absolute inset-0 w-full h-[500px] object-cover object-center opacity-0 transition-opacity duration-700 rounded-xl shadow"
-            onload="this.style.opacity='1'"
+            class="absolute inset-0 w-full h-[500px] object-cover object-center opacity-0 transition-opacity duration-700 shadow"
+            onload="this.style.opacity='1'; this.parentElement.classList.remove('animate-pulse');"
          />
       </div>
    `
@@ -67,13 +67,13 @@ const setJournalTemplate = (container, journalId) => {
 const setGallery = (gallery) => {
    const container = document.getElementById('gallery');
 
-   gallery.forEach(({ src, alt }, index) => {
+   gallery.forEach(({ src, alt, w, h }, index) => {
       const wrapper = document.createElement('div');
       wrapper.className = 'aspect-[4/3] overflow-hidden';
 
       const inner = document.createElement('div');
-      inner.className = 'relative w-full h-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800';
-      inner.style.backgroundImage = `url('${cloudinaryURL},w_10,h_10${src}')`;
+      inner.className = 'relative w-full h-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 animate-pulse';
+      inner.style.backgroundImage = `url('${customImageUrlOptimizer(src, 20, 20)}')`;
       inner.style.backgroundSize = 'cover';
       inner.style.backgroundPosition = 'center';
       inner.onclick = () => imageSliderModal(wrapper, gallery, index);
@@ -81,11 +81,11 @@ const setGallery = (gallery) => {
       inner.innerHTML = `
          <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
          <img 
-            src="${cloudinaryURL},w_600,h_600${src}"
+            src="${getOptimizedImageUrl(src, w, h)}"
             alt="${alt}"
             loading="lazy"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 rounded-xl shadow"
-            onload="this.style.opacity='1'"
+            onload="this.style.opacity='1'; this.parentElement.classList.remove('animate-pulse');"
          />
       `;
       wrapper.appendChild(inner);

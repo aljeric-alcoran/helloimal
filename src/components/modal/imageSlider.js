@@ -7,7 +7,7 @@ const template = `
             <div 
                id="image-container"
                background-image: "url('/img/contact-image.webp')"
-               class="relative inline-block lg:rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800"
+               class="relative inline-block lg:rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 animate-pulse"
                style="background-size: cover; background-position: center;"
             >
                <img 
@@ -22,13 +22,24 @@ const template = `
          <button id="nextImage" class="hidden lg:block absolute cursor-pointer right-0 md:right-8 text-white text-5xl px-6 hover:text-gray-300">&rsaquo;</button>
       </div>
       <div class="flex items-center justify-between px-4 mt-4 lg:hidden">
-         <div id="prevImage" class="text-white text-sm px-4 py-1 mb-2">⮜ Prev</div>
-         <div id="nextImage" class="text-white text-sm px-4 py-1 mb-2">Next ⮞</div>
+         <div id="prevImage" class="flex items-center gap-1 text-white text-sm px-4 py-1 mb-2 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Prev
+         </div>
+
+         <div id="nextImage" class="flex items-center gap-1 text-white text-sm px-4 py-1 mb-2 cursor-pointer">
+            Next
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+         </div>
       </div>
    </div>
 `;
 
-const cloudinaryURL = 'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,c_fill,g_auto';
+import { customImageUrlOptimizer, getOptimizedImageUrl } from '../../js/helpers.js'
 
 const imageSliderModal = (openModalBtn, galleryImages, currentIndex) => {
    const modal = document.getElementById('imageModal');
@@ -40,16 +51,19 @@ const imageSliderModal = (openModalBtn, galleryImages, currentIndex) => {
    const prevBtn = document.querySelectorAll('#prevImage');
    const nextBtn = document.querySelectorAll('#nextImage');
 
+   
    const updateImage = () => {
+      const  { src, w, h } = galleryImages[currentIndex];
       modalImage.style.opacity = "0";
 
-      imageContainer.style.backgroundImage = `url(${cloudinaryURL},w_20,h_20${galleryImages[currentIndex].src})`;
+      imageContainer.style.backgroundImage = `url(${customImageUrlOptimizer(src, 20, 20)})`;
 
-      const fullImageUrl = `${cloudinaryURL}${galleryImages[currentIndex].src}`;
+      const fullImageUrl = `${getOptimizedImageUrl(src, w, h)}`;
       modalImage.src = fullImageUrl;
 
       modalImage.onload = () => {
          modalImage.style.opacity = "1";
+         modalImage.classList.remove('animate-pulse');
       };
    };
 
