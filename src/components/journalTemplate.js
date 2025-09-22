@@ -62,7 +62,6 @@ const setJournalTemplate = (container, journalId) => {
          />
       </div>
    `
-
 }
 
 const setGallery = (gallery) => {
