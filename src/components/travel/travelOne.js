@@ -1,7 +1,7 @@
 const template = `
    <div class="max-w-screen-xl mx-auto p-4 py-8 md:p-8 md:py-16 xl:py-32 text-gray-900 dark:text-white">
       <div class="flex flex-col xl:grid grid-flow-col grid-rows-3 gap-6">
-         <div id="siquijor-journal" class="relative row-span-3 shadow hidden xl:block relative text-white">
+         <div id="siquijor-journal" class="relative row-span-3 shadow hidden xl:block text-white">
             <-- Content here is set by setMainJournals()  -->
          </div>
          <div class="col-span-2">
