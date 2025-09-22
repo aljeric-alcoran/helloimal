@@ -118,32 +118,32 @@ export const journals = [
       },
       gallery: [
          {
-            src: '/v1754232264/2024_05_29_13_02_IMG_4147_fk5tuy.jpg',
+            src: `${cloudinaryURL}/v1754232264/2024_05_29_13_02_IMG_4147_fk5tuy.jpg`,
             alt: 'IMG_4147_fk5tuy',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754232264/2024_05_29_13_15_IMG_4152_nj0l6p.jpg',
+            src: `${cloudinaryURL}/v1754232264/2024_05_29_13_15_IMG_4152_nj0l6p.jpg`,
             alt: 'IMG_4152_nj0l6p',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754232265/2024_05_29_13_08_IMG_4148_fkvegx.jpg',
+            src: `${cloudinaryURL}/v1754232265/2024_05_29_13_08_IMG_4148_fkvegx.jpg`,
             alt: 'IMG_4148_fkvegx',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754232264/2024_05_29_13_08_IMG_4150_ck7myk.jpg',
+            src: `${cloudinaryURL}/v1754232264/2024_05_29_13_08_IMG_4150_ck7myk.jpg`,
             alt: 'IMG_4150_ck7myk',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754232264/2024_05_29_13_15_IMG_4153_cb1edj.jpg',
+            src: `${cloudinaryURL}/v1754232264/2024_05_29_13_15_IMG_4153_cb1edj.jpg`,
             alt: 'IMG_4153_cb1edj',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754232265/2024_05_29_13_08_IMG_4149_jhdiw1.jpg',
+            src: `${cloudinaryURL}/v1754232265/2024_05_29_13_08_IMG_4149_jhdiw1.jpg`,
             alt: 'IMG_4149_jhdiw1',
             w: 4032,
             h: 3024 
@@ -198,32 +198,32 @@ export const journals = [
       },
       gallery: [
          {
-            src: '/v1754233521/2024_05_30_10_17_IMG_4099_zztj5l.jpg',
+            src: `${cloudinaryURL}/v1754233521/2024_05_30_10_17_IMG_4099_zztj5l.jpg`,
             alt: 'IMG_4099_zztj5l',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754233520/2024_05_30_10_54_IMG_4164_gzgbne.jpg',
+            src: `${cloudinaryURL}/v1754233520/2024_05_30_10_54_IMG_4164_gzgbne.jpg`,
             alt: 'IMG_4164_gzgbne',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754233519/2024_05_30_10_54_IMG_4165_j90ai9.jpg',
+            src: `${cloudinaryURL}/v1754233519/2024_05_30_10_54_IMG_4165_j90ai9.jpg`,
             alt: 'IMG_4165_j90ai9',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754233521/2024_05_30_10_13_IMG_4096_y4dbzm.jpg',
+            src: `${cloudinaryURL}/v1754233521/2024_05_30_10_13_IMG_4096_y4dbzm.jpg`,
             alt: 'IMG_4096_y4dbzm',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754233519/2024_05_30_10_11_IMG_4094_srtbey.jpg',
+            src: `${cloudinaryURL}/v1754233519/2024_05_30_10_11_IMG_4094_srtbey.jpg`,
             alt: 'IMG_4094_srtbey',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754233594/2024_05_30_10_03_IMG_4163_ewmwx4.jpg',
+            src: `${cloudinaryURL}/v1754233594/2024_05_30_10_03_IMG_4163_ewmwx4.jpg`,
             alt: 'IMG_4163_ewmwx4',
             w: 3024,
             h: 4032
@@ -270,32 +270,32 @@ export const journals = [
       },
       gallery: [
          {
-            src: '/v1754234681/2024_05_31_17_47_IMG_4210_zf2ti2.jpg',
+            src: `${cloudinaryURL}/v1754234681/2024_05_31_17_47_IMG_4210_zf2ti2.jpg`,
             alt: 'IMG_4210_zf2ti2',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754234682/2024_05_31_17_51_IMG_4312_cdld6s.jpg',
+            src: `${cloudinaryURL}/v1754234682/2024_05_31_17_51_IMG_4312_cdld6s.jpg`,
             alt: 'IMG_4312_cdld6s',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754234683/2024_05_31_17_28_IMG_4310_j6s7ax.jpg',
+            src: `${cloudinaryURL}/v1754234683/2024_05_31_17_28_IMG_4310_j6s7ax.jpg`,
             alt: 'IMG_4310_j6s7ax',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754547896/2024_05_31_17_06_IMG_4307_ljtkiz.jpg',
+            src: `${cloudinaryURL}/v1754547896/2024_05_31_17_06_IMG_4307_ljtkiz.jpg`,
             alt: 'IMG_4315_gx25z2',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754234682/2024_05_31_17_52_IMG_4314_tlqmtm.jpg',
+            src: `${cloudinaryURL}/v1754234682/2024_05_31_17_52_IMG_4314_tlqmtm.jpg`,
             alt: 'IMG_4314_tlqmtm',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754234682/2024_05_31_18_32_IMG_4321_hu8xtl.jpg',
+            src: `${cloudinaryURL}/v1754234682/2024_05_31_18_32_IMG_4321_hu8xtl.jpg`,
             alt: 'IMG_4321_hu8xtl',
             w: 3024,
             h: 4032
@@ -346,32 +346,32 @@ export const journals = [
       },
       gallery: [
          {
-            src: '/v1754370802/2024_06_01_14_53_IMG_4387_nfkffh.jpg',
+            src: `${cloudinaryURL}/v1754370802/2024_06_01_14_53_IMG_4387_nfkffh.jpg`,
             alt: 'IMG_4387_nfkffh',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754370803/2024_06_01_14_36_IMG_4379_ld4ibg.jpg',
+            src: `${cloudinaryURL}/v1754370803/2024_06_01_14_36_IMG_4379_ld4ibg.jpg`,
             alt: 'IMG_4379_ld4ibg',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754547522/2024_06_01_14_29_IMG_4294_g98bcj.jpg',
+            src: `${cloudinaryURL}/v1754547522/2024_06_01_14_29_IMG_4294_g98bcj.jpg`,
             alt: 'IMG_4293_in6cub',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370743/2024_06_01_14_28_IMG_4286_dgtogh.jpg',
+            src: `${cloudinaryURL}/v1754370743/2024_06_01_14_28_IMG_4286_dgtogh.jpg`,
             alt: 'IMG_4286_dgtogh',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754370742/2024_06_01_14_41_IMG_4380_g7mglv.jpg',
+            src: `${cloudinaryURL}/v1754370742/2024_06_01_14_41_IMG_4380_g7mglv.jpg`,
             alt: 'IMG_4380_g7mglv',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754370742/2024_06_01_14_41_IMG_4381_efg6go.jpg',
+            src: `${cloudinaryURL}/v1754370742/2024_06_01_14_41_IMG_4381_efg6go.jpg`,
             alt: 'IMG_4381_efg6go',
             w: 4032,
             h: 3024
@@ -423,32 +423,32 @@ export const journals = [
       },
       gallery: [
          {
-            src: '/v1754370743/2024_06_01_13_26_IMG_4240_mnxtj8.jpg',
+            src: `${cloudinaryURL}/v1754370743/2024_06_01_13_26_IMG_4240_mnxtj8.jpg`,
             alt: 'IMG_4240_mnxtj8',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370742/2024_06_01_13_28_IMG_4245_pywjh2.jpg',
+            src: `${cloudinaryURL}/v1754370742/2024_06_01_13_28_IMG_4245_pywjh2.jpg`,
             alt: 'IMG_4245_pywjh2',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370743/2024_06_01_13_30_IMG_4370_qklits.jpg',
+            src: `${cloudinaryURL}/v1754370743/2024_06_01_13_30_IMG_4370_qklits.jpg`,
             alt: 'IMG_4251_gzwxcj',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754370741/2024_06_01_13_34_IMG_4252_ec77br.jpg',
+            src: `${cloudinaryURL}/v1754370741/2024_06_01_13_34_IMG_4252_ec77br.jpg`,
             alt: 'IMG_4370_qklits',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370742/2024_06_01_13_34_IMG_4251_gzwxcj.jpg',
+            src: `${cloudinaryURL}/v1754370742/2024_06_01_13_34_IMG_4251_gzwxcj.jpg`,
             alt: 'IMG_4252_ec77br',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370742/2024_06_01_13_37_IMG_4376_s0xj5x.jpg',
+            src: `${cloudinaryURL}/v1754370742/2024_06_01_13_37_IMG_4376_s0xj5x.jpg`,
             alt: 'IMG_4376_s0xj5x',
             w: 4032,
             h: 3024
@@ -496,27 +496,27 @@ export const journals = [
       },
       gallery: [
          {
-            src: '/v1754370744/2024_06_01_13_14_IMG_4367_igvrg6.jpg',
+            src: `${cloudinaryURL}/v1754370744/2024_06_01_13_14_IMG_4367_igvrg6.jpg`,
             alt: 'IMG_4210_zf2ti2',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754370745/2024_06_01_13_11_IMG_4266_nrjg5d.jpg',
+            src: `${cloudinaryURL}/v1754370745/2024_06_01_13_11_IMG_4266_nrjg5d.jpg`,
             alt: 'IMG_4312_cdld6s',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370743/2024_06_01_13_17_IMG_4237_svjrt9.jpg',
+            src: `${cloudinaryURL}/v1754370743/2024_06_01_13_17_IMG_4237_svjrt9.jpg`,
             alt: 'IMG_4310_j6s7ax',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754370745/2024_06_01_13_13_IMG_4355_uws3gg.jpg',
+            src: `${cloudinaryURL}/v1754370745/2024_06_01_13_13_IMG_4355_uws3gg.jpg`,
             alt: 'IMG_4315_gx25z2',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370745/2024_06_01_13_10_IMG_4264_y5jxp7.jpg',
+            src: `${cloudinaryURL}/v1754370745/2024_06_01_13_10_IMG_4264_y5jxp7.jpg`,
             alt: 'IMG_4314_tlqmtm',
             w: 3024,
             h: 4032
@@ -569,32 +569,32 @@ export const journals = [
       },
       gallery: [
          {
-            src: '/v1754370745/2024_06_01_12_32_IMG_4352_uczxnp.jpg',
+            src: `${cloudinaryURL}/v1754370745/2024_06_01_12_32_IMG_4352_uczxnp.jpg`,
             alt: 'IMG_4210_zf2ti2',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370745/2024_06_01_12_09_IMG_4336_zmjmrb.jpg',
+            src: `${cloudinaryURL}/v1754370745/2024_06_01_12_09_IMG_4336_zmjmrb.jpg`,
             alt: 'IMG_4312_cdld6s',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370746/2024_06_01_12_12_IMG_4339_pyzvns.jpg',
+            src: `${cloudinaryURL}/v1754370746/2024_06_01_12_12_IMG_4339_pyzvns.jpg`,
             alt: 'IMG_4310_j6s7ax',
             w: 4032,
             h: 3024
          }, {
-            src: '/v1754370744/2024_06_01_12_32_IMG_4350_kiqaew.jpg',
+            src: `${cloudinaryURL}/v1754370744/2024_06_01_12_32_IMG_4350_kiqaew.jpg`,
             alt: 'IMG_4315_gx25z2',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370746/2024_06_01_12_15_IMG_4259_ii4dtm.jpg',
+            src: `${cloudinaryURL}/v1754370746/2024_06_01_12_15_IMG_4259_ii4dtm.jpg`,
             alt: 'IMG_4314_tlqmtm',
             w: 3024,
             h: 4032
          }, {
-            src: '/v1754370746/2024_06_01_12_15_IMG_4345_bakgpu.jpg',
+            src: `${cloudinaryURL}/v1754370746/2024_06_01_12_15_IMG_4345_bakgpu.jpg`,
             alt: 'IMG_4321_hu8xtl',
             w: 3024,
             h: 4032
