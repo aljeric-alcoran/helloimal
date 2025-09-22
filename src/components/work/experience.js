@@ -1,6 +1,6 @@
 const template = `
    <div class="h-full flex flex-col items-center justify-center">
-      <div class="md:mt-20 relative text-center w-full max-w-screen-md h-dvh md:h-auto md:py-24 space-y-2 md:bg-none bg-[url(https://res.cloudinary.com/docdldire/image/upload/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg)] bg-cover bg-center">
+      <div class="md:mt-20 relative text-center w-full max-w-screen-md h-dvh md:h-auto md:py-24 space-y-2 md:bg-none bg-[url(https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_1200,h_1428,c_fill/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg)] bg-cover bg-center">
          <div class="bg-black/20 backdrop-blur py-12 md:bg-transparent md:py-0 absolute bottom-0 w-full md:w-auto md:relative">
             <div class="mb-6 inline-flex items-center gap-1 justify-center bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-md px-2 py-1">
                <div class="inline-flex items-center justify-center w-2 h-2 border border-green-300 rounded-full">
@@ -42,7 +42,13 @@ const template = `
             <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
 
             <img 
-               src="https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_600,h_800,c_fill,g_auto/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg"
+               src="https://res.cloudinary.com/your-cloud/image/upload/f_auto,q_auto,w_1200,h_1428,c_fill/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg"v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg
+               srcset="
+                  https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_400,h_475,c_fill/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg 400w,
+                  https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800,h_950,c_fill/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg 800w,
+                  https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_1200,h_1428,c_fill/v1754549148/2023_10_23_21_15_IMG_0960_gvc9ln.jpg 1200w
+               "
+               sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
                alt="IMG_0960_gvc9ln"
                loading="lazy"
                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 rounded-xl shadow"

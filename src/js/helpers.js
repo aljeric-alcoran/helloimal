@@ -20,3 +20,23 @@ export const scrollTo = (elementId, route) => {
    localStorage.setItem('scrollTo', elementId);
    window.location.href = route;
 } 
+
+export const getOptimizedImageUrl = (baseUrl, originalWidth, originalHeight, maxDimension = 1600) => {
+   const screenWidth = window.innerWidth;
+
+   let targetWidth = Math.min(screenWidth, originalWidth, maxDimension);
+
+   let targetHeight = Math.round((targetWidth / originalWidth) * originalHeight);
+
+   return baseUrl.replace(
+      "/upload/",
+      `/upload/f_auto,q_auto,c_fill,g_auto,w_${targetWidth},h_${targetHeight}/`
+   );
+}
+
+export const customImageUrlOptimizer = (baseUrl, width, height) => {
+   return baseUrl.replace(
+      "/upload/",
+      `/upload/f_auto,q_auto,c_fill,g_auto,w_${width},h_${height}/`
+   );
+}

@@ -1,14 +1,15 @@
-const cloudinaryURL =  'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,c_fill,g_auto,'
+import { customImageUrlOptimizer, getOptimizedImageUrl } from '../../js/helpers.js'
 
 export const setMainJournal = (element, journals) => {
    const journal = journals[0];
    const strippedContent = journal.content.replace(/<\/?p>/g, '').replace(/\n/g, ' ').trim();
+   const { url, w, h } = journal.coverImage;
 
    element.innerHTML = `
       <div 
-         class="relative w-85 h-165 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800"
+         class="relative w-85 h-165 lg:rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 animate-pulse"
          style="
-            background-image: url('${cloudinaryURL}w_10,h_10${journal.coverImage}');
+            background-image: url('${customImageUrlOptimizer(url, 20, 20)}');
             background-size: cover;
             background-position: center;
          "
@@ -16,11 +17,11 @@ export const setMainJournal = (element, journals) => {
          <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
 
          <img 
-            src="${cloudinaryURL}w_800,h_1000${journal.coverImage}"
+            src="${getOptimizedImageUrl(url, w, h, 1000)}"
             alt="${journal.id}"
             loading="lazy"
-            class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 rounded-xl shadow"
-            onload="this.style.opacity='1'"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 shadow"
+            onload="this.style.opacity='1'; this.parentElement.classList.remove('animate-pulse');"
          />
       </div>
       
@@ -42,12 +43,13 @@ export const setMainJournal = (element, journals) => {
 export const setJounalList = (element, journals) => {
    element.innerHTML = journals.map((journal, index) => {
       const strippedContent = journal.content.replace(/<\/?p>/g, '').replace(/\n/g, ' ').trim();
+      const { url, w, h } = journal.coverImage;
       return `
          <div class="relative isolate rounded-xl shadow bg-white h-98 dark:bg-gray-700 overflow-hidden ${index === 0 ? 'block xl:hidden' : ''}">
             <div 
-               class="relative w-full h-1/2 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800"
+               class="relative w-full h-1/2 overflow-hidden bg-gray-100 dark:bg-gray-800 animate-pulse"
                style="
-                  background-image: url('${cloudinaryURL}w_10,h_10${journal.coverImage}');
+                  background-image: url('${customImageUrlOptimizer(url, 20, 20)}');
                   background-size: cover;
                   background-position: center;
                "
@@ -55,11 +57,11 @@ export const setJounalList = (element, journals) => {
                <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
 
                <img 
-                  src="${cloudinaryURL}w_800,h_900${journal.coverImage}"
+                  src="${getOptimizedImageUrl(url, w, h, 800)}"
                   alt="${journal.id}"
                   loading="lazy"
-                  class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 rounded-xl shadow"
-                  onload="this.style.opacity='1'"
+                  class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 shadow"
+                  onload="this.style.opacity='1'; this.parentElement.classList.remove('animate-pulse');"
                />
             </div>
             <div class="px-4 mt-4">
