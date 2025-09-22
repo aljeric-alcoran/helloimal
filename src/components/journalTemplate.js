@@ -8,8 +8,8 @@ const template = `
             <p id="info" class="text-sm text-gray-600 dark:text-gray-400 text-balance flex flex-wrap md:flex-nowrap items-center gap-2"></p>
          </div>
       </div>
-      <div class="lg:px-8 w-full">
-         <img id="image-banner" src="/img/boh-chocolate-hills.jpg" class="h-[500px] w-full object-cover lg:rounded-xl" alt="bohol"/>
+      <div class="lg:px-8 w-full h-[500px]" id="image-banner" >
+         
       </div>
       <div class="px-4 md:px-8 py-4">
          <div id="content" class="text-base/7 space-y-4 mt-4"></div>
@@ -26,6 +26,7 @@ const template = `
 `
 import { journals } from "../js/journals";
 import imageSliderModal from './modal/imageSlider.js';
+const cloudinaryURL =  'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,c_fill,g_auto'
 
 const setJournalTemplate = (container, journalId) => {
    container.innerHTML = template;
@@ -41,8 +42,26 @@ const setJournalTemplate = (container, journalId) => {
    setGallery(journal.gallery);
 
    const banner = document.getElementById('image-banner');
-   banner.src = journal.coverImage;
-   banner.alt = journal.title;
+   banner.innerHTML = `
+      <div 
+         class="relative w-full h-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800"
+         style="
+            background-image: url('${cloudinaryURL},w_10,h_10${journal.coverImage}');
+            background-size: cover;
+            background-position: center;
+         "
+      >
+         <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
+
+         <img 
+            src="${cloudinaryURL}${journal.coverImage}"
+            alt="${journal.id}"
+            loading="lazy"
+            class="absolute inset-0 w-full h-[500px] object-cover object-center opacity-0 transition-opacity duration-700 rounded-xl shadow"
+            onload="this.style.opacity='1'"
+         />
+      </div>
+   `
 
 }
 
@@ -53,13 +72,24 @@ const setGallery = (gallery) => {
       const wrapper = document.createElement('div');
       wrapper.className = 'aspect-[4/3] overflow-hidden';
 
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = alt;
-      img.onclick = () => imageSliderModal(wrapper, gallery, index);
-      img.className = 'rounded-xl w-full h-full object-cover transition-transform duration-500 delay-150 ease-in hover:scale-102 cursor-pointer';
+      const inner = document.createElement('div');
+      inner.className = 'relative w-full h-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800';
+      inner.style.backgroundImage = `url('${cloudinaryURL},w_10,h_10${src}')`;
+      inner.style.backgroundSize = 'cover';
+      inner.style.backgroundPosition = 'center';
+      inner.onclick = () => imageSliderModal(wrapper, gallery, index);
 
-      wrapper.appendChild(img);
+      inner.innerHTML = `
+         <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
+         <img 
+            src="${cloudinaryURL},w_600,h_600${src}"
+            alt="${alt}"
+            loading="lazy"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 rounded-xl shadow"
+            onload="this.style.opacity='1'"
+         />
+      `;
+      wrapper.appendChild(inner);
       container.appendChild(wrapper);
    });
 }
