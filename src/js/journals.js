@@ -35,25 +35,25 @@ export const journals = [
             Can’t wait to see what tomorrow brings!
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754231502/2024_05_30_08_31_IMG_4186_tgd4tz.jpg',
+      coverImage: '/v1754231502/2024_05_30_08_31_IMG_4186_tgd4tz.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230725/2024_05_30_08_29_IMG_4176_oy8lug.jpg',
+            src: '/v1754230725/2024_05_30_08_29_IMG_4176_oy8lug.jpg',
             alt: 'IMG_4176_oy8lug',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230725/2024_05_30_08_20_IMG_4088_oru2ef.jpg',
+            src: '/v1754230725/2024_05_30_08_20_IMG_4088_oru2ef.jpg',
             alt: 'IMG_4186_tgd4tz',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230725/2024_05_30_08_30_IMG_4178_jppqnb.jpg',
+            src: '/v1754230725/2024_05_30_08_30_IMG_4178_jppqnb.jpg',
             alt: 'IMG_4178_jppqnb',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230726/2024_05_30_08_32_IMG_4191_no0qgf.jpg',
+            src: '/v1754230726/2024_05_30_08_32_IMG_4191_no0qgf.jpg',
             alt: 'IMG_4191_no0qgf',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230725/2024_05_30_08_33_IMG_4198_iqcqo1.jpg',
+            src: '/v1754230725/2024_05_30_08_33_IMG_4198_iqcqo1.jpg',
             alt: 'IMG_4198_iqcqo1',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754230727/2024_05_30_08_32_IMG_4194_znyqvd.jpg',
+            src: '/v1754230727/2024_05_30_08_32_IMG_4194_znyqvd.jpg',
             alt: 'IMG_4194_znyqvd',
          }
       ]
@@ -94,25 +94,25 @@ export const journals = [
             completely full, and armed with way too many photos, we left the beach with sandy toes and happy souls.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_15_IMG_4154_olgzeo.jpg',
+      coverImage: '/v1754232264/2024_05_29_13_15_IMG_4154_olgzeo.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_02_IMG_4147_fk5tuy.jpg',
+            src: '/v1754232264/2024_05_29_13_02_IMG_4147_fk5tuy.jpg',
             alt: 'IMG_4147_fk5tuy',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_15_IMG_4152_nj0l6p.jpg',
+            src: '/v1754232264/2024_05_29_13_15_IMG_4152_nj0l6p.jpg',
             alt: 'IMG_4152_nj0l6p',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232265/2024_05_29_13_08_IMG_4148_fkvegx.jpg',
+            src: '/v1754232265/2024_05_29_13_08_IMG_4148_fkvegx.jpg',
             alt: 'IMG_4148_fkvegx',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_08_IMG_4150_ck7myk.jpg',
+            src: '/v1754232264/2024_05_29_13_08_IMG_4150_ck7myk.jpg',
             alt: 'IMG_4150_ck7myk',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232264/2024_05_29_13_15_IMG_4153_cb1edj.jpg',
+            src: '/v1754232264/2024_05_29_13_15_IMG_4153_cb1edj.jpg',
             alt: 'IMG_4153_cb1edj',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754232265/2024_05_29_13_08_IMG_4149_jhdiw1.jpg',
+            src: '/v1754232265/2024_05_29_13_08_IMG_4149_jhdiw1.jpg',
             alt: 'IMG_4149_jhdiw1',
          }
       ]
@@ -158,25 +158,25 @@ export const journals = [
             appreciation for nature’s beauty.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754233594/2024_05_30_10_03_IMG_4163_ewmwx4.jpg',
+      coverImage: '/v1754233594/2024_05_30_10_03_IMG_4163_ewmwx4.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233521/2024_05_30_10_17_IMG_4099_zztj5l.jpg',
+            src: '/v1754233521/2024_05_30_10_17_IMG_4099_zztj5l.jpg',
             alt: 'IMG_4099_zztj5l',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233520/2024_05_30_10_54_IMG_4164_gzgbne.jpg',
+            src: '/v1754233520/2024_05_30_10_54_IMG_4164_gzgbne.jpg',
             alt: 'IMG_4164_gzgbne',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233519/2024_05_30_10_54_IMG_4165_j90ai9.jpg',
+            src: '/v1754233519/2024_05_30_10_54_IMG_4165_j90ai9.jpg',
             alt: 'IMG_4165_j90ai9',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233521/2024_05_30_10_13_IMG_4096_y4dbzm.jpg',
+            src: '/v1754233521/2024_05_30_10_13_IMG_4096_y4dbzm.jpg',
             alt: 'IMG_4096_y4dbzm',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233519/2024_05_30_10_11_IMG_4094_srtbey.jpg',
+            src: '/v1754233519/2024_05_30_10_11_IMG_4094_srtbey.jpg',
             alt: 'IMG_4094_srtbey',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754233594/2024_05_30_10_03_IMG_4163_ewmwx4.jpg',
+            src: '/v1754233594/2024_05_30_10_03_IMG_4163_ewmwx4.jpg',
             alt: 'IMG_4163_ewmwx4',
          }
       ]
@@ -214,25 +214,25 @@ export const journals = [
             completely present. Just chilling and relaxing, no agenda, just peace.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_17_06_IMG_4306_cufm73.jpg',
+      coverImage: '/v1754234682/2024_05_31_17_06_IMG_4306_cufm73.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234681/2024_05_31_17_47_IMG_4210_zf2ti2.jpg',
+            src: '/v1754234681/2024_05_31_17_47_IMG_4210_zf2ti2.jpg',
             alt: 'IMG_4210_zf2ti2',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_17_51_IMG_4312_cdld6s.jpg',
+            src: '/v1754234682/2024_05_31_17_51_IMG_4312_cdld6s.jpg',
             alt: 'IMG_4312_cdld6s',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234683/2024_05_31_17_28_IMG_4310_j6s7ax.jpg',
+            src: '/v1754234683/2024_05_31_17_28_IMG_4310_j6s7ax.jpg',
             alt: 'IMG_4310_j6s7ax',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754547896/2024_05_31_17_06_IMG_4307_ljtkiz.jpg',
+            src: '/v1754547896/2024_05_31_17_06_IMG_4307_ljtkiz.jpg',
             alt: 'IMG_4315_gx25z2',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_17_52_IMG_4314_tlqmtm.jpg',
+            src: '/v1754234682/2024_05_31_17_52_IMG_4314_tlqmtm.jpg',
             alt: 'IMG_4314_tlqmtm',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754234682/2024_05_31_18_32_IMG_4321_hu8xtl.jpg',
+            src: '/v1754234682/2024_05_31_18_32_IMG_4321_hu8xtl.jpg',
             alt: 'IMG_4321_hu8xtl',
          }
       ]
@@ -274,25 +274,25 @@ export const journals = [
             Of course, we made sure to take plenty of pictures—because some views deserve to be remembered and shared.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754547307/2024_06_01_14_35_IMG_4303_hvytr6.jpg',
+      coverImage: '/v1754547307/2024_06_01_14_35_IMG_4303_hvytr6.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370802/2024_06_01_14_53_IMG_4387_nfkffh.jpg',
+            src: '/v1754370802/2024_06_01_14_53_IMG_4387_nfkffh.jpg',
             alt: 'IMG_4387_nfkffh',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370803/2024_06_01_14_36_IMG_4379_ld4ibg.jpg',
+            src: '/v1754370803/2024_06_01_14_36_IMG_4379_ld4ibg.jpg',
             alt: 'IMG_4379_ld4ibg',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754547522/2024_06_01_14_29_IMG_4294_g98bcj.jpg',
+            src: '/v1754547522/2024_06_01_14_29_IMG_4294_g98bcj.jpg',
             alt: 'IMG_4293_in6cub',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_14_28_IMG_4286_dgtogh.jpg',
+            src: '/v1754370743/2024_06_01_14_28_IMG_4286_dgtogh.jpg',
             alt: 'IMG_4286_dgtogh',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_14_41_IMG_4380_g7mglv.jpg',
+            src: '/v1754370742/2024_06_01_14_41_IMG_4380_g7mglv.jpg',
             alt: 'IMG_4380_g7mglv',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_14_41_IMG_4381_efg6go.jpg',
+            src: '/v1754370742/2024_06_01_14_41_IMG_4381_efg6go.jpg',
             alt: 'IMG_4381_efg6go',
          }
       ]
@@ -335,25 +335,25 @@ export const journals = [
             The trip was amazing from start to finish—a beautiful blend of adventure, nature, and quiet wonder.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_13_52_IMG_4253_ubmnyj.jpg',
+      coverImage: '/v1754370743/2024_06_01_13_52_IMG_4253_ubmnyj.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_13_26_IMG_4240_mnxtj8.jpg',
+            src: '/v1754370743/2024_06_01_13_26_IMG_4240_mnxtj8.jpg',
             alt: 'IMG_4240_mnxtj8',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_13_28_IMG_4245_pywjh2.jpg',
+            src: '/v1754370742/2024_06_01_13_28_IMG_4245_pywjh2.jpg',
             alt: 'IMG_4245_pywjh2',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_13_30_IMG_4370_qklits.jpg',
+            src: '/v1754370743/2024_06_01_13_30_IMG_4370_qklits.jpg',
             alt: 'IMG_4251_gzwxcj',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370741/2024_06_01_13_34_IMG_4252_ec77br.jpg',
+            src: '/v1754370741/2024_06_01_13_34_IMG_4252_ec77br.jpg',
             alt: 'IMG_4370_qklits',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_13_34_IMG_4251_gzwxcj.jpg',
+            src: '/v1754370742/2024_06_01_13_34_IMG_4251_gzwxcj.jpg',
             alt: 'IMG_4252_ec77br',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_13_37_IMG_4376_s0xj5x.jpg',
+            src: '/v1754370742/2024_06_01_13_37_IMG_4376_s0xj5x.jpg',
             alt: 'IMG_4376_s0xj5x',
          }
       ]
@@ -392,22 +392,22 @@ export const journals = [
             the beauty of something man-made, yet in harmony with nature.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_13_10_IMG_4264_y5jxp7.jpg',
+      coverImage: '/v1754370745/2024_06_01_13_10_IMG_4264_y5jxp7.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370744/2024_06_01_13_14_IMG_4367_igvrg6.jpg',
+            src: '/v1754370744/2024_06_01_13_14_IMG_4367_igvrg6.jpg',
             alt: 'IMG_4210_zf2ti2',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_13_11_IMG_4266_nrjg5d.jpg',
+            src: '/v1754370745/2024_06_01_13_11_IMG_4266_nrjg5d.jpg',
             alt: 'IMG_4312_cdld6s',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_13_17_IMG_4237_svjrt9.jpg',
+            src: '/v1754370743/2024_06_01_13_17_IMG_4237_svjrt9.jpg',
             alt: 'IMG_4310_j6s7ax',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_13_13_IMG_4355_uws3gg.jpg',
+            src: '/v1754370745/2024_06_01_13_13_IMG_4355_uws3gg.jpg',
             alt: 'IMG_4315_gx25z2',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_13_10_IMG_4264_y5jxp7.jpg',
+            src: '/v1754370745/2024_06_01_13_10_IMG_4264_y5jxp7.jpg',
             alt: 'IMG_4314_tlqmtm',
          }
       ]
@@ -451,25 +451,25 @@ export const journals = [
             their Bohol itinerary.
          </p>
       `,
-      coverImage: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_12_09_IMG_4333_pm5hki.jpg',
+      coverImage: '/v1754370745/2024_06_01_12_09_IMG_4333_pm5hki.jpg',
       gallery: [
          {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_12_32_IMG_4352_uczxnp.jpg',
+            src: '/v1754370745/2024_06_01_12_32_IMG_4352_uczxnp.jpg',
             alt: 'IMG_4210_zf2ti2',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370745/2024_06_01_12_09_IMG_4336_zmjmrb.jpg',
+            src: '/v1754370745/2024_06_01_12_09_IMG_4336_zmjmrb.jpg',
             alt: 'IMG_4312_cdld6s',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370746/2024_06_01_12_12_IMG_4339_pyzvns.jpg',
+            src: '/v1754370746/2024_06_01_12_12_IMG_4339_pyzvns.jpg',
             alt: 'IMG_4310_j6s7ax',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370744/2024_06_01_12_32_IMG_4350_kiqaew.jpg',
+            src: '/v1754370744/2024_06_01_12_32_IMG_4350_kiqaew.jpg',
             alt: 'IMG_4315_gx25z2',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370746/2024_06_01_12_15_IMG_4259_ii4dtm.jpg',
+            src: '/v1754370746/2024_06_01_12_15_IMG_4259_ii4dtm.jpg',
             alt: 'IMG_4314_tlqmtm',
          }, {
-            src: 'https://res.cloudinary.com/docdldire/image/upload/v1754370746/2024_06_01_12_15_IMG_4345_bakgpu.jpg',
+            src: '/v1754370746/2024_06_01_12_15_IMG_4345_bakgpu.jpg',
             alt: 'IMG_4321_hu8xtl',
          }
       ]
