@@ -55,6 +55,7 @@ const imageSliderModal = (openModalBtn, galleryImages, currentIndex) => {
    const updateImage = () => {
       const  { src, w, h } = galleryImages[currentIndex];
       modalImage.style.opacity = "0";
+      imageContainer.classList.add('animate-pulse');
 
       imageContainer.style.backgroundImage = `url(${customImageUrlOptimizer(src, 20, 20)})`;
 
@@ -63,7 +64,7 @@ const imageSliderModal = (openModalBtn, galleryImages, currentIndex) => {
 
       modalImage.onload = () => {
          modalImage.style.opacity = "1";
-         modalImage.classList.remove('animate-pulse');
+         imageContainer.classList.remove('animate-pulse');
       };
    };
 

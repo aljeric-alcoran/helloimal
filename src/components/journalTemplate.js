@@ -13,7 +13,7 @@ const template = `
       </div>
       <div class="px-4 md:px-8 py-4">
          <div id="content" class="text-base/7 space-y-4 mt-4"></div>
-         <div>
+         <div class="md:pb-16">
             <h2 class="text-lg font-semibold mt-8">Photo Gallery</h2>
             <div id="gallery" class="grid md:grid-cols-2 lg:grid-cols-3 gap-2 mt-4">
                <!-- Content here is set by setGallery() -->

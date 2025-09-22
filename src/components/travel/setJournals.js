@@ -17,7 +17,7 @@ export const setMainJournal = (element, journals) => {
          <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
 
          <img 
-            src="${getOptimizedImageUrl(url, w, h)}"
+            src="${getOptimizedImageUrl(url, w, h, 1000)}"
             alt="${journal.id}"
             loading="lazy"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 shadow"
@@ -57,7 +57,7 @@ export const setJounalList = (element, journals) => {
                <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
 
                <img 
-                  src="${getOptimizedImageUrl(url, w, h)}"
+                  src="${getOptimizedImageUrl(url, w, h, 800)}"
                   alt="${journal.id}"
                   loading="lazy"
                   class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 shadow"
