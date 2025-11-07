@@ -39,6 +39,10 @@ const template = `
             <label class="text-sm">VueJS</label>
          </div>
          <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-xl">
+            <img id="vue" src="/svg/react.svg" width="64" alt="vue" class="transition group-hover:drop-shadow-[0_0_24px_rgba(97,219,251,0.8)] dark:group-hover:drop-shadow-[0_0_24px_rgba(97,219,251,0.8)]">
+            <label class="text-sm">React</label>
+         </div>
+         <div class="group flex flex-col items-center gap-1 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-700 py-4 w-[9rem] rounded-xl">
             <img id="next" src="/svg/nextjs.svg" width="64" alt="next" class="transition group-hover:drop-shadow-[0_0_24px_rgba(107,114,128,0.8)] dark:group-hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.8)]">
             <label class="text-sm">NextJS</label>
          </div>                
