@@ -24,7 +24,7 @@ const template = `
       </div>
    </div>
 `
-import { journals } from "../js/journals";
+import { journals } from "../js/journals.js";
 import imageSliderModal from './modal/imageSlider.js';
 import { customImageUrlOptimizer, getOptimizedImageUrl } from '../js/helpers.js'
 

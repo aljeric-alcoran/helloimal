@@ -6,15 +6,14 @@ export const scrollToSection = (targetElement) => {
 }
 
 export const downloadCV = () => {
-   const url = `https://drive.google.com/uc?export=download&id=${import.meta.env.VITE_CV_FILE_ID}`;
-
+   const fileId = import.meta.env.VITE_CV_FILE_ID;
    const link = document.createElement('a');
-   link.href = url;
-   link.download = 'downloaded-file';
+   link.href = `https://drive.google.com/uc?export=download&id=${fileId}`;
+   link.download = 'Al_Jeric_Alcoran_CV.pdf';
    document.body.appendChild(link);
    link.click();
    document.body.removeChild(link);
-}
+};
 
 export const scrollTo = (elementId, route) => {
    localStorage.setItem('scrollTo', elementId);

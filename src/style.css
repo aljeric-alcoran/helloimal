@@ -1,17 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Load only the weights actually used in the project (400, 500, 600, 700) with display:swap */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@keyframes fadeUp {
+   from { opacity: 0; transform: translateY(20px); }
+   to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleX {
+   from { transform: scaleX(0); }
+   to   { transform: scaleX(1); }
+}
+
 
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+body::before {
+   content: '';
+   position: fixed;
+   inset: 0;
+   background-image:
+     radial-gradient(circle, rgba(80,100,180,0.09) 1px, transparent 1px);
+   background-size: 22px 22px;
+   pointer-events: none;
+   z-index: 0;
+ }
 
 .nav-container {
   @apply sticky top-0 z-10;
 }
 
 .main-banner-container {
-  @apply max-w-screen-xl items-center justify-center mx-auto px-8 text-gray-900 dark:text-white;
+  @apply w-full items-center justify-center mx-auto px-8 text-gray-900 dark:text-white;
 }
 
 .footer-container {
