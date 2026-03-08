@@ -30,18 +30,23 @@ const sendForm = (formData) => {
    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+   // Target the button element (not the span) to properly disable submission
+   const submitBtn = document.querySelector('#contact-form button[type="submit"]');
    const btnText = document.getElementById('btn-text');
 
-   btnText.disabled = true;
+   submitBtn.disabled = true;
    btnText.innerText = 'Sending...';
    
-   emailjs.send(serviceId, templateId, formData, publicKey).then((response) => {
+   emailjs.send(serviceId, templateId, formData, publicKey).then(() => {
       showAlert('success', 'Message sent successfully!');
       document.getElementById('contact-form').reset();
       btnText.innerText = 'Send message';
-      btnText.disabled = true;
+      submitBtn.disabled = false; // Re-enable so user can send again
       grecaptcha.reset();
    }, (error) => {
+      // Always re-enable the button on error so the user can retry
+      submitBtn.disabled = false;
+      btnText.innerText = 'Send message';
       if (error.status === 400) {
          showAlert('error', 'Invalid reCAPTCHA. Please try again.');
          grecaptcha.reset();

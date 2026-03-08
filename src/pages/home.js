@@ -1,8 +1,8 @@
 const template = `
    <div id="main-banner"></div>
-   <div id="biography" class="bg-gray-100 dark:bg-gray-800"></div>
-   <div id="technical-skills" class="bg-white dark:bg-gray-900"></div>
-   <div id="contact" class="bg-gray-100 dark:bg-gray-800"></div>
+   <div id="biography" class="bg-gray-100 dark:bg-gray-800/60"></div>
+   <div id="technical-skills" class="bg-transparent"></div>
+   <div id="contact" class="bg-gray-100 dark:bg-gray-800/60"></div>
 `
 
 import setBiographySection from '../components/home/biography.js';

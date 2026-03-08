@@ -5,29 +5,14 @@ export const scrollToSection = (targetElement) => {
    });
 }
 
-export const downloadCV = async () => {
+export const downloadCV = () => {
    const fileId = import.meta.env.VITE_CV_FILE_ID;
-   const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
- 
-   try {
-      const response = await fetch(url, { method: 'HEAD' });
-      const disposition = response.headers.get('Content-Disposition');
-      let fileName = 'downloaded-file';
- 
-      if (disposition) {
-         const match = disposition.match(/filename="?(.+?)"?$/);
-         if (match?.[1]) fileName = match[1];
-      }
- 
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = fileName;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-   } catch (err) {
-      console.error('Download failed:', err);
-   }
+   const link = document.createElement('a');
+   link.href = `https://drive.google.com/uc?export=download&id=${fileId}`;
+   link.download = 'Al_Jeric_Alcoran_CV.pdf';
+   document.body.appendChild(link);
+   link.click();
+   document.body.removeChild(link);
 };
 
 export const scrollTo = (elementId, route) => {

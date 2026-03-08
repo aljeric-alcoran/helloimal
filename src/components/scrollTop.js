@@ -14,16 +14,23 @@ const setScrollToTop = (element) => {
 
    const btn = document.getElementById('scrollUpBtn');
 
+   let ticking = false;
    window.addEventListener('scroll', () => {
-      const scrollPosition = window.innerHeight + window.scrollY;
-      const showThreshold = document.body.scrollHeight * 0.5;
+      if (!ticking) {
+         requestAnimationFrame(() => {
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const showThreshold = document.body.scrollHeight * 0.5;
 
-      if (scrollPosition >= showThreshold) {
-         btn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
-         btn.classList.add('opacity-100', 'translate-y-0');
-      } else {
-         btn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
-         btn.classList.remove('opacity-100', 'translate-y-0');
+            if (scrollPosition >= showThreshold) {
+               btn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+               btn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+               btn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+               btn.classList.remove('opacity-100', 'translate-y-0');
+            }
+            ticking = false;
+         });
+         ticking = true;
       }
    });
 

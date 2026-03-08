@@ -1,69 +1,110 @@
 const template = `
-   <div class="absolute w-full bg-white/60 border-gray-200 dark:bg-gray-900/60 backdrop-blur-md z-10 shadow-sm">
-      <div class="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:py-8">
-         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/img/logo.webp" class="h-8" alt="AL Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AL</span>
-         </a>
+   <div class="absolute w-full z-10">
 
-         <div class="fixed md:static mt-16 inset-0 top-2 z-50 md:z-0 md:mt-0 w-full md:w-auto h-full md:block hidden" id="navbar-default">
-            <ul id="nav-list" class="font-medium flex flex-col p-4 md:p-0 bg-gray-100 dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent md:bg-opacity-0 border border-gray-100 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700"></ul>
-         </div>
+      <!-- Main navbar bar -->
+      <div class="relative max-w-screen-xl mx-auto px-4 md:px-8">
+         <div class="flex items-center justify-between h-16 md:h-20">
 
-         <div class="flex items-center gap-2 md:gap-6 relative">
-            <div id="theme-switch" class="md:absolute left-[-60px] bg-gray-50 dark:bg-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 p-1 rounded">
-               <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5V3m0 18v-2M7.05 7.05 5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636 16.95 7.05M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
-               </svg>
-               <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"/>
-               </svg>                                     
+            <!-- Logo -->
+            <a href="/" nav-link class="flex items-center gap-2.5 group shrink-0">
+               <div class="relative">
+                  <img src="/img/logo.webp" class="h-8 w-8 rounded-lg" alt="AL Logo" loading="eager" />
+               </div>
+               <span class="text-lg font-bold tracking-tight text-gray-900 dark:text-white group-hover:text-[#3150CE] dark:group-hover:text-[#818cf8] transition-colors duration-200">
+                  helloimal
+               </span>
+            </a>
+
+            <!-- Desktop nav links (center) -->
+            <nav class="hidden md:flex items-center">
+               <ul id="nav-list" class="flex items-center gap-8"></ul>
+            </nav>
+
+            <!-- Right controls -->
+            <div class="flex items-center gap-2">
+               <!-- Theme toggle -->
+               <button id="theme-switch" type="button" aria-label="Toggle theme"
+                  class="cursor-pointer relative w-9 h-9 flex items-center justify-center rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40">
+                  <!-- Sun icon (shown in dark mode) -->
+                  <svg id="icon-sun" class="w-[18px] h-[18px] hidden" fill="none" viewBox="0 0 24 24">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5V3m0 18v-2M7.05 7.05 5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636 16.95 7.05M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+                  </svg>
+                  <!-- Moon icon (shown in light mode) -->
+                  <svg id="icon-moon" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"/>
+                  </svg>
+               </button>
+
+               <!-- Mobile hamburger -->
+               <button id="navbar-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+                  class="md:hidden cursor-pointer relative w-9 h-9 flex items-center justify-center rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40">
+                  <!-- Hamburger lines (3 → X via CSS toggle) -->
+                  <span id="hamburger-icon" class="flex flex-col gap-[5px] w-[18px]">
+                     <span class="block h-[2px] w-full bg-current rounded-full transition-all duration-300 origin-center" id="bar-1"></span>
+                     <span class="block h-[2px] w-full bg-current rounded-full transition-all duration-300" id="bar-2"></span>
+                     <span class="block h-[2px] w-full bg-current rounded-full transition-all duration-300 origin-center" id="bar-3"></span>
+                  </span>
+               </button>
             </div>
-            <button id="navbar-btn" type="button" class="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-               <span class="sr-only">Open main menu</span>
-               <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-               </svg>
-            </button>
+         </div>
+      </div>
+
+      <!-- Frosted glass bar (sits behind content, full-width) -->
+      <div class="absolute inset-0 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border-b border-gray-200/60 dark:border-gray-700/60 shadow-sm -z-10 pointer-events-none"></div>
+
+      <!-- Mobile menu drawer -->
+      <div id="mobile-menu"
+         class="md:hidden hidden overflow-hidden transition-all duration-300 ease-in-out
+                bg-white/95 dark:bg-gray-900/95 backdrop-blur-md
+                border-b border-gray-200/60 dark:border-gray-700/60 shadow-md">
+         <div class="max-w-screen-xl mx-auto px-4 py-4">
+            <ul id="nav-list-mobile" class="flex flex-col gap-1"></ul>
          </div>
       </div>
    </div>
-`
+`;
 
 import setTheme from "../js/theme";
-import { setNavlist } from "../js/navList";
+import { populateNavLists, syncActiveLinks, closeMenu, toggleMenu } from "../js/navList";
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 
+// ─── Main ─────────────────────────────────────────────────────────────────────
 const setNavigation = (element) => {
    element.innerHTML = template;
 
-   const navbarBtn = document.getElementById('navbar-btn');
-   const navbar = document.getElementById('navbar-default');
-   const outsideClick = document.getElementById('main-content');
+   const btn   = document.getElementById('navbar-btn');
+   const menu  = document.getElementById('mobile-menu');
+   const close = () => closeMenu(menu, btn);
 
-   navbarBtn.addEventListener('click', toggleNavbar);
-   outsideClick.addEventListener('click', () => {
-      navbar.classList.toggle('hidden', true);
+   // Populate both desktop + mobile lists
+   populateNavLists(close);
+
+   // Hamburger toggle
+   btn.addEventListener('click', (e) => { 
+      e.stopPropagation(); 
+      toggleMenu(menu, btn); 
    });
-   
+
+   // Close on outside click
+   document.getElementById('main-content')?.addEventListener('click', close);
+
+   // Close + reset on resize to desktop
+   let resizeTimer;
    window.addEventListener('resize', () => {
-      if (window.innerWidth === 768) {
-         navbar.classList.toggle('hidden', true);
-      }
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+         if (window.innerWidth >= 768) close();
+      }, 100);
    });
+
+   // Sync active state on SPA route changes
+   window.addEventListener('popstate', syncActiveLinks);
+   // Also expose for manual call after pushState navigations
+   window._syncNavActive = syncActiveLinks;
 
    setTheme();
-}
-
-const toggleNavbar = () => {
-   const navbar = document.getElementById('navbar-default');
-
-   const isHidden = navbar.classList.contains('hidden');
-   navbar.classList.toggle('hidden', !isHidden);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-   setNavlist(toggleNavbar);
-});
+};
 
 export default setNavigation;

@@ -1,5 +1,5 @@
 const template = `
-   <div id="work-exp" class="max-w-screen-xl items-center justify-center mx-auto text-gray-900 dark:text-white"></div>
+   <div id="work-exp" class="w-full items-center justify-center mx-auto text-gray-900 dark:text-white"></div>
 `
 import setWorkExperience from "../components/work/experience";
 
