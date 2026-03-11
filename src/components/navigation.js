@@ -1,5 +1,5 @@
 const template = `
-   <div class="absolute w-full z-10">
+   <div class="absolute w-full">
 
       <!-- Main navbar bar -->
       <div class="relative max-w-screen-xl mx-auto px-4 md:px-8">
