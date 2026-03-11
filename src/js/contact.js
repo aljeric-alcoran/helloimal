@@ -51,6 +51,7 @@ const sendForm = (formData) => {
          showAlert('error', 'Invalid reCAPTCHA. Please try again.');
          grecaptcha.reset();
       } else {
+         console.log(error);
          showAlert('error', 'Something went wrong. Please try again.');
       }
    });

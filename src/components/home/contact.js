@@ -38,10 +38,10 @@ const template = `
             </div>
 
             <!-- Global error banner -->
-            <div id="error-container" class="hidden mb-5 flex items-start gap-2 rounded-xl border border-red-200 dark:border-red-800/50 bg-red-50 dark:bg-red-900/20 px-4 py-3 text-xs text-red-700 dark:text-red-400"></div>
+            <div id="error-container" class="hidden mb-5">
+            </div>
 
             <form id="contact-form" class="flex flex-col gap-8" novalidate>
-
                <!-- Name -->
                <div class="flex flex-col gap-1.5">
                   <label for="name" class="required-label text-xs font-semibold text-gray-700 dark:text-gray-300">Name</label>
@@ -67,7 +67,7 @@ const template = `
                             focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40 focus:border-[#3150CE]
                             transition-all duration-200"
                   />
-                  <span id="email-error" class="hidden text-[0.68rem] font-medium text-red-600 dark:text-red-400">A valid email is required.</span>
+                  <span id="email-error" class="hidden text-[0.68rem] font-medium text-red-600 dark:text-red-400">Email is required.</span>
                </div>
 
                <!-- Subject -->
