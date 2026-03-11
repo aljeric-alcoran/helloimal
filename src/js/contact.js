@@ -51,8 +51,7 @@ const sendForm = (formData) => {
          showAlert('error', 'Invalid reCAPTCHA. Please try again.');
          grecaptcha.reset();
       } else {
-         console.log(error);
-         showAlert('error', 'Something went wrong. Please try again.');
+         showAlert('error', 'Server: Something went wrong. Please try again.');
       }
    });
 }
@@ -79,7 +78,7 @@ const showAlert = (type,message) => {
    if (type === 'success') {
       setTimeout(() => {
          errorContainer.style.display = 'none';
-      }, 5000);
+      }, 10000);
    }
 }
 

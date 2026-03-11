@@ -12,6 +12,45 @@
    to   { transform: scaleX(1); }
 }
 
+@keyframes blink {
+   0%, 100% { opacity: 1; }
+   50%       { opacity: 0; }
+}
+@keyframes scrollDrop {
+   0%   { transform: translateY(-100%); opacity: 1; }
+   100% { transform: translateY(100%);  opacity: 0; }
+}
+@keyframes kenBurns {
+   0%   { transform: scale(1.08) translate(0%, 0%); }
+   100% { transform: scale(1.18) translate(-3%, -2%); }
+}
+@keyframes fadeDown {
+   from { opacity: 0; transform: translateY(-12px); }
+   to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes compassSpin {
+   from { transform: rotate(0deg); }
+   to   { transform: rotate(360deg); }
+}
+@keyframes countUp {
+   from { opacity: 0; transform: translateY(8px); }
+   to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatY {
+   0%, 100% { transform: translateY(0px); }
+   50%       { transform: translateY(-10px); }
+}
+@keyframes planeFly {
+   0%   { transform: translate(-60px, 40px) rotate(-18deg); opacity: 0; }
+   10%  { opacity: 1; }
+   90%  { opacity: 1; }
+   100% { transform: translate(calc(100vw + 60px), -80px) rotate(-18deg); opacity: 0; }
+}
+@keyframes dashDraw {
+   from { stroke-dashoffset: 400; }
+   to   { stroke-dashoffset: 0; }
+}
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -33,7 +72,7 @@ body::before {
 }
 
 .main-banner-container {
-  @apply w-full items-center justify-center mx-auto px-8 text-gray-900 dark:text-white;
+  @apply w-full items-center justify-center mx-auto text-gray-900 dark:text-white;
 }
 
 .footer-container {
