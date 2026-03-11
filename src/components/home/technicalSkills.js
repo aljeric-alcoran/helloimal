@@ -35,7 +35,7 @@ const SKILL_CATEGORIES = [
 
 const buildCategoryBlock = ({ category, items }) => `
    <div class="skills-reveal">
-      <p class="text-[0.68rem] font-bold tracking-[0.16em] uppercase text-gray-400 dark:text-gray-500 mb-4">${category}</p>
+      <p class="text-[0.68rem] text-center font-bold tracking-[0.16em] uppercase text-gray-400 dark:text-gray-500 mb-4">${category}</p>
       <div class="flex flex-wrap gap-3">
          ${items.map(({ label, src, alt, glow }) => `
          <div class="skill-card group relative flex flex-col items-center gap-2.5
@@ -70,12 +70,12 @@ const template = `
       <!-- Section heading -->
       <div class="skills-reveal flex flex-col items-center gap-2 mb-14">
          <span class="text-[0.68rem] font-bold tracking-[0.18em] uppercase text-[#3150CE]">What I work with</span>
-         <h1 class="text-3xl md:text-4xl font-black tracking-tight">Technical <span class="text-[#3150CE]">Skills</span></h1>
+         <h1 class="text-3xl md:text-4xl font-black tracking-tight">Tech <span class="text-[#3150CE]">Stack</span></h1>
          <div class="w-8 h-[3px] bg-[#3150CE] rounded-full mt-1"></div>
       </div>
 
       <!-- Categories -->
-      <div class="flex flex-col gap-10 md:gap-12">
+      <div class="flex flex-col gap-10 md:gap-12 items-center">
          ${SKILL_CATEGORIES.map(buildCategoryBlock).join('')}
       </div>
 
