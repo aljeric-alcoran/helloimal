@@ -67,10 +67,6 @@ const template = `
 import setTheme from "../js/theme";
 import { populateNavLists, syncActiveLinks, closeMenu, toggleMenu } from "../js/navList";
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
-
-// ─── Main ─────────────────────────────────────────────────────────────────────
 const setNavigation = (element) => {
    element.innerHTML = template;
 
