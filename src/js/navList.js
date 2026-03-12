@@ -1,6 +1,6 @@
 const NAV_ITEMS = [
-   { href: '/', label: 'About' },
-   { href: '/experience', label: 'Experience' },
+   { href: '/', label: 'Profile' },
+   { href: '/career', label: 'Career' },
    { href: '/travel', label: 'Travel' },
    { href: '/projects', label: 'Projects' },
 ];

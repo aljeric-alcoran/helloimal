@@ -10,7 +10,7 @@ export const routeDefinitions = [
       }
    }, 
    {
-      path: '/experience',
+      path: '/career',
       handler: async () => {
          const { default: setWorkPage } = await import("../pages/work");
          setWorkPage(document.getElementById('main-content'));
