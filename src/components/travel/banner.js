@@ -1,7 +1,7 @@
 const PHOTOS = [
-   'https://res.cloudinary.com/docdldire/image/upload/v1754370743/2024_06_01_13_26_IMG_4240_mnxtj8.jpg',
-   'https://res.cloudinary.com/docdldire/image/upload/v1773221731/photo_2026-03-11_17-34-03_pteewl.jpg',
-   'https://res.cloudinary.com/docdldire/image/upload/v1754370742/2024_06_01_13_28_IMG_4245_pywjh2.jpg',
+   'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_400,h_500,c_fill,g_face/v1754370743/2024_06_01_13_26_IMG_4240_mnxtj8.jpg',
+   'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_400,h_500,c_fill,g_face/v1773221731/photo_2026-03-11_17-34-03_pteewl.jpg',
+   'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_400,h_500,c_fill,g_face/v1754370742/2024_06_01_13_28_IMG_4245_pywjh2.jpg',
 ];
 
 const template = `
@@ -60,24 +60,24 @@ const template = `
                            bg-[#3150CE]/8 dark:bg-[#3150CE]/15
                            border border-[#3150CE]/20 dark:border-[#3150CE]/30
                            text-[#3150CE] dark:text-[#818cf8]
-                           text-[0.65rem] font-bold tracking-[0.16em] uppercase
+                           text-[0.50rem] md:text-[0.65rem] font-bold tracking-[0.16em] uppercase
                            px-3.5 py-1.5 rounded-full">
                   It's time to
                </span>
             </div>
 
             <!-- Big stacked headline -->
-            <div class="opacity-0 animate-[fadeUp_0.6s_cubic-bezier(.22,.68,0,1.2)_0.2s_both]">
+            <div class="opacity-0 animate-[fadeUp_0.6s_cubic-bezier(.22,.68,0,1.2)_0.2s_both] space-y-2 md:space-y-1">
                <h1 class="font-black leading-[0.9] tracking-[-0.04em] text-gray-900 dark:text-white"
-                  style="font-size: clamp(3.2rem, 10vw, 6.5rem);">
+                  style="font-size: clamp(3.5rem, 10vw, 6.5rem);">
                   TRAVEL
                </h1>
                <h1 class="font-black leading-[0.9] tracking-[-0.04em] text-[#3150CE]"
-                  style="font-size: clamp(3.2rem, 10vw, 6.5rem);">
+                  style="font-size: clamp(3.5rem, 10vw, 6.5rem);">
                   EXPLORE
                </h1>
                <h1 class="font-black leading-[0.9] tracking-[-0.04em] text-gray-900 dark:text-white"
-                  style="font-size: clamp(3.2rem, 10vw, 6.5rem);">
+                  style="font-size: clamp(3.5rem, 10vw, 6.5rem);">
                   ENJOY
                </h1>
             </div>

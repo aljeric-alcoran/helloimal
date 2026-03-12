@@ -2,19 +2,19 @@ const SKILL_CATEGORIES = [
    {
       category: 'Frontend',
       items: [
+         { label: 'TypeScript', src: '/img/typescript.png',  alt: 'TypeScript', glow: 'rgba(59,130,246,0.75)'  },
+         { label: 'JavaScript', src: '/svg/javascript.svg',  alt: 'JavaScript', glow: 'rgba(234,179,8,0.75)'   },
          { label: 'HTML5',      src: '/svg/html.svg',        alt: 'HTML5',      glow: 'rgba(251,146,60,0.75)'  },
          { label: 'CSS3',       src: '/svg/css3.svg',        alt: 'CSS3',       glow: 'rgba(59,130,246,0.75)'  },
-         { label: 'JavaScript', src: '/svg/javascript.svg',  alt: 'JavaScript', glow: 'rgba(234,179,8,0.75)'   },
-         { label: 'TypeScript', src: '/img/typescript.png',  alt: 'TypeScript', glow: 'rgba(59,130,246,0.75)'  },
       ],
    },
    {
       category: 'Frameworks',
       items: [
-         { label: 'Angular',    src: '/img/angular.webp',    alt: 'Angular',    glow: 'rgba(220,38,38,0.7)'    },
          { label: 'React',      src: '/svg/react.svg',       alt: 'React',      glow: 'rgba(97,219,251,0.75)'  },
-         { label: 'Vue.js',     src: '/svg/vue-js.svg',      alt: 'Vue',        glow: 'rgba(34,197,94,0.75)'   },
          { label: 'Next.js',    src: '/svg/nextjs.svg',      alt: 'Next.js',    glow: 'rgba(255,255,255,0.6)'  },
+         { label: 'Angular',    src: '/img/angular.webp',    alt: 'Angular',    glow: 'rgba(220,38,38,0.7)'    },
+         { label: 'Vue.js',     src: '/svg/vue-js.svg',      alt: 'Vue',        glow: 'rgba(34,197,94,0.75)'   },
          { label: 'Node.js',    src: '/svg/nodejs.svg',      alt: 'Node.js',    glow: 'rgba(34,197,94,0.75)'   },
          { label: 'Express',    src: '/img/express.png',   alt: 'Express',    glow: 'rgba(255,255,255,0.5)'  },
          { label: 'Tailwind',   src: '/svg/tailwindcss.svg', alt: 'Tailwind',   glow: 'rgba(13,148,136,0.75)'  },
@@ -36,7 +36,7 @@ const SKILL_CATEGORIES = [
 const buildCategoryBlock = ({ category, items }) => `
    <div class="skills-reveal">
       <p class="text-[0.68rem] text-center font-bold tracking-[0.16em] uppercase text-gray-400 dark:text-gray-500 mb-4">${category}</p>
-      <div class="flex flex-wrap gap-3">
+      <div class="flex justify-center flex-wrap gap-3">
          ${items.map(({ label, src, alt, glow }) => `
          <div class="skill-card group relative flex flex-col items-center gap-2.5
                      bg-white dark:bg-gray-800/60
