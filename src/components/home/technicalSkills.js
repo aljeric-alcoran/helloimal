@@ -41,7 +41,7 @@ const buildCategoryBlock = ({ category, items }) => `
          <div class="skill-card group relative flex flex-col items-center gap-2.5
                      bg-white dark:bg-gray-800/60
                      border border-gray-100 dark:border-gray-700/60
-                     rounded-xl px-4 py-4 w-[6rem]
+                     rounded-xl px-4 py-4 w-[6.8rem] md:w-[7rem]
                      shadow-sm hover:shadow-md
                      hover:border-gray-200 dark:hover:border-gray-600
                      hover:-translate-y-1

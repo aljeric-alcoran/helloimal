@@ -7,19 +7,19 @@ const template = `
       </div>
 
       <!-- Two-column layout -->
-      <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 items-center py-20 md:py-0">
+      <div class="relative w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0 items-center py-20 md:py-0">
 
          <!-- LEFT — Text content -->
-         <div class="flex flex-col gap-7 items-center text-center md:items-start md:text-left order-2 md:order-1">
+         <div class="flex flex-col gap-7 items-center text-center md:items-start md:text-left order-2 md:order-1 md:pl-10">
 
             <!-- Available badge -->
-            <div class="inline-flex items-center gap-2 opacity-0 animate-[fadeUp_0.5s_ease_0.1s_both]">
+            <div class="inline-flex items-center gap-2 opacity-0 animate-[fadeUp_0.5s_ease_0.1s_both] mt-6 md:mt-0">
                <span class="text-md md:text-xl font-bold tracking-[0.12em] uppercase text-gray-500 dark:text-gray-400">Hello</span>
             </div>
 
             <!-- Name -->
             <div class="opacity-0 animate-[fadeUp_0.6s_cubic-bezier(.22,.68,0,1.2)_0.2s_both]">
-               <p class="text-[clamp(3.5rem,10vw,7rem)] font-black leading-[0.88] tracking-[-0.04em] text-gray-900 dark:text-white">
+               <p class="text-[clamp(4.5rem,10vw,7rem)] font-black leading-[0.88] tracking-[-0.04em] text-gray-900 dark:text-white">
                   I'm&nbsp;<span class="relative inline-block text-[#3150CE]">
                      AL
                      <span class="absolute bottom-1 left-0 w-full h-[3px] bg-[#3150CE] rounded-full origin-left animate-[scaleX_0.5s_ease_0.85s_both] scale-x-0"></span>
@@ -75,7 +75,7 @@ const template = `
          </div>
 
          <!-- RIGHT — Profile image -->
-         <div class="flex justify-center mt-8 md:mt-0 md:justify-end order-1 md:order-2 opacity-0 animate-[fadeUp_0.7s_cubic-bezier(.22,.68,0,1.2)_0.3s_both]">
+         <div class="flex justify-center mt-8 md:mt-0 order-1 md:order-2 opacity-0 animate-[fadeUp_0.7s_cubic-bezier(.22,.68,0,1.2)_0.3s_both]">
             <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
 
                <!-- Decorative solid ring -->
