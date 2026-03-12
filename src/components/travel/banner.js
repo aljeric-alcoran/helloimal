@@ -5,11 +5,8 @@ const PHOTOS = [
 ];
 
 const template = `
-   <div id="travel-banner"
-      class="relative min-h-dvh w-full overflow-hidden
-            bg-gray-50 dark:bg-gray-900
-            flex items-center z-0">
-
+   <div id="travel-banner" class="relative min-h-dvh w-full overflow-hidden bg-gray-50 dark:bg-gray-900 flex items-center z-0">
+   
       <!-- ── Dot grid background (matches body::before but contained) ── -->
       <div class="absolute inset-0 pointer-events-none"
          style="background-image:radial-gradient(circle,rgba(49,80,206,0.07) 1px,transparent 1px);background-size:28px 28px;"></div>

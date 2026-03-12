@@ -52,6 +52,17 @@
 }
 
 
+@keyframes lineGrow {
+   from { height: 0; }
+   to   { height: 100%; }
+}
+@keyframes dotPop {
+   0%   { transform: scale(0); opacity: 0; }
+   70%  { transform: scale(1.4); }
+   100% { transform: scale(1); opacity: 1; }
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -83,4 +94,63 @@ body::before {
   content: "*";
   color: #f44336;
   margin-left: 0.2rem;
+}
+
+/* experience.js */
+.fade-up { animation: fadeUp 0.6s cubic-bezier(.22,.68,0,1.2) both; }
+.fade-up-1 { animation-delay: 0.05s; }
+.fade-up-2 { animation-delay: 0.15s; }
+.fade-up-3 { animation-delay: 0.25s; }
+.fade-up-4 { animation-delay: 0.35s; }
+.fade-up-5 { animation-delay: 0.45s; }
+
+.timeline-line {
+   position: absolute; left: 0; top: 0; width: 2px;
+   background: linear-gradient(to bottom, #3150CE, #818cf8, transparent);
+   animation: lineGrow 1.2s ease both; animation-delay: 0.3s;
+}
+.timeline-dot { 
+   animation: dotPop 0.4s cubic-bezier(.22,.68,0,1.2) both; 
+}
+
+.skill-chip { 
+   transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+.skill-chip:hover { 
+   transform: translateY(-2px); 
+   box-shadow: 0 4px 12px rgba(49,80,206,0.18); 
+}
+
+.exp-card { 
+   transition: box-shadow 0.25s ease, transform 0.25s ease; 
+}
+.exp-card:hover { 
+   transform: translateY(-2px); 
+   box-shadow: 0 12px 40px rgba(49,80,206,0.10); 
+}
+
+.hero-gradient { 
+   background: linear-gradient(135deg, #3150CE 0%, #4f6ef7 60%, #818cf8 100%); 
+}
+
+.stat-card {
+   background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
+   border: 1px solid rgba(255,255,255,0.2); transition: background 0.2s;
+}
+.stat-card:hover { 
+   background: rgba(255,255,255,0.2); 
+}
+
+.tag-pill { 
+   background: rgba(49,80,206,0.08); 
+   color: #3150CE; 
+   border: 1px solid rgba(49,80,206,0.15); 
+}
+html[data-theme='dark'] .tag-pill { 
+   background: rgba(99,132,255,0.12); 
+   color: #818cf8; 
+   border-color: rgba(99,132,255,0.2); 
+}
+html[data-theme='dark'] .hero-gradient { 
+   background: linear-gradient(135deg, #1e3a9f 0%, #3150CE 60%, #4f6ef7 100%); 
 }

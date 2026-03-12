@@ -27,7 +27,7 @@ const template = `
                      "
                      sizes="(max-width: 768px) 100vw, 300px"
                      width="320" height="224"
-                     class="w-full h-full object-cover object-top grayscale hover:grayscale-0 scale-[1.03] hover:scale-100 transition-all duration-500"
+                     class="w-full h-full object-cover object-top md:grayscale hover:grayscale-0 scale-[1.03] hover:scale-100 transition-all duration-500"
                      alt="Al Jeric Alcoran"
                      loading="lazy"
                      decoding="async"
@@ -254,7 +254,7 @@ const template = `
 
                   <!-- Locked state -->
                   <div id="age-locked-state" class="hidden">
-                     <p class="text-xs font-semibold text-amber-500 dark:text-amber-400">🔒 Too many wrong guesses</p>
+                     <p class="text-xs font-semibold text-amber-500 dark:text-amber-400">Too many wrong guesses🔒</p>
                      <p id="age-locked-timer" class="text-[0.62rem] text-gray-400 dark:text-gray-500 mt-1"></p>
                   </div>
                </div>
@@ -300,14 +300,14 @@ const setBiographySection = (element) => {
    element.innerHTML = template;
 
    // ── Age-guess game ────────────────────────────────────────────────────────
-   const AGE_STORE_KEY  = 'age_game_v1';
-   const MAX_ATTEMPTS   = 2;
-   const LOCK_DURATION  = 10 * 60 * 1000; // 10 min in ms
-   const BIRTHDAY       = new Date(1997, 10, 26); // Nov 26 1997 (month is 0-indexed)
+   const AGE_STORE_KEY = 'age_game_v1';
+   const MAX_ATTEMPTS = 3;
+   const LOCK_DURATION = 10 * 60 * 1000; // 10 min in ms
+   const BIRTHDAY = new Date(1997, 10, 26); // Nov 26 1997 (month is 0-indexed)
 
    const calcAge = () => {
-      const now     = new Date();
-      const age     = now.getFullYear() - BIRTHDAY.getFullYear();
+      const now = new Date();
+      const age = now.getFullYear() - BIRTHDAY.getFullYear();
       const hasBday = now >= new Date(now.getFullYear(), BIRTHDAY.getMonth(), BIRTHDAY.getDate());
       return hasBday ? age : age - 1;
    };
@@ -333,7 +333,7 @@ const setBiographySection = (element) => {
             clearInterval(lockTimerInterval);
             saveState({});
             showInputState();
-            document.getElementById('age-attempts-label').textContent = '2 attempts remaining';
+            document.getElementById('age-attempts-label').textContent = '3 attempts remaining';
             document.getElementById('age-feedback').textContent = '';
             return;
          }
@@ -346,7 +346,7 @@ const setBiographySection = (element) => {
    };
 
    const initAgeGame = () => {
-      const state     = loadState();
+      const state = loadState();
       const correctAge = calcAge();
 
       // Already solved?
@@ -372,9 +372,9 @@ const setBiographySection = (element) => {
          attemptsLeft === 1 ? '⚠️ Last attempt!' : `${attemptsLeft} attempts remaining`;
 
       const doGuess = () => {
-         const input    = document.getElementById('age-input');
+         const input = document.getElementById('age-input');
          const feedback = document.getElementById('age-feedback');
-         const guess    = parseInt(input.value, 10);
+         const guess = parseInt(input.value, 10);
 
          if (!guess || guess < 1 || guess > 99) {
             feedback.textContent = 'Enter a valid age (1–99)';
@@ -382,7 +382,8 @@ const setBiographySection = (element) => {
             return;
          }
 
-         const newAttempts = (state.attempts || 0) + 1;
+         const fresh = loadState();
+         const newAttempts = (fresh.attempts || 0) + 1;
 
          if (guess === correctAge) {
             saveState({ solved: true });

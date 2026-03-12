@@ -37,14 +37,14 @@ const template = `
             <!-- CTA Buttons -->
             <div class="flex items-center gap-3 flex-wrap justify-center md:justify-start opacity-0 animate-[fadeUp_0.5s_ease_0.7s_both]">
                <button id="download-file-btn" type="button"
-                  class="cursor-pointer inline-flex items-center gap-2 bg-[#3150CE] hover:bg-[#2540b0] text-white text-sm font-semibold tracking-wide px-6 py-3 rounded-full transition-all duration-200 hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(49,80,206,0.35)] active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#3150CE]/50">
+                  class="cursor-pointer inline-flex items-center gap-2 bg-[#3150CE] hover:bg-[#2540b0] text-white text-xs md:text-sm font-semibold tracking-wide px-6 py-3 rounded-full transition-all duration-200 hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(49,80,206,0.35)] active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#3150CE]/50">
                   <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/>
                   </svg>
                   Download CV
                </button>
                <button id="contact-me-btn" type="button"
-                  class="cursor-pointer inline-flex items-center gap-2 bg-transparent text-gray-800 dark:text-white text-sm font-semibold tracking-wide px-6 py-3 rounded-full border-[1.5px] border-gray-300 dark:border-gray-600 hover:border-gray-800 dark:hover:border-white transition-all duration-200 hover:-translate-y-px active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600">
+                  class="cursor-pointer inline-flex items-center gap-2 bg-transparent text-gray-800 dark:text-white text-xs md:text-sm font-semibold tracking-wide px-6 py-3 rounded-full border-[1.5px] border-gray-300 dark:border-gray-600 hover:border-gray-800 dark:hover:border-white transition-all duration-200 hover:-translate-y-px active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600">
                   <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24">
                      <path stroke="currentColor" stroke-linecap="round" stroke-width="2.5" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
                   </svg>
@@ -95,7 +95,7 @@ const template = `
                      alt="Al Jeric Alcoran"
                      width="400"
                      height="400"
-                     class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+                     class="w-full h-full object-cover object-top md:grayscale hover:grayscale-0 transition-all duration-500"
                      loading="eager"
                      decoding="async"
                   />

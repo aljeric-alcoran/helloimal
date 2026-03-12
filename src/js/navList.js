@@ -20,7 +20,7 @@ const MOBILE_NORMAL  = 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dar
 const MOBILE_ACTIVE  = 'text-[#3150CE] dark:text-[#818cf8] bg-[#3150CE]/8 dark:bg-[#818cf8]/10';
 
 
-export const buildNavItem = (item, isMobile, onClose) => {
+export const buildNavItem = (item, isMobile) => {
    const li = document.createElement('li');
    const a  = document.createElement('a');
 
@@ -41,13 +41,13 @@ export const buildNavItem = (item, isMobile, onClose) => {
 };
 
 // ── Populate both desktop + mobile lists ──────────────────────────────────────
-export const populateNavLists = (onClose) => {
+export const populateNavLists = () => {
    const desktop = document.getElementById('nav-list');
    const mobile  = document.getElementById('nav-list-mobile');
 
    NAV_ITEMS.forEach(item => {
-      desktop?.appendChild(buildNavItem(item, false, null));
-      mobile?.appendChild(buildNavItem(item, true, onClose));
+      desktop?.appendChild(buildNavItem(item, false));
+      mobile?.appendChild(buildNavItem(item, true));
    });
 };
 

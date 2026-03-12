@@ -1,93 +1,55 @@
 const template = `
-   <style>
-      @keyframes fadeUp {
-         from { opacity: 0; transform: translateY(24px); }
-         to   { opacity: 1; transform: translateY(0); }
-      }
-      @keyframes lineGrow {
-         from { height: 0; }
-         to   { height: 100%; }
-      }
-      @keyframes dotPop {
-         0%   { transform: scale(0); opacity: 0; }
-         70%  { transform: scale(1.4); }
-         100% { transform: scale(1); opacity: 1; }
-      }
-      .fade-up { animation: fadeUp 0.6s cubic-bezier(.22,.68,0,1.2) both; }
-      .fade-up-1 { animation-delay: 0.05s; }
-      .fade-up-2 { animation-delay: 0.15s; }
-      .fade-up-3 { animation-delay: 0.25s; }
-      .fade-up-4 { animation-delay: 0.35s; }
-      .fade-up-5 { animation-delay: 0.45s; }
-
-      .timeline-line {
-         position: absolute; left: 0; top: 0; width: 2px;
-         background: linear-gradient(to bottom, #3150CE, #818cf8, transparent);
-         animation: lineGrow 1.2s ease both; animation-delay: 0.3s;
-      }
-      .timeline-dot { animation: dotPop 0.4s cubic-bezier(.22,.68,0,1.2) both; }
-
-      .skill-chip { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-      .skill-chip:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(49,80,206,0.18); }
-
-      .exp-card { transition: box-shadow 0.25s ease, transform 0.25s ease; }
-      .exp-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(49,80,206,0.10); }
-
-      .hero-gradient { background: linear-gradient(135deg, #3150CE 0%, #4f6ef7 60%, #818cf8 100%); }
-
-      .stat-card {
-         background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
-         border: 1px solid rgba(255,255,255,0.2); transition: background 0.2s;
-      }
-      .stat-card:hover { background: rgba(255,255,255,0.2); }
-
-      .tag-pill { background: rgba(49,80,206,0.08); color: #3150CE; border: 1px solid rgba(49,80,206,0.15); }
-      html[data-theme='dark'] .tag-pill { background: rgba(99,132,255,0.12); color: #818cf8; border-color: rgba(99,132,255,0.2); }
-      html[data-theme='dark'] .hero-gradient { background: linear-gradient(135deg, #1e3a9f 0%, #3150CE 60%, #4f6ef7 100%); }
-   </style>
-
    <!-- HERO -->
-   <div class="hero-gradient relative overflow-hidden pt-20">
-      <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 28px 28px;"></div>
-      <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full opacity-20" style="background: radial-gradient(circle, #fff 0%, transparent 70%);"></div>
-      <div class="absolute -bottom-10 -left-10 w-48 h-48 rounded-full opacity-10" style="background: radial-gradient(circle, #fff 0%, transparent 70%);"></div>
+   <div class="bg-slate-100 dark:bg-gray-900 relative overflow-hidden pt-20 my-auto border-b border-slate-100 dark:border-slate-800">
+      <div class="absolute inset-0 opacity-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 28px 28px;"></div>
+      <div class="absolute -top-16 -right-16 w-[500px] h-[500px] rounded-full opacity-20" style="background: radial-gradient(circle, #fff 0%, transparent 70%);"></div>
+      <div class="absolute -bottom-10 -left-10 w-[380px] h-[380px] rounded-full opacity-10" style="background: radial-gradient(circle, #fff 0%, transparent 70%);"></div>
 
       <div class="relative max-w-screen-md mx-auto px-6 py-16 md:py-24">
          <div class="fade-up fade-up-2">
-            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
-               Al Jeric <span class="text-white/70">Alcoran</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight tracking-tight">
+               Al Jeric <span class="text-[#3150CE]">Alcoran</span>
             </h1>
-            <p class="mt-3 text-white/80 text-lg font-medium">· Full Stack Developer</p>
-            <p class="mt-3 text-white/80 text-lg font-medium">· 4+ Years Experience</p>
+            <p class="mt-3 text-gray-600 dark:text-white/80 text-sm md:text-lg font-medium">· Full Stack Developer</p>
+            <p class="mt-2 text-gray-600 dark:text-white/80 text-sm md:text-lg font-medium">· 4+ Years Experience</p>
          </div>
 
          <div class="fade-up fade-up-3 grid grid-cols-3 gap-3 mt-10">
-            <div class="stat-card rounded-xl p-4 text-center"><p class="text-2xl font-bold text-white">4+</p><p class="text-white/60 text-xs mt-1">Years Exp.</p></div>
-            <div class="stat-card rounded-xl p-4 text-center"><p class="text-2xl font-bold text-white">2</p><p class="text-white/60 text-xs mt-1">Companies</p></div>
-            <div class="stat-card rounded-xl p-4 text-center"><p class="text-2xl font-bold text-white">10+</p><p class="text-white/60 text-xs mt-1">Technologies</p></div>
+            <div class="stat-card bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 shadow-sm dark:shadow-none rounded-xl p-4 text-center">
+               <p class="text-2xl font-bold text-gray-800 dark:text-white">4+</p>
+               <p class="text-gray-400 dark:text-white/60 text-xs mt-1">Years Exp.</p>
+            </div>
+            <div class="stat-card bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 shadow-sm dark:shadow-none rounded-xl p-4 text-center">
+               <p class="text-2xl font-bold text-gray-800 dark:text-white">2</p>
+               <p class="text-gray-400 dark:text-white/60 text-xs mt-1">Companies</p>
+            </div>
+            <div class="stat-card bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 shadow-sm dark:shadow-none rounded-xl p-4 text-center">
+               <p class="text-2xl font-bold text-gray-800 dark:text-white">10+</p>
+               <p class="text-gray-400 dark:text-white/60 text-xs mt-1">Technologies</p>
+            </div>
          </div>
 
-         <div class="fade-up fade-up-4 flex items-center gap-3 mt-8">
-            <button id="download-file" type="button" class="cursor-pointer inline-flex items-center gap-2 bg-white text-[#3150CE] font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all">
+         <div class="fade-up fade-up-4 flex items-center justify-center md:justify-start gap-3 mt-8">
+            <button id="download-file" type="button" class="cursor-pointer inline-flex items-center gap-2 bg-[#3150CE] dark:bg-white text-white dark:text-[#3150CE] font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-[#2540b0] dark:hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all">
                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/></svg>
                Download CV
             </button>
-            <button id="contact-me" type="button" class="cursor-pointer inline-flex items-center gap-2 bg-white/15 text-white border border-white/30 font-medium text-sm px-5 py-2.5 rounded-xl hover:bg-white/25 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all">
+            <button id="contact-me" type="button" class="cursor-pointer inline-flex items-center gap-2 bg-transparent dark:bg-white/15 text-gray-700 dark:text-white border border-gray-300 dark:border-white/30 font-medium text-sm px-5 py-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-white/25 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all">
                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/></svg>
                Contact Me
             </button>
          </div>
 
          <div class="fade-up fade-up-5 flex flex-wrap items-center gap-4 mt-6">
-            <a href="https://helloimal.vercel.app" target="_blank" class="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs transition-colors">
+            <a href="https://helloimal.vercel.app" target="_blank" class="inline-flex items-center gap-1.5 text-gray-400 dark:text-white/60 hover:text-gray-800 dark:hover:text-white text-xs transition-colors">
                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.168 3.809a9 9 0 1 0 2.027 9.608M13.168 3.809A9 9 0 0 0 3.8 12.06M3.8 12.06H3"/></svg>
                helloimal.vercel.app
             </a>
-            <a href="https://github.com/aljeric-alcoran" target="_blank" class="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs transition-colors">
+            <a href="https://github.com/aljeric-alcoran" target="_blank" class="inline-flex items-center gap-1.5 text-gray-400 dark:text-white/60 hover:text-gray-800 dark:hover:text-white text-xs transition-colors">
                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/></svg>
                aljeric-alcoran
             </a>
-            <a href="https://www.linkedin.com/in/al-jeric-alcoran-a420b6213/" target="_blank" class="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs transition-colors">
+            <a href="https://www.linkedin.com/in/al-jeric-alcoran-a420b6213/" target="_blank" class="inline-flex items-center gap-1.5 text-gray-400 dark:text-white/60 hover:text-gray-800 dark:hover:text-white text-xs transition-colors">
                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/><path d="M7.2 8.809H4V19.5h3.2V8.809Z"/></svg>
                LinkedIn
             </a>
