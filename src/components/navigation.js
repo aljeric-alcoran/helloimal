@@ -75,7 +75,7 @@ const setNavigation = (element) => {
    const close = () => closeMenu(menu, btn);
 
    // Populate both desktop + mobile lists
-   populateNavLists(close);
+   populateNavLists();
 
    // Hamburger toggle
    btn.addEventListener('click', (e) => { 

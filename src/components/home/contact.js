@@ -110,11 +110,12 @@ const template = `
                          hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(49,80,206,0.35)]
                          active:translate-y-0
                          focus:outline-none focus:ring-2 focus:ring-[#3150CE]/50
-                         disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0 disabled:shadow-none">
-                  <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24">
-                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
-                  </svg>
-                  <span id="btn-text">Send message</span>
+                         disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0 disabled:shadow-none"
+               >
+               <svg class="w-5 h-5 rotate-90 shrink-0" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
+               </svg>
+               <span id="btn-text">Send message</span>
                </button>
 
             </form>
