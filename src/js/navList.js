@@ -11,9 +11,9 @@ const isActive = (href) =>
       ? currentPath() === '/'
       : currentPath() === href || currentPath().startsWith(href + '/');
 
-const DESKTOP_BASE   = 'relative px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40';
+const DESKTOP_BASE   = 'relative px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors duration-200';
 const DESKTOP_NORMAL = 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800/70';
-const DESKTOP_ACTIVE = 'text-[#3150CE] dark:text-[#818cf8] bg-[#3150CE]/8 dark:bg-[#818cf8]/10';
+const DESKTOP_ACTIVE = 'text-[#3150CE] dark:text-[#818cf8]';
 
 const MOBILE_BASE    = 'block px-4 py-3 text-sm font-semibold rounded-xl transition-colors duration-200 focus:outline-none';
 const MOBILE_NORMAL  = 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800';

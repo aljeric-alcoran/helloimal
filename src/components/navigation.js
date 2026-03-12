@@ -17,7 +17,7 @@ const template = `
 
             <!-- Desktop nav links (center) -->
             <nav class="hidden md:flex items-center">
-               <ul id="nav-list" class="flex items-center gap-8"></ul>
+               <ul id="nav-list" class="flex items-center gap-4"></ul>
             </nav>
 
             <!-- Right controls -->
