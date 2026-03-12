@@ -1,4 +1,5 @@
 import { routeDefinitions } from './js/routes.js';
+import { syncActiveLinks, closeMenu } from './js/navList.js';
 
 const pathToRegex = (path) => {
    const paramNames = [];
@@ -8,63 +9,40 @@ const pathToRegex = (path) => {
          return '/([a-zA-Z0-9_-]+)';
       })
       .replace(/\//g, '\\/');
- 
+
    return {
-     regex: new RegExp(`^${regexPath}$`),
-     paramNames
+      regex: new RegExp(`^${regexPath}$`),
+      paramNames
    };
-}
+};
 
 const routes = routeDefinitions.map(route => {
    const { regex, paramNames } = pathToRegex(route.path);
-   return {
-     regex,
-     paramNames,
-     handler: route.handler
-   };
+   return { regex, paramNames, handler: route.handler };
 });
-
-const setActiveLinkClass = (currentPath) => {
-   const baseClass = 'block py-2 px-3 rounded-sm md:p-0';
-   const normalClass = 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
-   const activeClass = 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500';
-
-   const navLinks = document.querySelectorAll('#nav-list a');
-
-   navLinks.forEach(link => {
-      const linkPath = new URL(link.href, window.location.origin).pathname;
-      const isActive = currentPath === linkPath || currentPath.startsWith(linkPath + '/');
-      
-      link.className = baseClass + ' ' + (isActive ? activeClass : normalClass);
-   });
-}
 
 export const handleRoute = (path) => {
    for (const route of routes) {
       const match = path.match(route.regex);
       if (match) {
          const params = {};
-         route.paramNames.forEach((name, i) => {
-            params[name] = match[i + 1];
-         });
+         route.paramNames.forEach((name, i) => { params[name] = match[i + 1]; });
          route.handler(params);
          return;
       }
    }
-   // setNotFoundPage(main);
-}
+};
 
 const navigateTo = (url) => {
    history.pushState({}, '', url);
    handleRoute(url);
-   setActiveLinkClass(url);
-}
+   syncActiveLinks(); // ← always sync after pushState navigation
+};
 
 document.body.addEventListener('click', (e) => {
-   const navLink = e.target.closest('a[nav-link]');
+   const navLink     = e.target.closest('a[nav-link]');
    const journalLink = e.target.closest('a[journal-link]');
-
-   if (navLink) interceptLinkClick(navLink, e);
+   if (navLink)     interceptLinkClick(navLink, e);
    if (journalLink) interceptLinkClick(journalLink, e);
 });
 
@@ -72,12 +50,20 @@ const interceptLinkClick = (link, e) => {
    e.preventDefault();
    navigateTo(link.getAttribute('href'));
    window.scrollTo(0, 0);
-}
+
+   // Close mobile drawer if it's open
+   const menu = document.getElementById('mobile-menu');
+   const btn  = document.getElementById('navbar-btn');
+   if (menu && btn && !menu.classList.contains('hidden')) {
+      closeMenu(menu, btn);
+   }
+};
 
 window.addEventListener('popstate', () => {
    handleRoute(window.location.pathname);
+   syncActiveLinks(); // ← sync on browser back/forward too
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-   setActiveLinkClass(window.location.pathname);
+   syncActiveLinks(); // ← sync on first load
 });

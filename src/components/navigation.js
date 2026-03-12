@@ -6,7 +6,7 @@ const template = `
          <div class="flex items-center justify-between h-16 md:h-20">
 
             <!-- Logo -->
-            <a href="/" nav-link class="flex items-center gap-2.5 group shrink-0">
+            <a href="/" class="flex items-center gap-2.5 group shrink-0">
                <div class="relative">
                   <img src="/img/logo.webp" class="h-8 w-8 rounded-lg" alt="AL Logo" loading="eager" />
                </div>
@@ -17,7 +17,7 @@ const template = `
 
             <!-- Desktop nav links (center) -->
             <nav class="hidden md:flex items-center">
-               <ul id="nav-list" class="flex items-center gap-8"></ul>
+               <ul id="nav-list" class="flex items-center gap-4"></ul>
             </nav>
 
             <!-- Right controls -->

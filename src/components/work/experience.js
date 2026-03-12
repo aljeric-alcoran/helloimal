@@ -57,11 +57,8 @@ const template = `
             <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
                Al Jeric <span class="text-white/70">Alcoran</span>
             </h1>
-            <p class="mt-3 text-white/80 text-lg font-medium">Full Stack Developer · 4+ Years Experience</p>
-            <p class="text-white/55 text-sm mt-1 flex items-center gap-1">
-               <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957l-.573.699-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.31-.38a7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clip-rule="evenodd"/></svg>
-               Ramon Magsaysay, Zamboanga del Sur, Philippines
-            </p>
+            <p class="mt-3 text-white/80 text-lg font-medium">· Full Stack Developer</p>
+            <p class="mt-3 text-white/80 text-lg font-medium">· 4+ Years Experience</p>
          </div>
 
          <div class="fade-up fade-up-3 grid grid-cols-3 gap-3 mt-10">
@@ -99,7 +96,7 @@ const template = `
    </div>
 
    <!-- BODY -->
-   <div class="max-w-screen-md mx-auto px-4 md:px-0 pb-24 text-gray-900 dark:text-white">
+   <div class="max-w-screen-md mx-auto px-4 md:px-0 pb-6 text-gray-900 dark:text-white">
 
       <!-- Professional Summary -->
       <section class="fade-up fade-up-1 mt-10">
@@ -141,6 +138,7 @@ const template = `
                   <div class="flex flex-wrap gap-2">
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">React</span>
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Next.js</span>
+                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Tanstack React Query</span>
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Angular</span>
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Vue.js</span>
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Node.js</span>
@@ -152,11 +150,11 @@ const template = `
                   <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2.5">Tools & Technologies</p>
                   <div class="flex flex-wrap gap-2">
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">WordPress</span>
-                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Git / GitHub</span>
+                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Git</span>
+                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">GitHub</span>
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Docker</span>
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Postman</span>
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Figma</span>
-                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Adobe Photoshop</span>
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">VS Code</span>
                   </div>
                </div>
@@ -164,9 +162,8 @@ const template = `
                   <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2.5">Testing</p>
                   <div class="flex flex-wrap gap-2">
                      <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Mocha</span>
-                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Unit Testing</span>
-                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Integration Testing</span>
-                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">REST API Testing</span>
+                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Jest</span>
+                     <span class="skill-chip tag-pill text-xs font-medium px-3 py-1 rounded-full">Supertest</span>
                   </div>
                </div>
             </div>
@@ -300,17 +297,17 @@ const template = `
 
       <!-- CTA Footer -->
       <section class="fade-up fade-up-5 mt-6">
-         <div class="relative overflow-hidden rounded-2xl hero-gradient p-8 text-center">
+         <div class="relative overflow-hidden rounded-2xl hero-gradient p-5 md:p-8 text-center">
             <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 24px 24px;"></div>
             <div class="relative">
                <p class="text-white font-bold text-xl">Interested in working together?</p>
                <p class="text-white/70 text-sm mt-2">Let's build something great. Reach out and I'll get back to you promptly.</p>
                <div class="flex items-center justify-center gap-3 mt-6">
-                  <button id="contact-me-footer" type="button" class="cursor-pointer inline-flex items-center gap-2 bg-white text-[#3150CE] font-semibold text-sm px-6 py-2.5 rounded-xl hover:bg-white/90 transition-all focus:outline-none focus:ring-2 focus:ring-white/50">
+                  <button id="contact-me-footer" type="button" class="cursor-pointer inline-flex items-center gap-2 bg-white text-[#3150CE] font-semibold text-xs md:text-sm px-6 py-2.5 rounded-lg hover:bg-white/90 transition-all focus:outline-none focus:ring-2 focus:ring-white/50">
                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/></svg>
                      Get in Touch
                   </button>
-                  <button id="download-file-footer" type="button" class="cursor-pointer inline-flex items-center gap-2 bg-white/15 text-white border border-white/30 font-medium text-sm px-6 py-2.5 rounded-xl hover:bg-white/25 transition-all focus:outline-none focus:ring-2 focus:ring-white/30">
+                  <button id="download-file-footer" type="button" class="cursor-pointer inline-flex items-center gap-2 bg-white/15 text-white text-xs md:text-sm border border-white/30 font-medium px-6 py-2.5 rounded-lg hover:bg-white/25 transition-all focus:outline-none focus:ring-2 focus:ring-white/30">
                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/></svg>
                      Download CV
                   </button>
