@@ -66,7 +66,7 @@ const template = `
                   LinkedIn
                </a>
                <span class="text-gray-200 dark:text-gray-700">·</span>
-               <a href="https://helloimal.vercel.app" target="_blank"
+               <a href="https://helloimal.vercel.app/projects"
                   class="inline-flex items-center gap-1.5 text-[0.68rem] font-bold tracking-[0.1em] uppercase text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">
                   <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.168 3.809a9 9 0 1 0 2.027 9.608M13.168 3.809A9 9 0 0 0 3.8 12.06M3.8 12.06H3"/></svg>
                   Portfolio
