@@ -1,7 +1,7 @@
 export const PROJECTS = [
    {
       id: 'helloimal',
-      name: 'helloimal — Portfolio',
+      name: 'helloimal',
       description:
          'My personal portfolio website built with Vite and Tailwind CSS v4. A vanilla JS SPA with smooth client-side routing, dark mode, sections for biography, skills, experience, travel journals, and a contact form.',
       images: [
@@ -10,50 +10,27 @@ export const PROJECTS = [
          'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800,h_450,c_fill,g_face/v1773323870/Screenshot_2026-03-12_215449_wpbdpa.png',
       ],
       tools: ['Vite', 'Tailwind CSS v4', 'JavaScript', 'Cloudinary', 'Vercel'],
-      status: 'production',
+      status: 'released',
       url: null,
       year: '2025',
    },
    {
-      id: 'easypick',
-      name: 'Easypick Key-Sharing System',
+      id: 'bleep-store',
+      name: 'Bleep',
       description:
-         'A key-access management platform for property owners and managers. Handles key-sharing workflows, access control validation, and activity logging with a React + TypeScript frontend and Node.js / Express backend.',
+         `A full-featured e-commerce web application inspired by platforms like Shopee and Lazada, enabling sellers to list, 
+         manage, and sell products to customers through a user-friendly interface. The application includes product catalog 
+         management, seller dashboards, customer browsing and search, secure checkout workflows, order tracking, and basic 
+         inventory management.`,
       images: [
-         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800/easypick-1',
-         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800/easypick-2',
+         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800,h_450,c_fill,g_face/v1773370190/home_uokxpi.png',
+         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800,h_450,c_fill,g_face/v1773370190/login_pvqnbn.png',
+         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800,h_450,c_fill,g_face/v1773370189/product_bt1ueq.png',
+         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800,h_450,c_fill,g_face/v1773370189/cart_fwegj6.png'
       ],
-      tools: ['React', 'TypeScript', 'Node.js', 'Express.js', 'Mocha', 'REST API'],
-      status: 'production',
-      url: 'https://easypick.app',
-      year: '2022–2025',
-   },
-   {
-      id: 'hris',
-      name: 'HRIS — Human Resource System',
-      description:
-         'A Human Resource Information System built for Nextlogic Distribution Inc. Covers employee management, payroll records, and administrative workflows with a responsive Vue.js frontend.',
-      images: [
-         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800/hris-1',
-         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800/hris-2',
-         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800/hris-3',
-      ],
-      tools: ['Vue.js', 'Tailwind CSS', 'REST API', 'Figma'],
-      status: 'local',
+      tools: ['NextJS', 'TypeScript', 'Tailwindcss', 'Shadcn', 'Tanstack Query', 'NodeJS', 'Express', 'MongoDB'],
+      status: 'development',
       url: null,
-      year: '2021',
-   },
-   {
-      id: 'hotel',
-      name: 'Hotel Reservation System',
-      description:
-         'A reservation and room management system for a hotel client. Includes real-time availability display, booking workflows, and reservation tracking — built with React and integrated with a RESTful backend.',
-      images: [
-         'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_800/hotel-1',
-      ],
-      tools: ['React', 'Tailwind CSS', 'REST API', 'Figma'],
-      status: 'local',
-      url: null,
-      year: '2022',
-   },
+      year: '2025-Ongoing',
+   }
 ];
