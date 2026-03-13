@@ -219,6 +219,38 @@ const template = `
                </div>
             </div>
 
+            <!-- Education -->
+            <section class="fade-up fade-up-4">
+               <div class="bio-reveal rounded-2xl border border-gray-100 dark:border-gray-700/60 bg-white dark:bg-gray-800/50 p-5 shadow-sm group hover:border-[#3150CE]/25 dark:hover:border-[#3150CE]/25 transition-colors duration-300">
+                  <div class="flex items-center gap-3 mb-6">
+                     <div class="w-8 h-8 flex items-center justify-center rounded-xl bg-[#3150CE]/10 dark:bg-[#3150CE]/20">
+                        <svg class="w-5 h-5 text-[#3150CE]" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.37 7.991 12 12l7.63-4.009M12 20V12m8 .5V8a1 1 0 0 0-.583-.907l-7-3.5a1 1 0 0 0-.833 0l-7 3.5A1 1 0 0 0 4 8v4.5a7.001 7.001 0 0 0 7.341 6.987c.247-.015.494-.028.659-.05"/></svg>
+                     </div>
+                     <h2 class="font-bold text-base">Education</h2>
+                  </div>
+                  <div class="grid md:grid-cols-2 gap-4">
+                     <div class="p-5 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-[#3150CE]/30 dark:hover:border-[#3150CE]/30 transition-colors bg-gray-50 dark:bg-gray-700/30">
+                        <div class="flex items-start justify-between gap-2">
+                           <div>
+                              <p class="font-semibold text-sm">BS in Information Technology</p>
+                              <p class="text-[#3150CE] dark:text-indigo-400 text-xs font-medium mt-1">STI College Cagayan de Oro</p>
+                           </div>
+                           <span class="shrink-0 text-xs text-gray-400 dark:text-gray-500 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-2 py-1">2017–2020</span>
+                        </div>
+                     </div>
+                     <div class="p-5 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-[#3150CE]/30 dark:hover:border-[#3150CE]/30 transition-colors bg-gray-50 dark:bg-gray-700/30">
+                        <div class="flex items-start justify-between gap-2">
+                           <div>
+                              <p class="font-semibold text-sm">Information Technology Program</p>
+                              <p class="text-[#3150CE] dark:text-indigo-400 text-xs font-medium mt-1">STI College Pagadian</p>
+                           </div>
+                           <span class="shrink-0 text-xs text-gray-400 dark:text-gray-500 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg px-2 py-1">2014–2016</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
             <!-- Q&A cards -->
             <div class="grid sm:grid-cols-2 gap-4">
 
@@ -289,7 +321,6 @@ const template = `
                   <p class="text-[0.65rem] font-bold tracking-[0.12em] uppercase text-gray-400 dark:text-gray-500 mb-1.5">Dream</p>
                   <p class="text-sm/6 text-gray-600 dark:text-gray-400">To build and run my own business someday — turning ideas into products that genuinely help people.</p>
                </div>
-
             </div>
          </div>
       </div>
