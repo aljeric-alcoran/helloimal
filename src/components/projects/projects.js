@@ -1,4 +1,4 @@
-import { PROJECTS } from '../../constants/projects-data.js';
+import { PROJECTS } from '../../data/projects-data.js';
 import { 
    sliderState, 
    buildCard, 

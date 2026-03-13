@@ -1,4 +1,4 @@
-import { PROJECTS } from '../constants/projects-data';
+import { PROJECTS } from '../data/projects-data';
 export const sliderState = {};
 
 export const buildCard = (project, index) => {
