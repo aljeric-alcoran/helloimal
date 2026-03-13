@@ -39,7 +39,7 @@ const template = `
    </div>
 `;
 
-import { customImageUrlOptimizer, getOptimizedImageUrl } from '../../js/helpers.js'
+import { getFullSizedImage, generateImageThumbnail } from '../../js/helpers.js'
 
 const imageSliderModal = (openModalBtn, galleryImages, currentIndex) => {
    const modal = document.getElementById('imageModal');
@@ -57,9 +57,9 @@ const imageSliderModal = (openModalBtn, galleryImages, currentIndex) => {
       modalImage.style.opacity = "0";
       imageContainer.classList.add('animate-pulse');
 
-      imageContainer.style.backgroundImage = `url(${customImageUrlOptimizer(src, 20, 20)})`;
+      imageContainer.style.backgroundImage = `url(${generateImageThumbnail(src, 20, 20)})`;
 
-      const fullImageUrl = `${getOptimizedImageUrl(src, w, h)}`;
+      const fullImageUrl = `${getFullSizedImage(src, w, h)}`;
       modalImage.src = fullImageUrl;
 
       modalImage.onload = () => {

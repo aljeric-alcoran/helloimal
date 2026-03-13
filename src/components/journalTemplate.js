@@ -24,15 +24,15 @@ const template = `
       </div>
    </div>
 `
-import { journals } from "../js/journals.js";
+import { journals } from "../data/travel-data.js";
 import imageSliderModal from './modal/imageSlider.js';
-import { customImageUrlOptimizer, getOptimizedImageUrl } from '../js/helpers.js'
+import { getFullSizedImage, generateImageThumbnail } from '../js/helpers.js'
 
 const setJournalTemplate = (container, journalId) => {
    container.innerHTML = template;
 
    const journal = journals.find(j => j.id === journalId);
-   document.getElementById('category').textContent = `${journal.category}`;
+   document.getElementById('category').textContent = `${journal.contents.category}`;
    document.getElementById('title').textContent = journal.title;
    document.getElementById('blog').textContent = journal.blog;
    document.getElementById('content').innerHTML = journal.content;
@@ -46,7 +46,7 @@ const setJournalTemplate = (container, journalId) => {
       <div 
          class="relative w-full h-full lg:rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 animate-pulse"
          style="
-            background-image: url('${ customImageUrlOptimizer(journal.coverImage.url, 20, 20) }');
+            background-image: url('${ generateImageThumbnail(journal.coverImage.url, 20, 20) }');
             background-size: cover;
             background-position: center;
          "
@@ -54,7 +54,7 @@ const setJournalTemplate = (container, journalId) => {
          <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
 
          <img 
-            src="${ getOptimizedImageUrl(journal.coverImage.url, journal.coverImage.w, journal.coverImage.h) }"
+            src="${ getFullSizedImage(journal.coverImage.url, journal.coverImage.w, journal.coverImage.h) }"
             alt="${journal.id}"
             loading="lazy"
             class="absolute inset-0 w-full h-[500px] object-cover object-center opacity-0 transition-opacity duration-700 shadow"
@@ -73,7 +73,7 @@ const setGallery = (gallery) => {
 
       const inner = document.createElement('div');
       inner.className = 'relative w-full h-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 animate-pulse';
-      inner.style.backgroundImage = `url('${customImageUrlOptimizer(src, 20, 20)}')`;
+      inner.style.backgroundImage = `url('${generateImageThumbnail(src, 20, 20)}')`;
       inner.style.backgroundSize = 'cover';
       inner.style.backgroundPosition = 'center';
       inner.onclick = () => imageSliderModal(wrapper, gallery, index);
@@ -81,7 +81,7 @@ const setGallery = (gallery) => {
       inner.innerHTML = `
          <div class="absolute inset-0 w-full h-full backdrop-blur-2xl"></div>
          <img 
-            src="${getOptimizedImageUrl(src, w, h, 800)}"
+            src="${getFullSizedImage(src, w, h, 800)}"
             alt="${alt}"
             loading="lazy"
             class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 rounded-xl shadow"
