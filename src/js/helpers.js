@@ -20,7 +20,7 @@ export const scrollTo = (elementId, route) => {
    window.location.href = route;
 } 
 
-export const getOptimizedImageUrl = (baseUrl, originalWidth, originalHeight, maxDimension = 1300) => {
+export const getFullSizedImage = (baseUrl, originalWidth, originalHeight, maxDimension = 1300) => {
    const screenWidth = window.innerWidth;
    const minDimension = 1000;
 
@@ -38,7 +38,7 @@ export const getOptimizedImageUrl = (baseUrl, originalWidth, originalHeight, max
    );
 }
 
-export const customImageUrlOptimizer = (baseUrl, width, height) => {
+export const generateImageThumbnail = (baseUrl, width, height) => {
    return baseUrl.replace(
       "/upload/",
       `/upload/f_auto,q_auto,c_fill,g_auto,,dpr_auto,w_${width},h_${height}/`
