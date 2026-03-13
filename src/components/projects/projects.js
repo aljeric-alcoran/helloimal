@@ -20,7 +20,7 @@ const template = `
             <div class="w-8 h-[3px] bg-[#3150CE] rounded-full mt-3 origin-left"
                style="animation: scaleX 0.5s ease 0.2s both;"></div>
             <p class="text-sm/7 text-gray-500 dark:text-gray-400 mt-4 max-w-xl">
-               A collection of applications I've designed and developed — from internal tools to live production products.
+               A collection of applications I've designed and developed — from internal tools to live production projects.
             </p>
          </div>
       </div>
