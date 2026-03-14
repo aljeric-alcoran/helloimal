@@ -31,6 +31,10 @@ export const handleRoute = (path) => {
          return;
       }
    }
+   // No route matched — show 404
+   import('../src/pages/notFound.js').then(({ default: setNotFoundPage }) => {
+      setNotFoundPage(document.getElementById('main-content'));
+   });
 };
 
 const navigateTo = (url) => {
