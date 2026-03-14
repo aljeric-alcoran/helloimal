@@ -5,7 +5,7 @@ import { handleRoute } from './router.js';
 
 document.querySelector('#app').innerHTML = `
    <div class="relative scroll-smooth">
-      <nav id="navigation" class="nav-container z-50"></nav>
+      <nav id="navigation" class="nav-container"></nav>
       <div id="main-content"></div>
       <footer id="footer" class="footer-container"></footer>
    </div>

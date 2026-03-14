@@ -1,4 +1,4 @@
-export const SKILL_CATEGORIES = [
+export const TECH_STACKS = [
    {
       category: 'Frontend',
       items: [

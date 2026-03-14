@@ -1,4 +1,4 @@
-import { PROJECTS } from '../../constants/projects-data.js';
+import { PROJECTS } from '../../data/projects-data.js';
 import { 
    sliderState, 
    buildCard, 
@@ -26,7 +26,7 @@ const template = `
       </div>
 
       <!-- Projects grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8" id="projects-grid">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8" id="projects-grid">
          ${PROJECTS.map((p, i) => buildCard(p, i)).join('')}
       </div>
 

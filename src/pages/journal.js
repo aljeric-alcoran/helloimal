@@ -3,11 +3,11 @@ const template = `
 `
 import setJournalTemplate from '../components/journalTemplate.js';
 
-const setJournalPage = (container, journalId) => {
+const setJournalPage = (container, destinationId, touristSpotId) => {
    container.innerHTML = template;
 
    const content = document.getElementById('journal-content');
-   setJournalTemplate(content, journalId);
+   setJournalTemplate(content, destinationId, touristSpotId);
 }
 
 export default setJournalPage;

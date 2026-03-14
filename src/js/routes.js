@@ -24,10 +24,10 @@ export const routeDefinitions = [
       }
    }, 
    {
-      path: '/travel/:id',
-      handler: async ({ id }) => {
+      path: '/travel/:destinationId/:touristSpotId',
+      handler: async ({ destinationId, touristSpotId }) => {
          const { default: setJournalPage } = await import("../pages/journal");
-         setJournalPage(document.getElementById('main-content'), id);
+         setJournalPage(document.getElementById('main-content'), destinationId, touristSpotId);
       }
    },
    {

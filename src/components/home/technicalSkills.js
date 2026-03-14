@@ -1,4 +1,4 @@
-import { SKILL_CATEGORIES } from "../../constants/skills-categories"
+import { TECH_STACKS } from "../../data/tech-stack-data"
 
 const buildCategoryBlock = ({ category, items }) => `
    <div class="skills-reveal">
@@ -43,7 +43,7 @@ const template = `
 
       <!-- Categories -->
       <div class="flex flex-col gap-10 md:gap-12 items-center">
-         ${SKILL_CATEGORIES.map(buildCategoryBlock).join('')}
+         ${TECH_STACKS.map(buildCategoryBlock).join('')}
       </div>
 
    </div>

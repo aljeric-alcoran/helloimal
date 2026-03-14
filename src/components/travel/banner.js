@@ -1,7 +1,7 @@
 const PHOTOS = [
    'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_400,h_500,c_fill,g_face/v1754370743/2024_06_01_13_26_IMG_4240_mnxtj8.jpg',
    'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_400,h_500,c_fill,g_face/v1773221731/photo_2026-03-11_17-34-03_pteewl.jpg',
-   'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_400,h_500,c_fill,g_face/v1754370742/2024_06_01_13_28_IMG_4245_pywjh2.jpg',
+   'https://res.cloudinary.com/docdldire/image/upload/f_auto,q_auto,w_400,h_500,c_fill,g_face/v1773396361/photo_2026-03-13_18-04-51_cnuhb3.jpg',
 ];
 
 const template = `
@@ -97,7 +97,7 @@ const template = `
                         w-[180px] h-[230px] sm:w-[210px] sm:h-[270px] lg:w-[240px] lg:h-[310px]
                         rounded-2xl overflow-hidden shadow-xl
                         border-4 border-white dark:border-gray-700
-                        -translate-x-[60px] sm:-translate-x-[80px] translate-y-[20px]
+                        -translate-x-[80px] sm:-translate-x-[200px]
                         -rotate-[14deg]
                         transition-transform duration-300 hover:-rotate-[12deg] hover:scale-[1.02]
                         animate-[floatY_7s_ease-in-out_0.5s_infinite]">
@@ -110,11 +110,10 @@ const template = `
 
             <!-- Card 2 — front-center, slight tilt -->
             <div class="absolute z-10
-                        w-[190px] h-[250px] sm:w-[220px] sm:h-[290px] lg:w-[255px] lg:h-[330px]
+                        w-[190px] h-[300px] sm:w-[220px] sm:h-[340px] lg:w-[255px] lg:h-[380px]
                         rounded-2xl overflow-hidden shadow-2xl
                         border-4 border-white dark:border-gray-700
-                        translate-x-[10px] -translate-y-[10px]
-                        rotate-[3deg]
+                        -translate-y-[20px]
                         transition-transform duration-300 hover:rotate-[1deg] hover:scale-[1.02]
                         animate-[floatY_6s_ease-in-out_0s_infinite]">
                <img src="${PHOTOS[1]}"
@@ -125,12 +124,12 @@ const template = `
             </div>
 
             <!-- Card 3 — back-right -->
-            <div class="absolute
-                        w-[170px] h-[220px] sm:w-[200px] sm:h-[260px] lg:w-[230px] lg:h-[295px]
+            <div class="absolute md:z-20
+                        w-[180px] h-[230px] sm:w-[210px] sm:h-[270px] lg:w-[240px] lg:h-[310px]
                         rounded-2xl overflow-hidden shadow-xl
                         border-4 border-white dark:border-gray-700
-                        translate-x-[65px] sm:translate-x-[90px] translate-y-[30px]
-                        rotate-[12deg]
+                        translate-x-[80px] sm:translate-x-[200px]
+                        rotate-[14deg]
                         transition-transform duration-300 hover:rotate-[10deg] hover:scale-[1.02]
                         animate-[floatY_8s_ease-in-out_1s_infinite]">
                <img src="${PHOTOS[2]}"
