@@ -17,7 +17,7 @@ export const journals = [
          {
             id: 'cambugahay-falls',
             seriesId: 'siquijor',
-            href: '/travel/cambugahay-falls',
+            href: '/travel/siquijor/cambugahay-falls',
             title: 'Cambugahay Falls',
             author: 'Al Jeric Alcoran',
             readDuration: '1.5 Minutes Read',
@@ -47,7 +47,7 @@ export const journals = [
          {
             id: 'aquamare-beach-camp',
             seriesId: 'siquijor',
-            href: '/travel/aquamare-beach-camp',
+            href: '/travel/siquijor/aquamare-beach-camp',
             title: 'Aquamare Beach Camp',
             author: 'Al Jeric Alcoran',
             readDuration: '1.5 Minutes Read',
@@ -77,7 +77,7 @@ export const journals = [
          {
             id: 'paliton-beach',
             seriesId: 'siquijor',
-            href: '/travel/paliton-beach',
+            href: '/travel/siquijor/paliton-beach',
             title: 'Paliton Beach',
             author: 'Al Jeric Alcoran',
             readDuration: '1.8 Minutes Read',
@@ -107,7 +107,7 @@ export const journals = [
          {
             id: 'salagdoong-beach',
             seriesId: 'siquijor',
-            href: '/travel/salagdoong-beach',
+            href: '/travel/siquijor/salagdoong-beach',
             title: 'Salagdoong Beach',
             author: 'Al Jeric Alcoran',
             readDuration: '1.5 Minutes Read',
@@ -150,7 +150,7 @@ export const journals = [
          {
             id: 'bohol-chocolate-hills',
             seriesId: 'bohol',
-            href: '/travel/bohol-chocolate-hills',
+            href: '/travel/bohol/bohol-chocolate-hills',
             title: 'Chocolate Hills',
             author: 'Al Jeric Alcoran',
             readDuration: '2 Minutes Read',
@@ -181,7 +181,7 @@ export const journals = [
          {
             id: 'bohol-xzootic-animal-park',
             seriesId: 'bohol',
-            href: '/travel/bohol-xzootic-animal-park',
+            href: '/travel/bohol/bohol-xzootic-animal-park',
             title: 'Xzootic Animal Park',
             author: 'Al Jeric Alcoran',
             readDuration: '2 Minutes Read',
@@ -212,7 +212,7 @@ export const journals = [
          {
             id: 'bilar-man-made-forest',
             seriesId: 'bohol',
-            href: '/travel/bilar-man-made-forest',
+            href: '/travel/bohol/bilar-man-made-forest',
             title: 'Bilar Man-Made Forest',
             author: 'Al Jeric Alcoran',
             readDuration: '1.5 Minutes Read',
@@ -240,7 +240,7 @@ export const journals = [
          {
             id: 'bohol-tarsier-sanctuary',
             seriesId: 'bohol',
-            href: '/travel/bohol-tarsier-sanctuary',
+            href: '/travel/bohol/bohol-tarsier-sanctuary',
             title: 'Tarsier Sanctuary',
             author: 'Al Jeric Alcoran',
             readDuration: '2 Minutes Read',
