@@ -107,7 +107,13 @@ const setJournalTemplate = (container, destinationId, spotId) => {
 
    const destination = journals.find(j => j.id === destinationId);
    const spot = destination?.contents.find(p => p.id === spotId);
-   if (!spot) return;
+
+   if (!destination || !spot) {
+      import('../pages/notFound.js').then(({ default: setNotFoundPage }) => {
+         setNotFoundPage(container);
+      });
+      return;
+   }
 
    const { url, w, h } = spot.coverImage;
 
