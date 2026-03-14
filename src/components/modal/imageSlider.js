@@ -8,41 +8,39 @@ const buildShell = (total) => `
    <!-- close -->
    <button id="sldr-close"
       class="absolute top-4 right-4 md:top-6 md:right-6 z-30
-             w-9 h-9 flex items-center justify-center
-             rounded-full bg-white/10 hover:bg-white/20
-             text-white transition-colors duration-150
-             focus:outline-none focus:ring-2 focus:ring-white/40">
+         w-9 h-9 flex items-center justify-center
+         rounded-full bg-white/10 hover:bg-white/20
+         text-white transition-colors duration-150
+         focus:outline-none focus:ring-2 focus:ring-white/40">
       <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24">
-         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-               stroke-width="2.5" d="M6 18 18 6M6 6l12 12"/>
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18 18 6M6 6l12 12"/>
       </svg>
    </button>
 
    <!-- counter -->
-   <div id="sldr-counter"
-        class="absolute top-4 left-1/2 -translate-x-1/2 z-30
-               text-xs font-semibold text-white/60 tracking-widest select-none">
+   <div id="sldr-counter" class="absolute top-4 left-1/2 -translate-x-1/2 z-30
+      text-xs font-semibold text-white/60 tracking-widest select-none"
+   >
       1 / ${total}
    </div>
 
    <!-- prev arrow -->
    <button id="sldr-prev"
       class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-30
-             w-10 h-10 flex items-center justify-center
-             rounded-full bg-white/10 hover:bg-white/20
-             text-white transition-all duration-150
-             focus:outline-none focus:ring-2 focus:ring-white/40
-             disabled:opacity-20 disabled:pointer-events-none">
+         w-10 h-10 flex items-center justify-center
+         rounded-full bg-white/10 hover:bg-white/20
+         text-white transition-all duration-150
+         focus:outline-none focus:ring-2 focus:ring-white/40
+         disabled:opacity-20 disabled:pointer-events-none">
       <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24">
-         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-               stroke-width="2.5" d="m15 19-7-7 7-7"/>
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m15 19-7-7 7-7"/>
       </svg>
    </button>
 
    <!-- main image stage -->
    <div id="sldr-stage"
         class="relative flex-1 flex items-center justify-center
-               overflow-hidden select-none touch-none"
+            overflow-hidden select-none touch-none"
         style="max-height: calc(100vh - 130px);">
 
       <!-- blur placeholder -->
@@ -51,36 +49,32 @@ const buildShell = (total) => `
            style="filter:blur(20px);transform:scale(1.05);"></div>
 
       <!-- main image (transform handled by JS) -->
-      <img id="sldr-img"
-           src="" alt=""
-           draggable="false"
+      <img id="sldr-img" src="" alt="" draggable="false"
            class="relative max-w-full max-h-full object-contain
-                  opacity-0 transition-opacity duration-400 select-none
-                  md:rounded-md shadow-2xl"
+               opacity-0 transition-opacity duration-400 select-none
+               md:rounded-md shadow-2xl"
            style="transform-origin: center center; will-change: transform;" />
    </div>
 
    <!-- next arrow -->
    <button id="sldr-next"
       class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-30
-             w-10 h-10 flex items-center justify-center
-             rounded-full bg-white/10 hover:bg-white/20
-             text-white transition-all duration-150
-             focus:outline-none focus:ring-2 focus:ring-white/40
-             disabled:opacity-20 disabled:pointer-events-none">
+         w-10 h-10 flex items-center justify-center
+         rounded-full bg-white/10 hover:bg-white/20
+         text-white transition-all duration-150
+         focus:outline-none focus:ring-2 focus:ring-white/40
+         disabled:opacity-20 disabled:pointer-events-none">
       <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24">
-         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-               stroke-width="2.5" d="m9 5 7 7-7 7"/>
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m9 5 7 7-7 7"/>
       </svg>
    </button>
 
    <!-- thumbnail strip -->
-   <div id="sldr-thumbs"
-        class="absolute bottom-0 left-0 right-0 z-20
-               flex items-center justify-center gap-1.5
-               px-4 py-3
-               bg-gradient-to-t from-black/70 to-transparent
-               overflow-x-auto scrollbar-none">
+   <div id="sldr-thumbs" class="absolute bottom-0 left-0 right-0 z-20
+      flex items-center justify-center gap-1.5
+      px-4 py-3
+      bg-gradient-to-t from-black/70 to-transparent
+      overflow-x-auto scrollbar-none">
    </div>
 `;
 
@@ -110,9 +104,7 @@ const imageSliderModal = (gallery, startIndex = 0) => {
    gallery.forEach(({ src }, i) => {
       const btn = document.createElement('button');
       btn.className = `shrink-0 w-12 h-12 rounded-lg overflow-hidden ring-2 transition-all duration-200
-                       ${i === current
-                        ? 'ring-[#3150CE] opacity-100 scale-105'
-                        : 'ring-transparent opacity-50 hover:opacity-80'}`;
+         ${i === current ? 'ring-[#3150CE] opacity-100 scale-105' : 'ring-transparent opacity-50 hover:opacity-80'}`;
       btn.innerHTML = `<img src="${thumbUrl(src)}" class="w-full h-full object-cover" loading="lazy" />`;
       btn.addEventListener('click', () => goTo(i));
       btn.dataset.thumb = i;
@@ -122,8 +114,7 @@ const imageSliderModal = (gallery, startIndex = 0) => {
    const syncThumbs = () => {
       thumbsBar.querySelectorAll('[data-thumb]').forEach(btn => {
          const i = parseInt(btn.dataset.thumb);
-         btn.className = btn.className
-            .replace(/ring-\S+|opacity-\S+|scale-\S+/g, '').trim();
+         btn.className = btn.className.replace(/ring-\S+|opacity-\S+|scale-\S+/g, '').trim();
          btn.classList.add(
             'shrink-0', 'w-12', 'h-12', 'rounded-lg', 'overflow-hidden',
             'ring-2', 'transition-all', 'duration-200',
@@ -137,7 +128,7 @@ const imageSliderModal = (gallery, startIndex = 0) => {
       activeThumb?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
    };
 
-   // ── Load image ────────────────────────────────────────────────────────────
+   // ── Load image 
    const loadImage = (index) => {
       const { src, w, h, alt = '' } = gallery[index];
 
@@ -176,7 +167,7 @@ const imageSliderModal = (gallery, startIndex = 0) => {
 
    const applyTransform = (animate = true) => {
       img.style.transition = animate ? 'transform 0.2s ease' : 'none';
-      img.style.transform  = `translate(${originX}px, ${originY}px) scale(${scale})`;
+      img.style.transform = `scale(${scale}) translate(${originX}px, ${originY}px)`;
    };
 
    const resetZoom = () => {
@@ -197,14 +188,30 @@ const imageSliderModal = (gallery, startIndex = 0) => {
       applyTransform(true);
    });
 
-   // ── Touch: swipe + pinch ──────────────────────────────────────────────────
+   function clampOrigin() {
+      const stageW = stage.clientWidth;
+      const stageH = stage.clientHeight;
+   
+      // Use rendered size (at scale=1), then multiply by current scale
+      const renderedW = img.clientWidth  * scale;
+      const renderedH = img.clientHeight * scale;
+   
+      // Only allow panning if the scaled image overflows the stage
+      const maxX = Math.max(0, (renderedW - stageW) / 2 / scale);
+      const maxY = Math.max(0, (renderedH - stageH) / 2 / scale);
+   
+      originX = clamp(originX, -maxX, maxX);
+      originY = clamp(originY, -maxY, maxY);
+   }
+   
+   // ── Touch: swipe + pinch
    let touchStartX = 0;
    let touchStartY = 0;
    let touchLastDist = 0;
    let isPinching = false;
    let panStartX = 0;
    let panStartY = 0;
-
+   
    stage.addEventListener('touchstart', (e) => {
       if (e.touches.length === 2) {
          isPinching = true;
@@ -220,10 +227,9 @@ const imageSliderModal = (gallery, startIndex = 0) => {
          panStartY = originY;
       }
    }, { passive: true });
-
+   
    stage.addEventListener('touchmove', (e) => {
       if (e.touches.length === 2 && isPinching) {
-         // pinch zoom
          const dist = Math.hypot(
             e.touches[0].clientX - e.touches[1].clientX,
             e.touches[0].clientY - e.touches[1].clientY
@@ -231,75 +237,80 @@ const imageSliderModal = (gallery, startIndex = 0) => {
          const delta = dist / touchLastDist;
          scale = clamp(scale * delta, MIN_SCALE, MAX_SCALE);
          touchLastDist = dist;
+         clampOrigin();
          applyTransform(false);
-
+   
       } else if (e.touches.length === 1 && scale > 1) {
-         // pan when zoomed in
          const dx = e.touches[0].clientX - touchStartX;
          const dy = e.touches[0].clientY - touchStartY;
-         originX = panStartX + dx;
-         originY = panStartY + dy;
+   
+         // ← divide by scale so pan speed matches finger movement
+         originX = panStartX + (dx / scale);
+         originY = panStartY + (dy / scale);
+   
+         clampOrigin();
          applyTransform(false);
       }
    }, { passive: true });
-
+   
    stage.addEventListener('touchend', (e) => {
       if (isPinching) { isPinching = false; return; }
       if (scale > 1)  return;
-
+   
       const dx = e.changedTouches[0].clientX - touchStartX;
       const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
-
-      // swipe threshold: horizontal > 50px and not mostly vertical
+   
       if (Math.abs(dx) > 50 && dy < 80) {
          dx < 0 ? goTo(current + 1) : goTo(current - 1);
       }
-
-      // double-tap detection
+   
       const now = Date.now();
       if (now - lastTap < 300) {
          if (scale > 1) resetZoom();
          else {
             scale = 2.5;
+            clampOrigin();
             applyTransform(true);
          }
       }
       lastTap = now;
    }, { passive: true });
-
-   // ── Mouse drag (desktop pan when zoomed) ──────────────────────────────────
+   
+   // ── Mouse drag (desktop pan when zoomed) ─────────────────────────────────
    let isDragging = false;
-
+   
    stage.addEventListener('mousedown', (e) => {
       if (scale <= 1) return;
       isDragging = true;
       lastX = e.clientX; lastY = e.clientY;
       stage.style.cursor = 'grabbing';
    });
-
+   
    window.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
       originX += e.clientX - lastX;
       originY += e.clientY - lastY;
       lastX = e.clientX; lastY = e.clientY;
+      clampOrigin();              // ← clamp during mouse drag
       applyTransform(false);
    });
-
+   
    window.addEventListener('mouseup', () => {
       isDragging = false;
       stage.style.cursor = scale > 1 ? 'grab' : 'default';
    });
-
+   
    // ── Mouse wheel zoom ──────────────────────────────────────────────────────
    stage.addEventListener('wheel', (e) => {
       e.preventDefault();
       const delta = e.deltaY > 0 ? 0.85 : 1.15;
       scale = clamp(scale * delta, MIN_SCALE, MAX_SCALE);
       if (scale === MIN_SCALE) { originX = 0; originY = 0; }
+      clampOrigin();              // ← clamp after wheel zoom
       applyTransform(true);
       stage.style.cursor = scale > 1 ? 'grab' : 'default';
    }, { passive: false });
-
+   
    // ── Keyboard ──────────────────────────────────────────────────────────────
    const onKey = (e) => {
       if (e.key === 'ArrowLeft')  goTo(current - 1);
@@ -308,7 +319,7 @@ const imageSliderModal = (gallery, startIndex = 0) => {
    };
    window.addEventListener('keydown', onKey);
 
-   // ── Close ─────────────────────────────────────────────────────────────────
+   // ── Close 
    const closeModal = () => {
       modal.classList.add('hidden');
       modal.classList.remove('flex', 'flex-col');
@@ -318,11 +329,11 @@ const imageSliderModal = (gallery, startIndex = 0) => {
 
    closeBtn.addEventListener('click', closeModal);
 
-   // ── Buttons ───────────────────────────────────────────────────────────────
+   // ── Buttons 
    prevBtn.addEventListener('click', () => goTo(current - 1));
    nextBtn.addEventListener('click', () => goTo(current + 1));
 
-   // ── Initial load ─────────────────────────────────────────────────────────
+   // ── Initial load 
    loadImage(current);
 };
 
