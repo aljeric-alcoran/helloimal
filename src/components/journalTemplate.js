@@ -27,7 +27,7 @@ const template = `
          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30 pointer-events-none"></div>
 
          <!-- hero text -->
-         <div class="absolute bottom-0 left-0 right-0 z-10 max-w-screen-md mx-auto px-6 md:px-8 pb-10 md:pb-14">
+         <div class="absolute bottom-0 left-0 right-0 max-w-screen-md mx-auto px-6 md:px-8 pb-10 md:pb-14">
             <span id="jt-category"
                class="inline-flex items-center mb-4
                       bg-[#3150CE]/90 dark:bg-[#3150CE]/80 text-white
