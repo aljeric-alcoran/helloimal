@@ -1,4 +1,4 @@
-const NAV_ITEMS = [
+export const NAV_ITEMS = [
    { href: '/', label: 'Profile' },
    { href: '/career', label: 'Career' },
    { href: '/travel', label: 'Travel' },
@@ -12,13 +12,13 @@ const isActive = (href) =>
       ? currentPath() === '/'
       : currentPath() === href || currentPath().startsWith(href + '/');
 
-const DESKTOP_BASE   = 'relative px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors duration-200';
-const DESKTOP_NORMAL = 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800/70';
-const DESKTOP_ACTIVE = 'text-[#3150CE] dark:text-[#818cf8]';
+const DESKTOP_BASE   = 'relative inline-flex h-9 items-center rounded-full px-3.5 text-sm font-medium transition-colors duration-200';
+const DESKTOP_NORMAL = 'text-muted hover:text-ink';
+const DESKTOP_ACTIVE = 'bg-primary-subtle text-accent';
 
-const MOBILE_BASE    = 'block px-4 py-3 text-sm font-semibold rounded-xl transition-colors duration-200 focus:outline-none';
-const MOBILE_NORMAL  = 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800';
-const MOBILE_ACTIVE  = 'text-[#3150CE] dark:text-[#818cf8] bg-[#3150CE]/8 dark:bg-[#818cf8]/10';
+const MOBILE_BASE    = 'flex items-center justify-between border-b border-line/70 py-3.5 text-lg font-medium tracking-tight transition-colors duration-200';
+const MOBILE_NORMAL  = 'text-muted hover:text-ink';
+const MOBILE_ACTIVE  = 'text-accent';
 
 
 export const buildNavItem = (item, isMobile) => {
@@ -30,6 +30,7 @@ export const buildNavItem = (item, isMobile) => {
    a.setAttribute('nav-link', '');
 
    const active = isActive(item.href);
+   if (active) a.setAttribute('aria-current', 'page');
 
    if (isMobile) {
       a.className = `${MOBILE_BASE} ${active ? MOBILE_ACTIVE : MOBILE_NORMAL}`;
@@ -54,10 +55,13 @@ export const populateNavLists = () => {
 
 // ── Sync active classes after every SPA navigation ───────────────────────────
 export const syncActiveLinks = () => {
-   document.querySelectorAll('[nav-link]').forEach(a => {
+   document.querySelectorAll('#nav-list [nav-link], #nav-list-mobile [nav-link]').forEach(a => {
       const href   = new URL(a.href, location.origin).pathname;
       const active = isActive(href);
       const mobile = a.closest('#nav-list-mobile') !== null;
+
+      if (active) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
 
       if (mobile) {
          a.className = `${MOBILE_BASE} ${active ? MOBILE_ACTIVE : MOBILE_NORMAL}`;
@@ -82,7 +86,7 @@ export const closeMenu = (menu, btn) => {
    document.getElementById('bar-1').style.cssText = '';
    document.getElementById('bar-2').style.cssText = '';
    document.getElementById('bar-3').style.cssText = '';
-   syncActiveLinks(); // ← sync active state whenever drawer closes
+   syncActiveLinks(); // sync active state whenever drawer closes
 };
 
 export const toggleMenu = (menu, btn) => {

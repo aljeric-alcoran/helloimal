@@ -15,11 +15,6 @@ export const downloadCV = () => {
    document.body.removeChild(link);
 };
 
-export const scrollTo = (elementId, route) => {
-   localStorage.setItem('scrollTo', elementId);
-   window.location.href = route;
-} 
-
 export const getFullSizedImage = (baseUrl, originalWidth, originalHeight, maxDimension = 1300) => {
    const screenWidth = window.innerWidth;
    const minDimension = 1000;
@@ -41,6 +36,26 @@ export const getFullSizedImage = (baseUrl, originalWidth, originalHeight, maxDim
 export const generateImageThumbnail = (baseUrl, width, height) => {
    return baseUrl.replace(
       "/upload/",
-      `/upload/f_auto,q_auto,c_fill,g_auto,,dpr_auto,w_${width},h_${height}/`
+      `/upload/f_auto,q_auto,c_fill,g_auto,dpr_auto,w_${width},h_${height}/`
    );
 }
+// Scrolls to the Home contact section from any route. Off Home, it routes
+// to "/" first and waits for the section to render.
+export const goToContact = () => {
+   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+   const scroll = (el) => el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+
+   const existing = document.getElementById('contact');
+   if (window.location.pathname === '/' && existing) return scroll(existing);
+
+   history.pushState({}, '', '/');
+   window.dispatchEvent(new PopStateEvent('popstate'));
+
+   const started = performance.now();
+   const wait = () => {
+      const el = document.getElementById('contact');
+      if (el && el.childElementCount) return scroll(el);
+      if (performance.now() - started < 3000) requestAnimationFrame(wait);
+   };
+   requestAnimationFrame(wait);
+};

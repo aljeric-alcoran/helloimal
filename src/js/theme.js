@@ -10,8 +10,9 @@ const setTheme = () => {
    const switchThemIcon = (theme) => {
       const [lightIcon, darkIcon] = setThemeBtn?.children || [];
       const isDark = theme === 'dark';
-      lightIcon.classList.toggle('hidden', isDark);
-      darkIcon.classList.toggle('hidden', !isDark);
+      lightIcon?.classList.toggle('hidden', isDark);
+      darkIcon?.classList.toggle('hidden', !isDark);
+      setThemeBtn?.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
    }
    
    const handleThemeSwitch = () => {

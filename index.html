@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Al Jeric Alcoran — Web Developer specializing in modern, responsive websites and web applications." />
-    <meta name="theme-color" content="#3150CE" />
+    <meta name="description" content="Al Jeric Alcoran, web developer specializing in modern, responsive websites and web applications." />
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)" />
+
+    <!-- Apply the saved theme before first paint to avoid a light/dark flash -->
+    <script>
+      try { document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark'); } catch (e) {}
+    </script>
 
     <!-- Preconnect to external origins for faster resource loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://res.cloudinary.com" />
     <link rel="preconnect" href="https://www.google.com" />
 
@@ -19,10 +23,10 @@
     <!-- reCAPTCHA: loaded async/defer so it never blocks rendering -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    <title>helloimal — Al Jeric Alcoran</title>
+    <title>helloimal | Al Jeric Alcoran</title>
   </head>
   <body>
-    <div id="app" class="dark:bg-gray-900"></div>
+    <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

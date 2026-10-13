@@ -1,43 +1,40 @@
-const template = `
-   <div id="scrollUpBtn"
-      class="fixed border border-gray-300 dark:border-gray-600 bottom-3 right-3 md:bottom-5 md:right-5 cursor-pointer bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 p-2 md:p-3 rounded-sm
-      opacity-0 translate-y-10 pointer-events-none transition-all duration-300 ease-in-out"
-   >
-      <svg class="w-5 h-5 md:w-6 md:h-6 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/>
-      </svg>
-   </div>
-`
+import arrowUpIcon from '@phosphor-icons/core/assets/regular/arrow-up.svg?raw';
+import { icon } from '../js/icons.js';
 
+const template = `
+   <button id="scrollUpBtn" type="button" aria-label="Back to top" tabindex="-1"
+      class="fixed bottom-4 right-4 z-20 flex size-11 cursor-pointer items-center justify-center rounded-full
+             border border-line bg-surface/90 text-ink shadow-[0_8px_24px_-12px_rgb(24_24_27/0.35)] backdrop-blur
+             translate-y-4 opacity-0 pointer-events-none
+             transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]
+             hover:-translate-y-0.5 md:bottom-6 md:right-6">
+      ${icon(arrowUpIcon, 'size-5')}
+   </button>
+`;
+
+// Shows the button once the visitor has scrolled past the first ~1.5 screens.
+// A sentinel + IntersectionObserver avoids running code on every scroll frame.
 const setScrollToTop = (element) => {
    element.insertAdjacentHTML('afterbegin', template);
-
    const btn = document.getElementById('scrollUpBtn');
 
-   let ticking = false;
-   window.addEventListener('scroll', () => {
-      if (!ticking) {
-         requestAnimationFrame(() => {
-            const scrollPosition = window.innerHeight + window.scrollY;
-            const showThreshold = document.body.scrollHeight * 0.5;
+   const sentinel = document.createElement('div');
+   sentinel.setAttribute('aria-hidden', 'true');
+   sentinel.className = 'pointer-events-none absolute left-0 top-0 h-[150vh] w-px';
+   document.getElementById('app').firstElementChild.prepend(sentinel);
 
-            if (scrollPosition >= showThreshold) {
-               btn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
-               btn.classList.add('opacity-100', 'translate-y-0');
-            } else {
-               btn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
-               btn.classList.remove('opacity-100', 'translate-y-0');
-            }
-            ticking = false;
-         });
-         ticking = true;
-      }
-   });
+   new IntersectionObserver(([entry]) => {
+      const show = !entry.isIntersecting;
+      btn.classList.toggle('opacity-0', !show);
+      btn.classList.toggle('translate-y-4', !show);
+      btn.classList.toggle('pointer-events-none', !show);
+      btn.tabIndex = show ? 0 : -1;
+   }).observe(sentinel);
 
-   // Scroll to top when clicked.
    btn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
    });
-}
+};
 
 export default setScrollToTop;

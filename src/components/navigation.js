@@ -1,70 +1,63 @@
+import sunIcon  from '@phosphor-icons/core/assets/regular/sun.svg?raw';
+import moonIcon from '@phosphor-icons/core/assets/regular/moon.svg?raw';
+import { icon } from '../js/icons.js';
+
 const template = `
-   <div class="absolute w-full">
+   <div class="relative border-b border-line/70 bg-canvas/80 backdrop-blur-md supports-[backdrop-filter]:bg-canvas/70">
+      <div class="shell flex h-16 items-center justify-between gap-6">
 
-      <!-- Main navbar bar -->
-      <div class="relative max-w-screen-xl mx-auto px-4 md:px-8">
-         <div class="flex items-center justify-between h-16 md:h-20">
+         <!-- Wordmark -->
+         <a href="/" nav-link class="group flex shrink-0 items-center gap-2.5 rounded-full">
+            <img src="/img/logo.webp" class="size-8 rounded-full" alt="" width="32" height="32" loading="eager" />
+            <span class="text-[0.95rem] font-semibold tracking-tight text-ink">helloimal</span>
+         </a>
 
-            <!-- Logo -->
-            <a href="/" class="flex items-center gap-2.5 group shrink-0">
-               <div class="relative">
-                  <img src="/img/logo.webp" class="h-8 w-8 rounded-lg" alt="AL Logo" loading="eager" />
-               </div>
-               <span class="text-lg font-bold tracking-tight text-gray-900 dark:text-white group-hover:text-[#3150CE] dark:group-hover:text-[#818cf8] transition-colors duration-200">
-                  helloimal
-               </span>
-            </a>
-
-            <!-- Desktop nav links (center) -->
-            <nav class="hidden md:flex items-center">
-               <ul id="nav-list" class="flex items-center gap-4"></ul>
+         <div class="flex items-center gap-1">
+            <!-- Desktop links -->
+            <nav aria-label="Main" class="hidden md:block">
+               <ul id="nav-list" class="flex items-center gap-1"></ul>
             </nav>
 
-            <!-- Right controls -->
-            <div class="flex items-center gap-2">
-               <!-- Theme toggle -->
-               <button id="theme-switch" type="button" aria-label="Toggle theme"
-                  class="cursor-pointer relative w-9 h-9 flex items-center justify-center rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40">
-                  <!-- Sun icon (shown in dark mode) -->
-                  <svg id="icon-sun" class="w-[18px] h-[18px] hidden" fill="none" viewBox="0 0 24 24">
-                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5V3m0 18v-2M7.05 7.05 5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636 16.95 7.05M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
-                  </svg>
-                  <!-- Moon icon (shown in light mode) -->
-                  <svg id="icon-moon" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24">
-                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"/>
-                  </svg>
-               </button>
+            <button id="nav-contact" type="button"
+               class="btn btn-primary ml-3 hidden px-4 py-2 text-sm md:inline-flex">
+               Contact me
+            </button>
 
-               <!-- Mobile hamburger -->
-               <button id="navbar-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
-                  class="md:hidden cursor-pointer relative w-9 h-9 flex items-center justify-center rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40">
-                  <!-- Hamburger lines (3 → X via CSS toggle) -->
-                  <span id="hamburger-icon" class="flex flex-col gap-[5px] w-[18px]">
-                     <span class="block h-[2px] w-full bg-current rounded-full transition-all duration-300 origin-center" id="bar-1"></span>
-                     <span class="block h-[2px] w-full bg-current rounded-full transition-all duration-300" id="bar-2"></span>
-                     <span class="block h-[2px] w-full bg-current rounded-full transition-all duration-300 origin-center" id="bar-3"></span>
-                  </span>
-               </button>
-            </div>
+            <span class="mx-2 hidden h-5 w-px bg-line md:block" aria-hidden="true"></span>
+
+            <!-- Theme toggle: first icon shows in light mode, second in dark (see js/theme.js) -->
+            <button id="theme-switch" type="button" aria-label="Switch to light theme"
+               class="flex size-9 cursor-pointer items-center justify-center rounded-full text-muted transition-colors duration-200 hover:bg-sunken hover:text-ink">
+               ${icon(moonIcon, 'size-[18px]')}
+               ${icon(sunIcon, 'size-[18px] hidden')}
+            </button>
+
+            <!-- Mobile menu toggle -->
+            <button id="navbar-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+               class="flex size-9 cursor-pointer items-center justify-center rounded-full text-muted transition-colors duration-200 hover:bg-sunken hover:text-ink md:hidden">
+               <span class="flex w-[18px] flex-col gap-[5px]">
+                  <span id="bar-1" class="block h-[2px] w-full origin-center rounded-full bg-current transition-transform duration-300"></span>
+                  <span id="bar-2" class="block h-[2px] w-full rounded-full bg-current transition-[opacity,transform] duration-300"></span>
+                  <span id="bar-3" class="block h-[2px] w-full origin-center rounded-full bg-current transition-transform duration-300"></span>
+               </span>
+            </button>
          </div>
       </div>
 
-      <!-- Frosted glass bar (sits behind content, full-width) -->
-      <div class="absolute inset-0 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border-b border-gray-200/60 dark:border-gray-700/60 shadow-sm -z-10 pointer-events-none"></div>
-
-      <!-- Mobile menu drawer -->
-      <div id="mobile-menu"
-         class="md:hidden hidden overflow-hidden transition-all duration-300 ease-in-out
-                bg-white/95 dark:bg-gray-900/95 backdrop-blur-md
-                border-b border-gray-200/60 dark:border-gray-700/60 shadow-md">
-         <div class="max-w-screen-xl mx-auto px-4 py-4">
-            <ul id="nav-list-mobile" class="flex flex-col gap-1"></ul>
-         </div>
+      <!-- Mobile drawer -->
+      <div id="mobile-menu" class="hidden border-t border-line/70 md:hidden">
+         <nav aria-label="Main" class="shell py-3">
+            <ul id="nav-list-mobile" class="flex flex-col"></ul>
+            <button id="nav-contact-mobile" type="button" class="btn btn-primary mb-2 mt-5 w-full">
+               Contact me
+            </button>
+         </nav>
       </div>
    </div>
 `;
 
 import setTheme from "../js/theme";
+import { goToContact } from "../js/helpers";
 import { populateNavLists, syncActiveLinks, closeMenu, toggleMenu } from "../js/navList";
 
 const setNavigation = (element) => {
@@ -78,13 +71,26 @@ const setNavigation = (element) => {
    populateNavLists();
 
    // Hamburger toggle
-   btn.addEventListener('click', (e) => { 
-      e.stopPropagation(); 
-      toggleMenu(menu, btn); 
+   btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu(menu, btn);
    });
 
-   // Close on outside click
+   // Contact CTA: works from any route
+   document.getElementById('nav-contact').addEventListener('click', goToContact);
+   document.getElementById('nav-contact-mobile').addEventListener('click', () => {
+      close();
+      goToContact();
+   });
+
+   // Close on outside click or Escape
    document.getElementById('main-content')?.addEventListener('click', close);
+   document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+         close();
+         btn.focus();
+      }
+   });
 
    // Close + reset on resize to desktop
    let resizeTimer;

@@ -1,110 +1,128 @@
+import arrowLeft    from '@phosphor-icons/core/assets/regular/arrow-left.svg?raw';
+import userIcon     from '@phosphor-icons/core/assets/regular/user.svg?raw';
+import calendarIcon from '@phosphor-icons/core/assets/regular/calendar-blank.svg?raw';
+import clockIcon    from '@phosphor-icons/core/assets/regular/clock.svg?raw';
 import { journals } from '../data/travel-data.js';
 import imageSliderModal from './modal/imageSlider.js';
-import { getFullSizedImage, generateImageThumbnail } from '../js/helpers.js';
-
-const blurUpImg = (url, w, h, maxDim, alt, cls = '') => {
-   const thumbnail = generateImageThumbnail(url, 30, 30);
-   const fullSizedImage  = getFullSizedImage(url, w, h, maxDim);
-   return `
-      <div class="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-800"
-           style="background-image:url('${thumbnail}');background-size:cover;background-position:center;">
-         <div class="absolute inset-0 backdrop-blur-xl"></div>
-         <img src="${fullSizedImage}" alt="${alt}" loading="lazy" decoding="async"
-              class="absolute inset-0 w-full h-full object-cover object-center
-                     opacity-0 transition-opacity duration-700 ${cls}"
-              onload="this.style.opacity='1'; this.parentElement.classList.remove('animate-pulse');" />
-      </div>`;
-};
+import { icon } from '../js/icons.js';
+import { cld, photo, stripHtml } from './travel/setJournals.js';
 
 const template = `
-   <article class="min-h-screen text-gray-900 dark:text-white pt-16 md:pt-20">
+   <article class="pb-8 pt-8 md:pt-14">
 
-      <!-- Hero banner -->
-      <div id="jt-banner" class="relative w-full max-w-screen-lg mx-auto h-[60vh] md:h-[60vh] overflow-hidden bg-gray-200 dark:bg-gray-800">
-         <!-- image injected by JS -->
+      <!-- Header -->
+      <header class="shell">
+         <div class="mx-auto max-w-3xl">
+            <a href="/travel" journal-link
+               class="inline-flex items-center gap-1.5 rounded-full text-sm text-muted transition-colors duration-200 hover:text-ink
+                      motion-safe:animate-fade-up">
+               ${icon(arrowLeft, 'size-4')}
+               All journals
+            </a>
 
-         <!-- gradient overlay -->
-         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30 pointer-events-none"></div>
-
-         <!-- hero text -->
-         <div class="absolute bottom-0 left-0 right-0 max-w-screen-md mx-auto px-6 md:px-8 pb-10 md:pb-14">
-            <span id="jt-category"
-               class="inline-flex items-center mb-4
-                      bg-[#3150CE]/90 dark:bg-[#3150CE]/80 text-white
-                      text-[10px] font-bold tracking-[0.14em] uppercase
-                      px-3 py-1 rounded-full backdrop-blur-sm">
-            </span>
-            <h1 id="jt-title" class="text-2xl md:text-4xl font-black text-white leading-tight tracking-tight mb-2"></h1>
-
-            <p id="jt-series" class="text-sm font-semibold text-[#818cf8] mb-4"></p>
-
-            <div id="jt-meta" class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/60 font-medium"></div>
+            <p class="mt-10 eyebrow motion-safe:animate-fade-up motion-safe:[animation-delay:60ms]">
+               <span id="jt-category"></span> · <span id="jt-series"></span>
+            </p>
+            <h1 id="jt-title"
+                class="mt-4 max-w-[20ch] text-[clamp(2.25rem,1.5rem+3.2vw,4rem)] font-semibold leading-[1.04] tracking-[-0.04em] text-ink
+                       motion-safe:animate-fade-up motion-safe:[animation-delay:120ms]"></h1>
+            <div id="jt-meta"
+                 class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted
+                        motion-safe:animate-fade-up motion-safe:[animation-delay:180ms]"></div>
          </div>
+      </header>
+
+      <!-- Cover -->
+      <div class="shell mt-10 md:mt-14">
+         <div id="jt-banner"
+              class="mx-auto aspect-[4/3] max-w-5xl overflow-hidden rounded-2xl bg-sunken md:aspect-[16/9]
+                     motion-safe:animate-fade-up motion-safe:[animation-delay:240ms]"></div>
       </div>
 
-      <!-- Body -->
-      <div class="max-w-screen-md mx-auto px-6 md:px-8">
-
-         <!-- article content -->
-         <div id="jt-content" class="prose prose-sm md:prose-base max-w-none text-sm md:text-base text-gray-700 dark:text-gray-300 leading-7 space-y-5 py-10 md:py-14 [&>p]:text-gray-700 dark:[&>p]:text-gray-300">
-         </div>
-
-         <!-- divider -->
-         <hr class="border-gray-200 dark:border-gray-700/60" />
-
-         <!-- Gallery -->
-         <section class="py-10 md:py-14">
-            <div class="flex items-center gap-3 mb-6">
-               <div class="w-8 h-[3px] bg-[#3150CE] rounded-full"></div>
-               <h2 class="text-lg font-black text-gray-900 dark:text-white tracking-tight">
-                  Photo Gallery
-               </h2>
-            </div>
-
-            <div id="jt-gallery" class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
-            </div>
-         </section>
+      <!-- Story -->
+      <div class="shell">
+         <div id="jt-content"
+              class="mx-auto max-w-[65ch] py-14 text-[1.0625rem] leading-[1.8] text-ink/85 md:py-20
+                     [&>p+p]:mt-6 [&>p:first-child]:text-xl [&>p:first-child]:leading-relaxed [&>p:first-child]:text-ink"></div>
       </div>
+
+      <!-- Gallery -->
+      <section aria-labelledby="jt-gallery-title" class="shell">
+         <div class="mx-auto max-w-5xl border-t border-line pt-12 md:pt-16">
+            <div class="flex items-baseline justify-between gap-4">
+               <h2 id="jt-gallery-title" class="text-2xl font-semibold tracking-tight text-ink">Photo gallery</h2>
+               <p id="jt-gallery-count" class="font-mono text-sm text-faint"></p>
+            </div>
+            <div id="jt-gallery" class="mt-8 columns-2 gap-3 md:columns-3 md:gap-4"></div>
+         </div>
+      </section>
+
+      <!-- More from the same trip -->
+      <section id="jt-more" aria-labelledby="jt-more-title" class="shell hidden">
+         <div class="mx-auto max-w-5xl pt-20 md:pt-28">
+            <h2 id="jt-more-title" class="text-2xl font-semibold tracking-tight text-ink">More from this trip</h2>
+            <ul id="jt-more-list" class="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"></ul>
+         </div>
+      </section>
 
       <!-- Image modal -->
-      <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/95 backdrop-blur-md">
+      <div id="imageModal" role="dialog" aria-modal="true" aria-label="Photo viewer"
+           class="fixed inset-0 z-50 hidden items-center justify-center bg-[#0b0b0d]/95 backdrop-blur-md">
       </div>
-
    </article>
 `;
 
-const buildGallery = (gallery) => {
+const buildGallery = (gallery, title) => {
    const container = document.getElementById('jt-gallery');
+   document.getElementById('jt-gallery-count').textContent = `${gallery.length} photos`;
 
-   gallery.forEach(({ src, alt, w, h }, index) => {
-      const wrapper = document.createElement('div');
-      wrapper.className = 'group relative aspect-square overflow-hidden rounded-xl cursor-pointer';
-
-      const inner = document.createElement('div');
-      inner.className = 'relative w-full h-full';
-      inner.innerHTML = blurUpImg(src, w, h, 700, alt, 'group-hover:scale-105 transition-transform duration-500');
-
-      // hover overlay
-      const overlay = document.createElement('div');
-      overlay.className = `absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center`;
-      overlay.innerHTML = `
-         <svg class="w-7 h-7 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-3.5-3.5M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0Z"/>
-         </svg>`;
-
-      inner.appendChild(overlay);
-      wrapper.appendChild(inner);
-
-      // open modal on click
-      wrapper.addEventListener('click', () => imageSliderModal(gallery, index));
-
-      container.appendChild(wrapper);
+   gallery.forEach(({ src, w, h }, index) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'group mb-3 block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-sunken md:mb-4 [break-inside:avoid]';
+      btn.setAttribute('aria-label', `Open photo ${index + 1} of ${gallery.length}`);
+      btn.innerHTML = photo(src, {
+         ratio: w / h,
+         widths: [400, 720],
+         sizes: '(min-width: 768px) 32vw, 50vw',
+         alt: `${title}, photo ${index + 1}`,
+         cls: 'transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]',
+      });
+      btn.addEventListener('click', () => imageSliderModal(gallery, index, btn));
+      container.appendChild(btn);
    });
 };
 
-const setJournalTemplate = (container, destinationId, spotId) => {
-   container.innerHTML = template;
+const buildMore = (destination, spot) => {
+   const others = destination.contents.filter((s) => s.id !== spot.id).slice(0, 3);
+   if (!others.length) return;
 
+   document.getElementById('jt-more-list').innerHTML = others.map((entry, i) => `
+      <li data-reveal style="--i:${i}">
+         <a href="${entry.href}" journal-link class="group block">
+            <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-sunken">
+               ${photo(entry.coverImage.url, {
+                  ratio: 4 / 3,
+                  widths: [480, 720],
+                  sizes: '(min-width: 1024px) 22rem, (min-width: 640px) 50vw, 100vw',
+                  alt: entry.title,
+                  cls: 'transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]',
+               })}
+            </div>
+            <p class="mt-4 font-mono text-xs text-faint">
+               <time datetime="${entry.date}">${entry.displayDate}</time> · ${entry.readDuration}
+            </p>
+            <h3 class="mt-1.5 text-lg font-semibold tracking-tight text-ink transition-colors duration-200 group-hover:text-accent">
+               ${entry.title}
+            </h3>
+            <p class="mt-1 text-sm leading-relaxed text-muted line-clamp-2">${stripHtml(entry.content)}</p>
+         </a>
+      </li>
+   `).join('');
+   document.getElementById('jt-more').classList.remove('hidden');
+};
+
+const setJournalTemplate = (container, destinationId, spotId) => {
    const destination = journals.find(j => j.id === destinationId);
    const spot = destination?.contents.find(p => p.id === spotId);
 
@@ -115,12 +133,17 @@ const setJournalTemplate = (container, destinationId, spotId) => {
       return;
    }
 
-   const { url, w, h } = spot.coverImage;
+   container.innerHTML = template;
 
-   // Hero banner image
-   document.getElementById('jt-banner').insertAdjacentHTML(
-      'afterbegin', blurUpImg(url, w, h, 1400, spot.title)
-   );
+   // Cover image (16:9 source; the 4:3 mobile frame crops the sides)
+   const { url } = spot.coverImage;
+   document.getElementById('jt-banner').innerHTML = `
+      <img src="${cld(url, 1280, 720)}"
+           srcset="${[800, 1280, 1920].map((w) => `${cld(url, w, w * 9 / 16)} ${w}w`).join(', ')}"
+           sizes="(min-width: 1024px) 64rem, 100vw"
+           width="1280" height="720" fetchpriority="high" decoding="async"
+           alt="${spot.title}"
+           class="h-full w-full object-cover" />`;
 
    // Text fields
    document.getElementById('jt-category').textContent = spot.category;
@@ -129,28 +152,12 @@ const setJournalTemplate = (container, destinationId, spotId) => {
    document.getElementById('jt-content').innerHTML    = spot.content;
 
    document.getElementById('jt-meta').innerHTML = `
-      <span class="inline-flex items-center gap-1">
-         <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-4 7a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7Z"/>
-         </svg>
-         ${spot.author}
-      </span>
-      <span class="text-white/30">·</span>
-      <span class="inline-flex items-center gap-1">
-         <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
-         </svg>
-         ${spot.displayDate}
-      </span>
-      <span class="text-white/30">·</span>
-      <span class="inline-flex items-center gap-1">
-         <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-         </svg>
-         ${spot.readDuration}
-      </span>`;
+      <span class="inline-flex items-center gap-2">${icon(userIcon, 'size-4 text-faint')}${spot.author}</span>
+      <span class="inline-flex items-center gap-2">${icon(calendarIcon, 'size-4 text-faint')}<time datetime="${spot.date}">${spot.displayDate}</time></span>
+      <span class="inline-flex items-center gap-2">${icon(clockIcon, 'size-4 text-faint')}${spot.readDuration}</span>`;
 
-   buildGallery(spot.gallery);
+   buildGallery(spot.gallery, spot.title);
+   buildMore(destination, spot);
 };
 
 export default setJournalTemplate;

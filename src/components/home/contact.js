@@ -1,155 +1,83 @@
+import paperPlaneIcon from '@phosphor-icons/core/assets/regular/paper-plane-tilt.svg?raw';
+import envelopeIcon   from '@phosphor-icons/core/assets/regular/envelope-simple.svg?raw';
+import { icon } from '../../js/icons.js';
+
+// Field ids/names are read by js/contact.js; keep them stable.
+const FIELDS = [
+   { id: 'name',    label: 'Name',    type: 'text',  autocomplete: 'name',  placeholder: 'Your name' },
+   { id: 'email',   label: 'Email',   type: 'email', autocomplete: 'email', placeholder: 'you@company.com' },
+   { id: 'subject', label: 'Subject', type: 'text',  autocomplete: 'off',   placeholder: 'Website project' },
+];
+
+const errorText = (id, label) => `
+   <span id="${id}-error" class="hidden text-sm text-danger" role="alert">${label} is required.</span>
+`;
+
 const template = `
-   <div id="contact-section" class="max-w-screen-xl mx-auto px-4 md:px-8 py-16 md:py-24 text-gray-900 dark:text-white">
+   <section id="contact-section" aria-labelledby="contact-title" class="shell py-20 md:py-28">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
 
-      <!-- Section heading -->
-      <div class="contact-reveal flex flex-col items-center gap-2 mb-14">
-         <span class="text-[0.68rem] font-bold tracking-[0.18em] uppercase text-[#3150CE]">Get in touch</span>
-         <h1 class="text-3xl md:text-4xl font-black tracking-tight">Contact <span class="text-[#3150CE]">Me</span></h1>
-         <div class="w-8 h-[3px] bg-[#3150CE] rounded-full mt-1"></div>
-      </div>
-
-      <!-- Main grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-
-         <!-- ── LEFT: info panel ── -->
-         <div class="contact-reveal flex flex-col gap-6">
-
-            <!-- Headline block -->
-            <div>
-               <img src="/img/contact-image.webp" width="180" height="180" alt="Contact" class="mb-6 opacity-90" loading="lazy" decoding="async"/>
-               <h2 class="text-2xl md:text-3xl font-black leading-tight tracking-tight mb-4 space-y-3">
-                  <p>Need a website</p>
-                  <p>for your business?</p>
-               </h2>
-               <p class="text-sm/7 text-gray-500 dark:text-gray-400 max-w-sm">
-                  I help businesses build fast, professional, and mobile-ready websites.
-                  Whether you need a landing page, a full web app, or ongoing support — 
-                  fill out the form and let's talk.
-               </p>
-            </div>
+         <!-- Pitch -->
+         <div data-reveal class="lg:col-span-5">
+            <p class="eyebrow">Get in touch</p>
+            <h2 id="contact-title" class="mt-4 text-title text-ink">
+               Need a website for your business?
+            </h2>
+            <p class="mt-6 max-w-[42ch] text-lg leading-relaxed text-muted">
+               I help businesses build fast, professional, and mobile-ready websites.
+               Whether you need a landing page, a full web app, or ongoing support, fill out the form and let's talk.
+            </p>
+            <a href="mailto:aljericalcoran026@gmail.com"
+               class="mt-8 inline-flex items-center gap-2 text-sm font-medium text-ink underline decoration-line-strong underline-offset-4 transition-colors hover:text-accent hover:decoration-current">
+               ${icon(envelopeIcon, 'size-[18px]')}
+               aljericalcoran026@gmail.com
+            </a>
          </div>
 
-         <!-- ── RIGHT: form card ── -->
-         <div class="contact-reveal rounded-2xl border border-gray-100 dark:border-gray-700/60 bg-white dark:bg-gray-800/50 shadow-sm p-6 md:p-8">
+         <!-- Form -->
+         <div data-reveal style="--i:1" class="sm:rounded-2xl sm:border sm:border-line sm:bg-surface sm:p-6 md:p-8 lg:col-span-7">
+            <h3 class="text-lg font-semibold tracking-tight text-ink">Send me a message</h3>
 
-            <div class="flex items-center gap-3 mb-6">
-               <span class="w-7 h-0.5 bg-[#3150CE] rounded-full shrink-0"></span>
-               <h2 class="text-base font-bold tracking-tight">Send me a message</h2>
-            </div>
+            <!-- Global alert (filled by js/contact.js) -->
+            <div id="error-container" class="mt-5 hidden" aria-live="polite"></div>
 
-            <!-- Global error banner -->
-            <div id="error-container" class="hidden mb-5">
-            </div>
+            <form id="contact-form" class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2" novalidate>
+               ${FIELDS.map(({ id, label, type, autocomplete, placeholder }) => `
+                  <div class="flex flex-col gap-2 ${id === 'subject' ? 'sm:col-span-2' : ''}">
+                     <label for="${id}" class="required-label text-sm font-medium text-ink">${label}</label>
+                     <input type="${type}" id="${id}" name="${id}" autocomplete="${autocomplete}"
+                            placeholder="${placeholder}" class="field" />
+                     ${errorText(id, label)}
+                  </div>
+               `).join('')}
 
-            <form id="contact-form" class="flex flex-col gap-8" novalidate>
-               <!-- Name -->
-               <div class="flex flex-col gap-1.5">
-                  <label for="name" class="required-label text-xs font-semibold text-gray-700 dark:text-gray-300">Name</label>
-                  <input type="text" id="name" autocomplete="name"
-                     placeholder="e.g. John Doe"
-                     class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-600
-                            bg-gray-50 dark:bg-gray-700/50 text-gray-900 dark:text-white
-                            placeholder-gray-400 dark:placeholder-gray-500
-                            focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40 focus:border-[#3150CE]
-                            transition-all duration-200"
-                  />
-                  <span id="name-error" class="hidden text-[0.68rem] font-medium text-red-600 dark:text-red-400">Name is required.</span>
+               <div class="flex flex-col gap-2 sm:col-span-2">
+                  <label for="message" class="required-label text-sm font-medium text-ink">Message</label>
+                  <textarea id="message" name="message" rows="5"
+                            placeholder="Tell me about your project or inquiry"
+                            class="field resize-y"></textarea>
+                  ${errorText('message', 'Message')}
                </div>
 
-               <!-- Email -->
-               <div class="flex flex-col gap-1.5">
-                  <label for="email" class="required-label text-xs font-semibold text-gray-700 dark:text-gray-300">Email</label>
-                  <input type="email" id="email" autocomplete="email"
-                     placeholder="e.g. johndoe@email.com"
-                     class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-600
-                            bg-gray-50 dark:bg-gray-700/50 text-gray-900 dark:text-white
-                            placeholder-gray-400 dark:placeholder-gray-500
-                            focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40 focus:border-[#3150CE]
-                            transition-all duration-200"
-                  />
-                  <span id="email-error" class="hidden text-[0.68rem] font-medium text-red-600 dark:text-red-400">Email is required.</span>
+               <!-- reCAPTCHA (rendered by js/recaptcha.js) -->
+               <div id="recaptcha-container" class="overflow-x-auto sm:col-span-2"></div>
+
+               <div class="sm:col-span-2">
+                  <button type="submit" class="btn btn-primary w-full sm:w-auto">
+                     ${icon(paperPlaneIcon, 'size-[18px]')}
+                     <span id="btn-text">Send message</span>
+                  </button>
                </div>
-
-               <!-- Subject -->
-               <div class="flex flex-col gap-1.5">
-                  <label for="subject" class="required-label text-xs font-semibold text-gray-700 dark:text-gray-300">Subject</label>
-                  <input type="text" id="subject"
-                     placeholder="e.g. Website Project Request"
-                     class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-600
-                            bg-gray-50 dark:bg-gray-700/50 text-gray-900 dark:text-white
-                            placeholder-gray-400 dark:placeholder-gray-500
-                            focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40 focus:border-[#3150CE]
-                            transition-all duration-200"
-                  />
-                  <span id="subject-error" class="hidden text-[0.68rem] font-medium text-red-600 dark:text-red-400">Subject is required.</span>
-               </div>
-
-               <!-- Message -->
-               <div class="flex flex-col gap-1.5">
-                  <label for="message" class="required-label text-xs font-semibold text-gray-700 dark:text-gray-300">Message</label>
-                  <textarea id="message" rows="4"
-                     placeholder="Tell me about your project or inquiry…"
-                     class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-600
-                            bg-gray-50 dark:bg-gray-700/50 text-gray-900 dark:text-white
-                            placeholder-gray-400 dark:placeholder-gray-500
-                            focus:outline-none focus:ring-2 focus:ring-[#3150CE]/40 focus:border-[#3150CE]
-                            resize-none transition-all duration-200"></textarea>
-                  <span id="message-error" class="hidden text-[0.68rem] font-medium text-red-600 dark:text-red-400">Message is required.</span>
-               </div>
-
-               <!-- reCAPTCHA -->
-               <div id="recaptcha-container" class="flex justify-center"></div>
-
-               <!-- Submit -->
-               <button type="submit"
-                  class="cursor-pointer mt-1 inline-flex items-center justify-center gap-2
-                         bg-[#3150CE] hover:bg-[#2540b0] text-white
-                         text-sm font-semibold tracking-wide
-                         px-6 py-3 rounded-full w-full
-                         transition-all duration-200
-                         hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(49,80,206,0.35)]
-                         active:translate-y-0
-                         focus:outline-none focus:ring-2 focus:ring-[#3150CE]/50
-                         disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0 disabled:shadow-none"
-               >
-               <svg class="w-5 h-5 rotate-90 shrink-0" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m12 18-7 3 7-18 7 18-7-3Zm0 0v-5"/>
-               </svg>
-               <span id="btn-text">Send message</span>
-               </button>
-
             </form>
          </div>
       </div>
-   </div>
+   </section>
 `;
 
 import submitContactForm from "../../js/contact";
 
 const setContactSection = (element) => {
    element.innerHTML = template;
-
-   // Scroll-triggered reveal
-   const targets = element.querySelectorAll('.contact-reveal');
-   const observer = new IntersectionObserver(
-      (entries) => {
-         entries.forEach((entry, i) => {
-            if (!entry.isIntersecting) return;
-            setTimeout(() => {
-               entry.target.style.transition = 'opacity 0.5s ease, transform 0.5s cubic-bezier(.22,.68,0,1.2)';
-               entry.target.style.opacity    = '1';
-               entry.target.style.transform  = 'translateY(0)';
-            }, i * 100);
-            observer.unobserve(entry.target);
-         });
-      },
-      { threshold: 0.08 }
-   );
-   targets.forEach(el => {
-      el.style.opacity   = '0';
-      el.style.transform = 'translateY(24px)';
-      observer.observe(el);
-   });
 
    // Form submit
    const inputs = ['email', 'name', 'message', 'subject'];

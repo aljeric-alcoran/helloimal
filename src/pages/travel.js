@@ -1,6 +1,6 @@
 const template = `
-   <div id="travel-banner" class="main-banner-container"></div>
-   <div id="travel-journals" class="bg-transparent"></div>
+   <div id="travel-banner"></div>
+   <div id="travel-journals" class="scroll-mt-16 border-t border-line"></div>
 `;
 
 import setTravelBannerSection from '../components/travel/banner.js';

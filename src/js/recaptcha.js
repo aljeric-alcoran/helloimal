@@ -6,6 +6,8 @@ export const initRecaptcha = () => {
       if (window.grecaptcha && window.grecaptcha.render) {
          window.grecaptcha.render('recaptcha-container', {
             sitekey: import.meta.env.VITE_RECAPTCHA_SITE_KEY,
+            // Match the site theme at render time
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light',
             callback: () => {
                document.getElementById('error-container').style.display = 'none';
             }
